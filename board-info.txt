@@ -1,0 +1,1 @@
+require board=ripcurrentpro|ripcurrent24|caiman|komodo|tokay
