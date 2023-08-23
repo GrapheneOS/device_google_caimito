@@ -199,6 +199,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/caimito/prebuilts
 
 # Location
+# SDK build system
+$(call soong_config_set, include_libsitril-gps-wifi, board_without_radio, $(BOARD_WITHOUT_RADIO))
+include device/google/gs-common/gps/brcm/device.mk
+
 PRODUCT_COPY_FILES += \
        device/google/caimito/location/gps.cer:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cer
 

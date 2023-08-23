@@ -30,5 +30,9 @@ PRODUCT_MANUFACTURER := Google
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.bluetooth.evb_bdaddr="22:22:22:33:44:55"
 
+# Override to factory SDK
+$(call soong_config_set, gpssdk, sdkv1, True)
+$(call soong_config_set, gpssdk, gpsmcuversion, gpsv1_$(TARGET_BUILD_VARIANT))
+
 # Factory binaries of camera
 PRODUCT_PACKAGES += fatp_km4cm4tk4_wide_hat_tool fatp_km4cm4_tele_hat_tool fatp_km4cm4tk4_ultrawide_hat_tool fatp_km4cm4_front_hat_tool fatp_tk4_front_hat_tool
