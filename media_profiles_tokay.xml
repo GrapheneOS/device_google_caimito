@@ -1042,10 +1042,10 @@
 
         <EncoderProfile quality="2160p" fileFormat="mp4" duration="60">
             <Video codec="h264"
-                   bitRate="48000000"
+                   bitRate="72000000"
                    width="3840"
                    height="2160"
-                   frameRate="30" />
+                   frameRate="60" />
 
             <Audio codec="aac"
                    bitRate="96000"
@@ -1055,10 +1055,10 @@
 
         <EncoderProfile quality="1080p" fileFormat="mp4" duration="60">
             <Video codec="h264"
-                   bitRate="22000000"
+                   bitRate="33000000"
                    width="1920"
                    height="1080"
-                   frameRate="30" />
+                   frameRate="60" />
 
             <Audio codec="aac"
                    bitRate="96000"
