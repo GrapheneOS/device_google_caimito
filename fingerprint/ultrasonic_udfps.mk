@@ -27,13 +27,12 @@ PRODUCT_COPY_FILES += \
 
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/caimito/fingerprint/device_framework_matrix_product.xml
 
-PRODUCT_COPY_FILES += \
-	device/google/caimito/fingerprint/init.qfp.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qfp.sh
-
 #$(call soong_config_set,fp_hal_feature,biometric_suez_support,true)
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.qfp.update_vfs_calib=1
+	persist.vendor.qfp.enable_setprop=0 \
+	log.tag.QFP=3
 
 ifneq (,$(findstring factory, $(TARGET_PRODUCT)))
 PRODUCT_PACKAGES += QfsFactoryTest
