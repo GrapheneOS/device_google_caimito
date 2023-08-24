@@ -35,6 +35,7 @@ include hardware/google/pixel/vibrator/cs40l26/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/syna/syna20.mk
 include device/google/caimito/fingerprint/ultrasonic_udfps.mk
+-include vendor/samsung_slsi/gps/s5400/location/gnssd/device-gnss.mk
 
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,tokay)
