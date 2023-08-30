@@ -17,6 +17,13 @@
 TARGET_KERNEL_DIR ?= device/google/caimito-kernel
 TARGET_BOARD_KERNEL_HEADERS := device/google/caimito-kernel/kernel-headers
 
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+    USE_UWBFIELDTESTQM := true
+endif
+ifeq ($(filter factory_komodo, $(TARGET_PRODUCT)),)
+    include device/google/caimito/uwb/uwb_calibration.mk
+endif
+
 $(call inherit-product-if-exists, vendor/google_devices/caimito/prebuilts/device-vendor-komodo.mk)
 $(call inherit-product-if-exists, vendor/google_devices/zumapro/prebuilts/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/zumapro/proprietary/device-vendor.mk)
@@ -193,6 +200,10 @@ PRODUCT_PACKAGES += \
 
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/caimito/prebuilts
+
+# UWB
+PRODUCT_SOONG_NAMESPACES +=
+    device/google/caimito/uwb
 
 # Location
 # SDK build system
