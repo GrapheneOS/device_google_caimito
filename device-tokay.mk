@@ -41,6 +41,10 @@ $(call soong_config_set,google3a_config,target_device,tokay)
 # display
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/tokay/overlay
 
+# display color data
+PRODUCT_COPY_FILES += \
+	device/google/caimito/tokay/panel_config_google-tk4b_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-tk4b_cal0.pb
+
 # Init files
 PRODUCT_COPY_FILES += \
 	device/google/caimito/conf/init.tokay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.tokay.rc
