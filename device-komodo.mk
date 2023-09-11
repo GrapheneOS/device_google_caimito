@@ -202,7 +202,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/caimito/prebuilts
 
 # UWB
-PRODUCT_SOONG_NAMESPACES +=
+PRODUCT_SOONG_NAMESPACES += \
     device/google/caimito/uwb
 
 # Location
