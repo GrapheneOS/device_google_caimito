@@ -5,9 +5,8 @@ on init && property:ro.vendor.factory=1
     import /vendor/etc/init/hw/init.factory.rc
 
 on init
-    # NFC streset tool name
-    setprop persist.vendor.nfc.streset libstreset23
-    setprop persist.vendor.se.streset libstreset23
+    # eSE streset tool name
+    setprop persist.vendor.se.streset libstreset24
 
 on early-boot
     # Wait for insmod_sh to finish all common modules

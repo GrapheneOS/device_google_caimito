@@ -13,9 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_UWB_CAL_DIR=device/google/caimito/uwb
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_UWB_CAL_DIR)/UWB-calibration.conf:$(TARGET_COPY_OUT_VENDOR)/etc/UWB-calibration.conf \
-    $(LOCAL_UWB_CAL_DIR)/UWB-calibration.conf:$(TARGET_COPY_OUT_VENDOR)/etc/UWB-calibration-unknown.conf \
-    $(LOCAL_UWB_CAL_DIR)/UWB-calibration.conf:$(TARGET_COPY_OUT_VENDOR)/etc/UWB-calibration-default.conf \
+PRODUCT_PACKAGES += \
+    configuration.conf \
+    calibration.conf \
+    calibration-default.conf \
+    calibration-CE.conf \
+    calibration-FCC.conf \
+    calibration-JP.conf \
+    calibration-TW.conf \
+    calibration-RESTRICTED.conf
