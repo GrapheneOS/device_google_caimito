@@ -40,6 +40,11 @@ $(call soong_config_set,google3a_config,target_device,komodo)
 
 # display
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/komodo/overlay
+# Display RRS default Config
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config=1008x2244@120
+# TODO: b/250788756 - the property will be phased out after HWC loads user-preferred mode
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.preferred_mode=1008x2244@120
+
 
 # Init files
 PRODUCT_COPY_FILES += \
