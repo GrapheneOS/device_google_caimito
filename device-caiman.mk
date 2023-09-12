@@ -235,6 +235,11 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.udfps.als_feed_forward_supported=true \
     persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
 
+# Display RRS default Config
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config=960x2142@120
+# TODO: b/250788756 - the property will be phased out after HWC loads user-preferred mode
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.preferred_mode=960x2142@120
+
 # Vibrator HAL
 ACTUATOR_MODEL := luxshare_ict_081545
 PRODUCT_VENDOR_PROPERTIES += \
