@@ -33,6 +33,9 @@ $(call inherit-product-if-exists, vendor/qorvo/uwb/qm35-hal/Device.mk)
 # Disable modem until b/291009607 is fixed
 BOARD_WITHOUT_RADIO := true
 
+# display
+DEVICE_PACKAGE_OVERLAYS += device/google/caimito/komodo/overlay
+
 include device/google/caimito/audio/komodo/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
 include hardware/google/pixel/vibrator/cs40l26/device.mk
@@ -45,8 +48,6 @@ $(call soong_config_set,lyric,camera_hardware,komodo)
 $(call soong_config_set,lyric,tuning_product,komodo)
 $(call soong_config_set,google3a_config,target_device,komodo)
 
-# display
-DEVICE_PACKAGE_OVERLAYS += device/google/caimito/komodo/overlay
 # Display RRS default Config
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config=1008x2244@120
 # TODO: b/250788756 - the property will be phased out after HWC loads user-preferred mode
