@@ -224,6 +224,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
 	vendor.zram.size=3g \
+	vendor.disable.thermal.control=1 \
 	persist.device_config.configuration.disable_rescue_party=true
 
 PRODUCT_VENDOR_PROPERTIES += \
