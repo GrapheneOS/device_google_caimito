@@ -33,6 +33,9 @@ $(call inherit-product-if-exists, vendor/qorvo/uwb/qm35-hal/Device.mk)
 # Disable modem until b/291009607 is fixed
 BOARD_WITHOUT_RADIO := true
 
+# display
+DEVICE_PACKAGE_OVERLAYS += device/google/caimito/caiman/overlay
+
 include device/google/caimito/audio/caiman/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
 include hardware/google/pixel/vibrator/cs40l26/device.mk
@@ -44,9 +47,6 @@ include device/google/caimito/fingerprint/ultrasonic_udfps.mk
 $(call soong_config_set,lyric,camera_hardware,caiman)
 $(call soong_config_set,lyric,tuning_product,caiman)
 $(call soong_config_set,google3a_config,target_device,caiman)
-
-# display
-DEVICE_PACKAGE_OVERLAYS += device/google/caimito/caiman/overlay
 
 # Init files
 PRODUCT_COPY_FILES += \
