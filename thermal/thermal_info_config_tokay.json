@@ -838,7 +838,7 @@
                 },
                 {
                     "Name": "VIRTUAL-SKIN-SUB-0",
-                    "Thresholds": [41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 75
+                    "Thresholds": [41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 75]
                 },
                 {
                     "Name": "VIRTUAL-SKIN-SUB-1",
