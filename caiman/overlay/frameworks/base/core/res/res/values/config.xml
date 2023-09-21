@@ -287,4 +287,8 @@
          Note: If the display supports multiple resolutions, please define the path config based on
          the highest resolution so that it can be scaled correctly in each resolution. -->
     <string name="config_mainDisplayShape">M 1279.97,230.06 V 2624.26 M 0,229.82 V 2624.02 m 230.23,231.94 h 817.56 M 230.18,0.03 H 1047.83 M 1049.65,2855.93 c 40.06,-0.12 81.47,1.06 119.48,-13.6 43.5,-15.91 79.36,-51.02 96.08,-94.17 16.07,-39.24 14.57,-82.34 14.75,-123.9 m -0.07,-2394.27 c -0.12,-40 1.06,-81.34 -13.62,-119.3 C 1250.34,67.26 1215.17,31.46 1171.96,14.76 1132.65,-1.29 1089.49,0.21 1047.86,0.03 M 230.35,2855.72 c -40.06,-0.12 -81.47,1.06 -119.48,-13.6 -43.5,-15.91 -79.36,-51.03 -96.08,-94.17 -16.07,-39.24 -14.57,-82.34 -14.75,-123.9 m 0,-2394.06 C 0.15,189.99 -1.02,148.65 13.65,110.69 29.59,67.26 64.76,31.46 107.98,14.76 147.28,-1.29 190.44,0.21 232.07,0.03 z</string>
+
+    <!-- Boolean indicating whether allow sending null to modem to clear the previous initial attach
+         data profile -->
+    <bool name="allow_clear_initial_attach_data_profile">true</bool>
 </resources>
