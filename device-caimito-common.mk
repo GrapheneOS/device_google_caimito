@@ -30,4 +30,5 @@ TARGET_VENDOR_PERF_CONFIG_PATH := device/google/caimito/perf
 endif
 
 PRODUCT_COPY_FILES += \
-	$(TARGET_VENDOR_PERF_CONFIG_PATH)/powerhint-$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+	$(TARGET_VENDOR_PERF_CONFIG_PATH)/powerhint-$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
+	$(TARGET_VENDOR_PERF_CONFIG_PATH)/powerhint-$(TARGET_DEVICE)-proto.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint-proto.json
