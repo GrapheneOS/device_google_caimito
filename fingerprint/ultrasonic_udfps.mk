@@ -30,7 +30,7 @@ DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/caimito/fingerprint/de
 $(call soong_config_set,fp_hal_feature,biometric_suez_support,true)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	persist.vendor.qfp.update_vfs_calib=1
+	persist.vendor.qfp.update_vfs_calib=1 \
 	persist.vendor.qfp.enable_setprop=0 \
 	log.tag.QFP=3
 
