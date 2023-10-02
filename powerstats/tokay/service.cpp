@@ -35,11 +35,11 @@ void addDisplay(std::shared_ptr<PowerStats> p) {
     // Add display residency stats
     std::vector<std::string> states = {
         "Off",
-        "LP: 1440x3120@30",
-        "On: 1440x3120@60",
-        "On: 1440x3120@90",
-        "HBM: 1440x3120@60",
-        "HBM: 1440x3120@90"};
+        "LP: 1080x2424@30",
+        "On: 1080x2424@60",
+        "On: 1080x2424@120",
+        "HBM: 1080x2424@60",
+        "HBM: 1080x2424@120"};
 
     p->addStateResidencyDataProvider(std::make_unique<DisplayStateResidencyDataProvider>(
             "Display",
