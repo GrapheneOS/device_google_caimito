@@ -35,9 +35,7 @@ include device/google/gs-common/touch/stm/stm20.mk
 include device/google/caimito/fingerprint/ultrasonic_udfps.mk
 
 # go/lyric-soong-variables
-# TODO(b/272725898): Needs to check with owner later
-$(warning camera_hardware set to zuma on zumapro target)
-$(call soong_config_set,lyric,camera_hardware,ripcurrent)
+$(call soong_config_set,lyric,camera_hardware,ripcurrentpro)
 $(warning tuning_product set to zuma on zumapro target)
 $(call soong_config_set,lyric,tuning_product,ripcurrent)
 $(warning target_device set to zuma on zumapro target)
