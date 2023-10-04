@@ -7,7 +7,7 @@
             "HotHysteresis":[0.0, 0.9, 0.0, 0.0, 0.0, 0.0, 0.0],
             "TempPath":"/dev/thermal/tz-by-name/north_therm/tz_temp",
             "Multiplier":0.001,
-            "PollingDelay":60000,
+            "PollingDelay":300000,
             "PassiveDelay":7000
         },
         {
@@ -17,7 +17,7 @@
             "HotHysteresis":[0.0, 0.9, 0.0, 0.0, 0.0, 0.0, 0.0],
             "TempPath":"/dev/thermal/tz-by-name/rfpa_therm/tz_temp",
             "Multiplier":0.001,
-            "PollingDelay":60000,
+            "PollingDelay":300000,
             "PassiveDelay":7000
         },
         {
@@ -27,7 +27,7 @@
             "HotHysteresis":[0.0, 0.9, 0.0, 0.0, 0.0, 0.0, 0.0],
             "TempPath":"/dev/thermal/tz-by-name/soc_therm/tz_temp",
             "Multiplier":0.001,
-            "PollingDelay":60000,
+            "PollingDelay":300000,
             "PassiveDelay":7000
         },
         {
@@ -37,7 +37,7 @@
             "HotHysteresis":[0.0, 0.9, 0.0, 0.0, 0.0, 0.0, 0.0],
             "TempPath":"/dev/thermal/tz-by-name/charging_therm/tz_temp",
             "Multiplier":0.001,
-            "PollingDelay":60000,
+            "PollingDelay":300000,
             "PassiveDelay":7000
         },
         {
@@ -47,7 +47,7 @@
             "HotHysteresis":[0.0, 0.9, 0.0, 0.0, 0.0, 0.0, 0.0],
             "TempPath":"/dev/thermal/tz-by-name/disp_therm/tz_temp",
             "Multiplier":0.001,
-            "PollingDelay":60000,
+            "PollingDelay":300000,
             "PassiveDelay":7000
         },
         {
@@ -63,7 +63,7 @@
             "HotHysteresis":[0.0, 0.9, 0.0, 0.0, 0.0, 0.0, 0.0],
             "TempPath":"/dev/thermal/tz-by-name/btmspkr_therm/tz_temp",
             "Multiplier":0.001,
-            "PollingDelay":60000,
+            "PollingDelay":300000,
             "PassiveDelay":7000
         },
         {
@@ -73,7 +73,7 @@
             "HotHysteresis":[0.0, 0.9, 0.0, 0.0, 0.0, 0.0, 0.0],
             "TempPath":"/dev/thermal/tz-by-name/quiet_therm/tz_temp",
             "Multiplier":0.001,
-            "PollingDelay":60000,
+            "PollingDelay":300000,
             "PassiveDelay":7000
         },
         {
@@ -82,7 +82,7 @@
             "HotThreshold":["NAN", 45.0, "NAN", "NAN", "NAN", "NAN", "NAN"],
             "TempPath":"/dev/thermal/tz-by-name/usb_pwr_therm/tz_temp",
             "Multiplier":0.001,
-            "PollingDelay":60000,
+            "PollingDelay":300000,
             "PassiveDelay":7000
         },
         {
@@ -91,9 +91,9 @@
             "Hidden":true,
             "VirtualSensor":true,
             "Formula":"WEIGHTED_AVG",
-            "Combination":["north_therm", "rfpa_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "btmspkr_therm", "quiet_therm", "usb_pwr_therm"],
-            "Coefficient":[0.04, 0.16, 0.19, 0.16, 0.17, 0, 0.01, 0.24, 0],
-            "Offset":-820,
+            "Combination":["north_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "quiet_therm", "usb_pwr_therm", "btmspkr_therm"],
+            "Coefficient":[0.2, 0.15, 0, 0, 0.3, 0.22, 0.02, 0.02],
+            "Offset":1310,
             "Multiplier":0.001
         },
         {
@@ -102,9 +102,9 @@
             "Hidden":true,
             "VirtualSensor":true,
             "Formula":"WEIGHTED_AVG",
-            "Combination":["north_therm", "rfpa_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "btmspkr_therm", "quiet_therm", "usb_pwr_therm"],
-            "Coefficient":[0.02, 0.01, 0.04, 0.04, 0.4, 0.14, 0.1, 0.02, 0.12],
-            "Offset":1840,
+            "Combination":["north_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "quiet_therm", "usb_pwr_therm", "btmspkr_therm"],
+            "Coefficient":[0.04, 0, 0.12, 0.03, 0.32, 0.04, 0.12, 0.27],
+            "Offset":2470,
             "Multiplier":0.001
         },
         {
@@ -113,20 +113,9 @@
             "Hidden":true,
             "VirtualSensor":true,
             "Formula":"WEIGHTED_AVG",
-            "Combination":["north_therm", "rfpa_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "btmspkr_therm", "quiet_therm", "usb_pwr_therm"],
-            "Coefficient":[0.18, 0.1, 0.15, 0.13, 0.22, 0.16, 0.02, 0.04, 0.01],
-            "Offset":-2810,
-            "Multiplier":0.001
-        },
-        {
-            "Name":"VIRTUAL-SKIN-CHARGE-SUB-3",
-            "Type":"UNKNOWN",
-            "Hidden":true,
-            "VirtualSensor":true,
-            "Formula":"WEIGHTED_AVG",
-            "Combination":["north_therm", "rfpa_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "btmspkr_therm", "quiet_therm", "usb_pwr_therm"],
-            "Coefficient":[0.1, 0.16, 0.11, 0.19, 0.26, 0, 0, 0.11, 0],
-            "Offset":1140,
+            "Combination":["north_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "quiet_therm", "usb_pwr_therm", "btmspkr_therm"],
+            "Coefficient":[0.02, 0, 0, 0.15, 0.06, 0.06, 0.32, 0.48],
+            "Offset":-2260,
             "Multiplier":0.001
         },
         {
@@ -134,10 +123,10 @@
             "Type":"UNKNOWN",
             "Version":"4.0",
             "VirtualSensor":true,
-            "TriggerSensor":["north_therm", "rfpa_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm"],
+            "TriggerSensor":["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "btmspkr_therm"],
             "Formula":"MAXIMUM",
-            "Combination":["VIRTUAL-SKIN-CHARGE-SUB-0", "VIRTUAL-SKIN-CHARGE-SUB-1", "VIRTUAL-SKIN-CHARGE-SUB-2", "VIRTUAL-SKIN-CHARGE-SUB-3"],
-            "Coefficient":[1.0, 1.0, 1.0, 1.0],
+            "Combination":["VIRTUAL-SKIN-CHARGE-SUB-0", "VIRTUAL-SKIN-CHARGE-SUB-1", "VIRTUAL-SKIN-CHARGE-SUB-2"],
+            "Coefficient":[1.0, 1.0, 1.0],
             "HotThreshold":["NAN", 44.0, 48.0, 51.0, 55.0, 57.0, 75.0],
             "HotHysteresis":[0.0, 1.9, 3.9, 2.9, 3.9, 1.9, 1.9],
             "Multiplier":0.001,
