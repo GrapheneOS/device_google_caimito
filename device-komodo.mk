@@ -54,6 +54,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config
 # TODO: b/250788756 - the property will be phased out after HWC loads user-preferred mode
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.preferred_mode=1008x2244@120
 
+# Display OP HZ Config
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.primarydisplay.op.hs_hz=120 \
+    vendor.primarydisplay.op.ns_hz=60 \
+    vendor.primarydisplay.op.ns_min_dbv=1088
 
 # Init files
 PRODUCT_COPY_FILES += \
