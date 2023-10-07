@@ -19,7 +19,6 @@ TARGET_BOARD_KERNEL_HEADERS := device/google/caimito-kernel/kernel-headers
 
 USE_SWIFTSHADER := false
 BOARD_USES_SWIFTSHADER := false
-BOARD_WITHOUT_RADIO := true
 
 $(call inherit-product-if-exists, vendor/google_devices/caimito/prebuilts/device-vendor-ripcurrentpro.mk)
 $(call inherit-product-if-exists, vendor/google_devices/zumapro/prebuilts/device-vendor.mk)
