@@ -31,3 +31,5 @@ endif
 
 PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_PERF_CONFIG_PATH)/powerhint-$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+PRODUCT_COPY_FILES += \
+	$(TARGET_VENDOR_PERF_CONFIG_PATH)/powerhint-zuma.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint-proto.json

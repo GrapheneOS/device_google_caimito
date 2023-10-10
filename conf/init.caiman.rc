@@ -4,6 +4,9 @@ import /vendor/etc/init/hw/init.zumapro.rc
 on init && property:ro.vendor.factory=1
     import /vendor/etc/init/hw/init.factory.rc
 
+on init && property:ro.boot.hardware.platform=zuma
+    setprop vendor.powerhal.config powerhint-proto.json
+
 on init
     # eSE  streset tool name
     setprop persist.vendor.se.streset libstreset24
