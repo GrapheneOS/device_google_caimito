@@ -65,7 +65,7 @@ PRODUCT_COPY_FILES += \
 	device/google/caimito/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
 
 PRODUCT_PACKAGES += \
-	NfcNci \
+	com.android.nfcservices \
 	Tag \
 	android.hardware.nfc-service.st
 
@@ -217,7 +217,7 @@ endif
 
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
-	vendor.zram.size=3g \
+	vendor.zram.size=50p \
 	vendor.disable.thermal.control=1 \
 	persist.device_config.configuration.disable_rescue_party=true
 
