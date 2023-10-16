@@ -246,6 +246,22 @@
             ]
         },
         {
+            "Name":"VIRTUAL-SKIN-MODEL",
+            "Type":"UNKNOWN",
+            "VirtualSensor":true,
+            "ModelPath":"vt_estimation_model.tflite",
+            "TriggerSensor":["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "btmspkr_therm"],
+            "Formula":"USE_ML_MODEL",
+            "Combination":["north_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
+            "Coefficient":[1.0],
+            "HotThreshold":["NAN", 37.0, 43.0, 45.0, 46.5, 52.0, 55.0],
+            "HotHysteresis":[0.0, 1.9, 1.9, 1.9, 1.4, 1.9, 1.9],
+            "Multiplier":0.001,
+            "SendCallback":true,
+            "PollingDelay":300000,
+            "PassiveDelay":7000
+        },
+        {
             "Name":"VIRTUAL-SKIN-HINT",
             "Type":"UNKNOWN",
             "Hidden":true,
