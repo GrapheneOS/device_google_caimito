@@ -22,7 +22,8 @@ endif
 
 PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
-	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_charge_$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json
+	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_charge_$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json \
+	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_$(TARGET_DEVICE)_proto.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_proto.json
 
 # Power HAL config
 ifeq (,$(TARGET_VENDOR_PERF_CONFIG_PATH))
