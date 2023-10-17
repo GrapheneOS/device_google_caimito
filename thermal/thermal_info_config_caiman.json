@@ -300,7 +300,7 @@
                     "CdevWeightForPID": [1, 1, 1, 1, 1, 1, 1],
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 2,
-                    "BindedPowerRail": "S2M_VDD_CPUCL1",
+                    "BindedPowerRail": "S3M_VDD_CPUCL1",
                     "CdevCeiling": [0, 6, 6, 6, 6, 6, 6]
                 },
                 {
@@ -308,7 +308,7 @@
                     "CdevWeightForPID": [1, 1, 1, 1, 1, 1, 1],
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 2,
-                    "BindedPowerRail": "S3M_VDD_CPUCL2",
+                    "BindedPowerRail": "S2M_VDD_CPUCL2",
                     "CdevCeiling": [0, 8, 8, 8, 8, 8, 8]
                 }
             ]
@@ -515,7 +515,7 @@
                     "CdevWeightForPID": [1, 1, 1, 1, 1, 1, 1],
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 2,
-                    "BindedPowerRail": "S2M_VDD_CPUCL1",
+                    "BindedPowerRail": "S3M_VDD_CPUCL1",
                     "CdevCeiling": [0, 11, 11, 11, 11, 14, 14],
                     "LimitInfo": [0, 0, 0, 0, 0, 14, 14]
                 },
@@ -524,7 +524,7 @@
                     "CdevWeightForPID": [1, 1, 1, 1, 1, 1, 1],
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 2,
-                    "BindedPowerRail": "S3M_VDD_CPUCL2",
+                    "BindedPowerRail": "S2M_VDD_CPUCL2",
                     "CdevCeiling": [0, 13, 13, 13, 13, 14, 14],
                     "LimitInfo": [0, 0, 0, 0, 0, 14, 14]
                 }
@@ -753,12 +753,12 @@
     ],
     "PowerRails":[
         {
-            "Name":"S2M_VDD_CPUCL1",
+            "Name":"S2M_VDD_CPUCL2",
             "PowerSampleDelay":7000,
             "PowerSampleCount":1
         },
         {
-            "Name":"S3M_VDD_CPUCL2",
+            "Name":"S3M_VDD_CPUCL1",
             "PowerSampleDelay":7000,
             "PowerSampleCount":1
         },
@@ -776,7 +776,7 @@
             "Name":"PARTIAL_SYSTEM_POWER",
             "VirtualRails":true,
             "Formula":"WEIGHTED_AVG",
-            "Combination":["S1S_VDD_CAM", "S2S_VDD_G3D", "S4S_VDD2H_MEM", "S5S_VDDQ_MEM", "S8S_VDD_G3D_L2", "S9S_VDD_AOC", "L2S_PLL_MIPI_UFS", "L9S_GNSS_CORE", "L21S_VDD2L_MEM", "VSYS_PWR_DISPLAY", "VSYS_PWR_WLAN_BT", "S1M_VDD_MIF", "S2M_VDD_CPUCL1", "S3M_VDD_CPUCL2", "S4M_VDD_CPUCL0", "S5M_VDD_INT", "S6M_LLDO1", "S7M_VDD_TPU", "S8M_LLDO2", "VSYS_PWR_MODEM"],
+            "Combination":["S1S_VDD_CAM", "S2S_VDD_G3D", "S4S_VDD2H_MEM", "S5S_VDDQ_MEM", "S8S_VDD_G3D_L2", "S9S_VDD_AOC", "L2S_PLL_MIPI_UFS", "L9S_GNSS_CORE", "L21S_VDD2L_MEM", "VSYS_PWR_DISPLAY", "VSYS_PWR_WLAN_BT", "S1M_VDD_MIF", "S2M_VDD_CPUCL2", "S3M_VDD_CPUCL1", "S4M_VDD_CPUCL0", "S5M_VDD_INT", "S6M_LLDO1", "S7M_VDD_TPU", "S8M_LLDO2", "VSYS_PWR_MODEM"],
             "Coefficient":[1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
             "PowerSampleDelay":7000,
             "PowerSampleCount":5
