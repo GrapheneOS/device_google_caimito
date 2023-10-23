@@ -267,7 +267,7 @@
     <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
     <!-- Display cutout configuration -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout">
-	m 719,101 a 46.5,46.5 0 0 0 -93,0 46.5,46.5 0 0 0 93,0 z
+	m 719,99.5 a 47,47 0 0 0 -94,0 47,47 0 0 0 94,0 z
         @left
     </string>
 
