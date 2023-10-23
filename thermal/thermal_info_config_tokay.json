@@ -165,16 +165,6 @@
             "PassiveDelay":1000
         },
         {
-            "Name":"VIRTUAL-BTS-WINDOW-PARTIAL",
-            "Type":"UNKNOWN",
-            "VirtualSensor":true,
-            "Formula":"WEIGHTED_AVG",
-            "Combination":["rfpa_therm", "north_therm"],
-            "Coefficient":[0.05, 0.14],
-            "Offset":560,
-            "Multiplier":0.001
-        },
-        {
             "Name":"VIRTUAL-SKIN-SUB-0",
             "Type":"UNKNOWN",
             "Hidden":true,
@@ -867,10 +857,6 @@
         "Sensors": {
             "RecordWithDefaultThreshold": ["VIRTUAL-SKIN"],
             "RecordWithThreshold": [
-                {
-                    "Name": "VIRTUAL-BTS-WINDOW-PARTIAL",
-                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
-                },
                 {
                     "Name": "VIRTUAL-SKIN-SPEAKER",
                     "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
