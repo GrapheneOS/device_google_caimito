@@ -127,7 +127,7 @@
             "Formula":"MAXIMUM",
             "Combination":["VIRTUAL-SKIN-CHARGE-SUB-0", "VIRTUAL-SKIN-CHARGE-SUB-1", "VIRTUAL-SKIN-CHARGE-SUB-2"],
             "Coefficient":[1.0, 1.0, 1.0],
-            "HotThreshold":["NAN", 44.0, 48.0, 51.0, 55.0, 57.0, 75.0],
+            "HotThreshold":["NAN", 34.0, 38.0, 41.0, 45.0, 47.0, 55.0],
             "HotHysteresis":[0.0, 1.9, 3.9, 2.9, 3.9, 1.9, 1.9],
             "Multiplier":0.001,
             "PollingDelay":60000,
