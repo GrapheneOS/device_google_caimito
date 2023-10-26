@@ -31,8 +31,8 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_tokay_fullmte.mk \
     $(LOCAL_DIR)/factory_tokay.mk
 COMMON_LUNCH_CHOICES := \
-    aosp_caiman-userdebug \
-    aosp_komodo-userdebug \
-    aosp_ripcurrentpro-userdebug \
-    aosp_ripcurrent24-userdebug \
-    aosp_tokay-userdebug
+    aosp_caiman-trunk_staging-userdebug \
+    aosp_komodo-trunk_staging-userdebug \
+    aosp_ripcurrentpro-trunk_staging-userdebug \
+    aosp_ripcurrent24-trunk_staging-userdebug \
+    aosp_tokay-trunk_staging-userdebug
