@@ -16,6 +16,12 @@
             "Multiplier":0.001
         },
         {
+            "Name":"soc",
+            "Type":"BCL_PERCENTAGE",
+            "HotThreshold":["NAN", "NAN", 80, "NAN", "NAN", "NAN", "NAN"],
+            "Multiplier":1
+        },
+        {
             "Name":"LITTLE",
             "Type":"CPU",
             "HotThreshold":[

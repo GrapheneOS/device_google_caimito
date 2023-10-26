@@ -94,8 +94,8 @@
             "Type":"UNKNOWN",
             "VirtualSensor":true,
             "Formula":"COUNT_THRESHOLD",
-            "TriggerSensor": "vdroop1",
-            "Combination":["battery", "battery_cycle", "vdroop1"],
+            "TriggerSensor": "vdroop2",
+            "Combination":["battery", "battery_cycle", "vdroop2"],
             "Coefficient":[-10000, 400, 1000],
             "HotThreshold":["NAN", "NAN", "NAN", "NAN", 3.00, "NAN", "NAN"],
             "Multiplier":1,
@@ -121,6 +121,16 @@
             "PassiveDelay":1000
         },
         {
+            "Name":"batoilo2",
+            "Type":"BCL_CURRENT",
+            "HotThreshold":["NAN", "NAN", "NAN", "NAN", 8000, "NAN", "NAN"],
+            "HotHysteresis":[0.0, 0.0, 0.0, 0.0, 100, 0.0, 0.0],
+            "Multiplier":1,
+            "SendCallback":true,
+            "PollingDelay":0,
+            "PassiveDelay":1000
+        },
+        {
             "Name":"BCL_AUDIO_BAACL",
             "Type":"BCL_VOLTAGE",
             "VirtualSensor":true,
@@ -137,7 +147,7 @@
         {
             "Name":"vdroop1",
             "Type":"BCL_VOLTAGE",
-            "HotThreshold":["NAN", "NAN", "NAN", "NAN", 1000, "NAN", "NAN"],
+            "HotThreshold":["NAN", "NAN", "NAN", "NAN", 1200, "NAN", "NAN"],
             "HotHysteresis":[0.0, 0.0, 0.0, 0.0, 100, 0.0, 0.0],
             "Multiplier":1,
             "SendCallback":true,
@@ -147,7 +157,7 @@
         {
             "Name":"vdroop2",
             "Type":"BCL_VOLTAGE",
-            "HotThreshold":["NAN", "NAN", "NAN", "NAN", 1200, "NAN", "NAN"],
+            "HotThreshold":["NAN", "NAN", "NAN", "NAN", 1000, "NAN", "NAN"],
             "HotHysteresis":[0.0, 0.0, 0.0, 0.0, 100, 0.0, 0.0],
             "Multiplier":1,
             "SendCallback":true,
