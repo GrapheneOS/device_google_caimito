@@ -101,6 +101,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.bluetooth.a2dp_offload.disabled=false \
     persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-opus
 
+# DCK properties based on target
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.gms.dck.eligible_wcc=3 \
+    ro.gms.dck.se_capability=1
+
 # Spatial Audio
 PRODUCT_PACKAGES += \
 	libspatialaudio
