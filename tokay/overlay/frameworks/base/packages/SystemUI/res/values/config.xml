@@ -49,10 +49,7 @@
 
    <!-- Configure 13px of extra protection around the front-facing camera -->
     <string translatable="false" name="config_frontBuiltInDisplayCutoutProtection">
-        M 489.5,66
-        a 50,50 0 0 1 100,0
-        a 50,50 0 0 1 -100,0
-        Z
+        m 594.5,86.5 a 55,55 0 0 0 -110,0 55,55 0 0 0 110,0 z
     </string>
 
     <!-- The time (in ms) needed to trigger the lock icon view's long-press affordance -->
