@@ -252,12 +252,12 @@
     <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
     <!-- Display cutout configuration -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout">
-	m 581,86 a 41.5,41.5 0 0 0 -83,0 41.5,41.5 0 0 0 83,0 z
+	m 581.5,86.5 a 42,42 0 0 0 -84,0 42,42 0 0 0 84,0 z
         @left
     </string>
 
     <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
-        m 485.5,0 h 110 v 121 h -110 Z
+        m 484.5,20.5 h 110 v 121 h -110 z
         @left
     </string>
     <!-- A string config in svg path format for the main display shape.
