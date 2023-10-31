@@ -227,20 +227,15 @@ PRODUCT_SOONG_NAMESPACES += \
 $(call soong_config_set, include_libsitril-gps-wifi, board_without_radio, $(BOARD_WITHOUT_RADIO))
 include device/google/gs-common/gps/brcm/device.mk
 
-PRODUCT_COPY_FILES += \
-       device/google/caimito/location/gps.cer:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cer
-
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-        PRODUCT_COPY_FILES += \
-            device/google/caimito/location/lhd.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/lhd.conf \
-            device/google/caimito/location/scd.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/scd.conf \
-            device/google/caimito/location/gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
-else
-        PRODUCT_COPY_FILES += \
-            device/google/caimito/location/lhd_user.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/lhd.conf \
-            device/google/caimito/location/scd_user.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/scd.conf \
-            device/google/caimito/location/gps_user.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
-endif
+PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/komodo
+SOONG_CONFIG_NAMESPACES += gpssdk
+SOONG_CONFIG_gpssdk += gpsconf
+SOONG_CONFIG_gpssdk_gpsconf ?= $(TARGET_BUILD_VARIANT)
+PRODUCT_PACKAGES += \
+	gps.cer \
+	gps.xml \
+	scd.conf \
+	lhd.conf
 
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
