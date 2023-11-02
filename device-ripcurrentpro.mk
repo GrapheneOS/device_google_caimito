@@ -35,8 +35,7 @@ include device/google/caimito/fingerprint/ultrasonic_udfps.mk
 
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,ripcurrentpro)
-$(warning tuning_product set to zuma on zumapro target)
-$(call soong_config_set,lyric,tuning_product,ripcurrent)
+$(call soong_config_set,lyric,tuning_product,ripcurrentpro)
 $(warning target_device set to zuma on zumapro target)
 $(call soong_config_set,google3a_config,target_device,ripcurrent)
 
