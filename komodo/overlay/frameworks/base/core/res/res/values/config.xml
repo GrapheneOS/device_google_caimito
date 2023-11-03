@@ -42,8 +42,8 @@
 
     <!-- Default screen brightness setting
          Must be in the range specified by minimum and maximum. -->
-    <!-- 140 nits: (140-2)/(1250-2)*(0.68-0.0)+0.0 = 0.075192308 -->
-    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.075192308</item>
+    <!-- 140 nits: (140-2)/(1250-2)*(0.61-0.0)+0.0 = 0.067451923 -->
+    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.067451923</item>
 
     <!-- The default refresh rate. Pixel 6 manages this using the peak refresh rate setting, so set
          this value to 0 so it has no effect. -->
@@ -157,7 +157,7 @@
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
     <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">2000</integer>
 
     <integer-array name="config_ambientThresholdLevels">
         <item>2</item>
