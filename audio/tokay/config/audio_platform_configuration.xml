@@ -304,5 +304,6 @@
         <module libname="liboffloadeffect.so"/>
         <module libname="audio_amcs_ext.so"/>
         <module libname="audio_bluenote_aoc.so"/>
+        <module libname="audio_compensation_aoc.so" argu="ScreenRotation:0,90,180,270|LeftChannel:compens_spk_l.conf|RightChannel:compens_spk_r.conf "/>
     </external_module>
 </audio_platform_configuration>
