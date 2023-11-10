@@ -6,11 +6,27 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
+    <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.fingerprint</name>
-        <version>1.0</version>
+        <version>1</version>
         <interface>
-            <name>IQtiExtendedFingerprint</name>
+            <name>IQfpExtendedFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.fingerprint</name>
+        <version>1</version>
+        <interface>
+            <name>IQfpExtendedSession</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.fingerprint</name>
+        <version>1</version>
+        <interface>
+            <name>IQfpExtendedSessionCallback</name>
             <instance>default</instance>
         </interface>
     </hal>
