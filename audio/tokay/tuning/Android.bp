@@ -1,0 +1,125 @@
+//
+// Copyright (C) 2023 The Android Open-Source Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+soong_namespace {}
+
+package {
+    // See: http://go/android-license-faq
+    // A large-scale-change added 'default_applicable_licenses' to import
+    // all of the 'license_kinds' from "device_google_caimito_license"
+    // to get the below license kinds:
+    //   SPDX-license-identifier-Apache-2.0
+    default_applicable_licenses: ["device_google_caimito_license"],
+}
+
+prebuilt_defaults {
+    name: "aoc_defaults",
+    soc_specific: true,
+    sub_dir: "aoc",
+}
+
+prebuilt_etc {
+    name: "recording.gatf",
+    src: "bluenote/recording.gatf",
+    defaults: ["aoc_defaults"],
+}
+prebuilt_etc {
+    name: "template.xml",
+    src: "bluenote/template.xml",
+    defaults: ["aoc_defaults"],
+}
+prebuilt_etc {
+    name: "tuning_constraints_combination.xml",
+    src: "bluenote/tuning_constraints_combination.xml",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "compens_spk_l.conf",
+    src: "compensation/compens_spk_l.conf",
+    soc_specific: true,
+}
+prebuilt_etc {
+    name: "compens_spk_r.conf",
+    src: "compensation/compens_spk_r.conf",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "BLUETOOTH.dat",
+    src: "fortemedia/BLUETOOTH.dat",
+    defaults: ["aoc_defaults"],
+}
+prebuilt_etc {
+    name: "BLUETOOTH.mods",
+    src: "fortemedia/BLUETOOTH.mods",
+    defaults: ["aoc_defaults"],
+}
+prebuilt_etc {
+    name: "HANDSFREE.dat",
+    src: "fortemedia/HANDSFREE.dat",
+    defaults: ["aoc_defaults"],
+}
+prebuilt_etc {
+    name: "HANDSFREE.mods",
+    src: "fortemedia/HANDSFREE.mods",
+    defaults: ["aoc_defaults"],
+}
+prebuilt_etc {
+    name: "HANDSET.dat",
+    src: "fortemedia/HANDSET.dat",
+    defaults: ["aoc_defaults"],
+}
+prebuilt_etc {
+    name: "HANDSET.mods",
+    src: "fortemedia/HANDSET.mods",
+    defaults: ["aoc_defaults"],
+}
+prebuilt_etc {
+    name: "HEADSET.dat",
+    src: "fortemedia/HEADSET.dat",
+    defaults: ["aoc_defaults"],
+}
+prebuilt_etc {
+    name: "HEADSET.mods",
+    src: "fortemedia/HEADSET.mods",
+    defaults: ["aoc_defaults"],
+}
+prebuilt_etc {
+    name: "mcps.dat",
+    src: "fortemedia/mcps.dat",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "waves_config.ini",
+    src: "waves/waves_config.ini",
+    soc_specific: true,
+}
+prebuilt_etc {
+    name: "waves_preset.mps",
+    src: "waves/waves_preset.mps",
+    soc_specific: true,
+}
+prebuilt_etc {
+    name: "test_config.ini",
+    src: "waves/tests/test_config.ini",
+    soc_specific: true,
+}
+prebuilt_etc {
+    name: "test_preset.mps",
+    src: "waves/tests/test_preset.mps",
+    soc_specific: true,
+}
