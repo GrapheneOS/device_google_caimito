@@ -662,7 +662,10 @@
     </path>
 
     <path name="voice-hac">
-        <path name="voice-handset"/>
+        <ctl name="Boost Peak Current Limit" value="3.50A"/>
+        <ctl name="PCM Source" value="ASP"/>
+        <ctl name="AMP PCM Gain" value="11"/>
+        <ctl name="Main AMP Enable Switch" value="1"/>
     </path>
 
     <path name="voice-hac-handset">
@@ -673,10 +676,6 @@
         <ctl name="R Boost Peak Current Limit" value="2.50A"/>
         <ctl name="Main AMP Enable Switch" value="1"/>
         <ctl name="R Main AMP Enable Switch" value="1"/>
-        <ctl name="Fast Use Case Delta File" value="fast_switch3.txt" />
-        <ctl name="Fast Use Case Switch Enable" value="1" />
-        <ctl name="R Fast Use Case Delta File" value="fast_switch4.txt" />
-        <ctl name="R Fast Use Case Switch Enable" value="1" />
     </path>
 
     <path name="speaker-post">
@@ -695,10 +694,6 @@
     <!--<ctl name="R DSP RX2 Source" value="ASPRX2"/>-->
         <ctl name="R Main AMP Enable Switch" value="1"/>
         <ctl name="Main AMP Enable Switch" value="1"/>
-        <ctl name="Fast Use Case Delta File" value="fast_switch1.txt" />
-        <ctl name="Fast Use Case Switch Enable" value="1" />
-        <ctl name="R Fast Use Case Delta File" value="fast_switch2.txt" />
-        <ctl name="R Fast Use Case Switch Enable" value="1" />
         <ctl name="Digital PCM Volume" value="817"/>
         <ctl name="R Digital PCM Volume" value="817"/>
     </path>
