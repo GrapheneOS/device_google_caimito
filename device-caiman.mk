@@ -226,6 +226,9 @@ PRODUCT_PACKAGES += \
 	scd.conf \
 	lhd.conf
 
+# Display LBE
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
+
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
 	vendor.zram.size=50p \
