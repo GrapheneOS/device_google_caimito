@@ -16,12 +16,10 @@
 
 PRODUCT_SOONG_NAMESPACES += \
 	vendor/qcom/fingerprint/qfp-service \
-	vendor/qcom/fingerprint/QFingerprintService \
 	vendor/qcom/fingerprint/QFPCalibration \
 
 PRODUCT_PACKAGES += \
 	qfp-daemon \
-	QFingerprintService \
 	QFPCalibration \
 
 PRODUCT_COPY_FILES += \
