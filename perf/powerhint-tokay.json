@@ -1626,24 +1626,6 @@
       "Value": "camera"
     },
     {
-      "PowerHint": "CAMERA_STREAMING_EXTREME",
-      "Node": "VIRTUAL-SKIN-CPU-MID",
-      "Duration": 0,
-      "Value": "camera"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_EXTREME",
-      "Node": "VIRTUAL-SKIN-CPU-HIGH",
-      "Duration": 0,
-      "Value": "camera"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "PowerHALCameraRunning",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PowerHALCameraRunning",
       "Duration": 0,
@@ -1800,18 +1782,6 @@
       "Value": "camera"
     },
     {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "VIRTUAL-SKIN-CPU-MID",
-      "Duration": 0,
-      "Value": "camera"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "VIRTUAL-SKIN-CPU-HIGH",
-      "Duration": 0,
-      "Value": "camera"
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PowerHALCameraRunning",
       "Duration": 0,
@@ -1930,18 +1900,6 @@
       "Node": "CDCpuset",
       "Duration": 0,
       "Value": "0-7"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_STANDARD",
-      "Node": "VIRTUAL-SKIN-CPU-MID",
-      "Duration": 0,
-      "Value": "camera"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_STANDARD",
-      "Node": "VIRTUAL-SKIN-CPU-HIGH",
-      "Duration": 0,
-      "Value": "camera"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
