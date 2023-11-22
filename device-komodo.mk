@@ -47,9 +47,7 @@ $(call soong_config_set,lyric,tuning_product,komodo)
 $(call soong_config_set,google3a_config,target_device,komodo)
 
 # Display RRS default Config
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config=1008x2244@120
-# TODO: b/250788756 - the property will be phased out after HWC loads user-preferred mode
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.preferred_mode=1008x2244@120
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config=1008x2244@120:120
 
 # Display OP HZ Config
 PRODUCT_VENDOR_PROPERTIES += \
@@ -236,6 +234,9 @@ PRODUCT_PACKAGES += \
 	gps.xml \
 	scd.conf \
 	lhd.conf
+
+# Display LBE
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
 
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
