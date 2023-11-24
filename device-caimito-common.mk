@@ -39,6 +39,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_PERF_CONFIG_PATH)/powerhint-zuma.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint-proto.json
 
-# Copy init.p24.zuma.rc for proto devices
+# Copy init.zuma.rc for proto devices
 PRODUCT_COPY_FILES += \
-	device/google/zumapro/conf/init.p24.zuma.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.zuma.rc
+	device/google/zumapro/conf/init.zuma.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.zuma.rc
