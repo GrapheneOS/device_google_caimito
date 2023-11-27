@@ -147,25 +147,6 @@ PRODUCT_PACKAGES += \
 	libspatialaudio \
 	librondo
 
-# Bluetooth LE Audio
-PRODUCT_PRODUCT_PROPERTIES += \
-	ro.bluetooth.leaudio_switcher.supported=true \
-	bluetooth.profile.bap.unicast.client.enabled=true \
-	bluetooth.profile.csip.set_coordinator.enabled=true \
-	bluetooth.profile.hap.client.enabled=true \
-	bluetooth.profile.mcp.server.enabled=true \
-	bluetooth.profile.ccp.server.enabled=true \
-	bluetooth.profile.vcp.controller.enabled=true \
-
-# Bluetooth LE Audio enable hardware offloading
-PRODUCT_PRODUCT_PROPERTIES += \
-	ro.bluetooth.leaudio_offload.supported=true \
-	persist.bluetooth.leaudio_offload.disabled=false \
-
-# Bluetooth LE Auido offload capabilities setting
-PRODUCT_COPY_FILES += \
-	device/google/caimito/bluetooth/le_audio_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/le_audio_codec_capabilities.xml
-
 # Keymaster HAL
 #LOCAL_KEYMASTER_PRODUCT_PACKAGE ?= android.hardware.keymaster@4.1-service
 
@@ -274,3 +255,43 @@ PRODUCT_VENDOR_PROPERTIES += \
 # PKVM Memory Reclaim
 PRODUCT_VENDOR_PROPERTIES += \
     hypervisor.memory_reclaim.supported=1
+
+# Bluetooth LE Audio
+# Unicast
+PRODUCT_PRODUCT_PROPERTIES += \
+	bluetooth.profile.bap.unicast.client.enabled=true \
+	bluetooth.profile.csip.set_coordinator.enabled=true \
+	bluetooth.profile.hap.client.enabled=true \
+	bluetooth.profile.mcp.server.enabled=true \
+	bluetooth.profile.ccp.server.enabled=true \
+	bluetooth.profile.vcp.controller.enabled=true
+
+# LE Audio switcher in developer options
+PRODUCT_PRODUCT_PROPERTIES += \
+	ro.bluetooth.leaudio_switcher.supported=true \
+
+# Enable hardware offloading
+PRODUCT_PRODUCT_PROPERTIES += \
+	ro.bluetooth.leaudio_offload.supported=true \
+	persist.bluetooth.leaudio_offload.disabled=false
+
+# Bluetooth LE Audio CIS handover to SCO
+# Set the property only for the controller couldn't support CIS/SCO simultaneously. More detailed in b/242908683.
+PRODUCT_PRODUCT_PROPERTIES += \
+	persist.bluetooth.leaudio.notify.idle.during.call=true
+
+# LE Audio Offload Capabilities setting
+PRODUCT_COPY_FILES += \
+    device/google/caimito/bluetooth/le_audio_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/le_audio_codec_capabilities.xml
+
+# Disable LE Audio dual mic SWB call support
+# This may depend on the BT controller capability or the launch strategy
+# For example, P22 BT chip is not able to support 32k dual mic
+# P23a disabled the 32k dual mic as it is not in the phase 2 launch plan
+PRODUCT_PRODUCT_PROPERTIES += \
+    bluetooth.leaudio.dual_bidirection_swb.supported=true
+
+# LE Audio Unicast Allowlist
+PRODUCT_PRODUCT_PROPERTIES += \
+   persist.bluetooth.leaudio.allow_list=SM-R510
+
