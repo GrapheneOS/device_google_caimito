@@ -46,6 +46,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.ignore_hdr_camera_layer
 
 # display color data
 PRODUCT_COPY_FILES += \
+	device/google/caimito/tokay/panel_config_google-tk4a_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-tk4a_cal0.pb \
 	device/google/caimito/tokay/panel_config_google-tk4b_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/panel_config_google-tk4b_cal0.pb \
 	device/google/caimito/tokay/display_colordata_google-tk4a_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_google-tk4a_cal0.pb \
 	device/google/caimito/tokay/display_colordata_google-tk4b_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_google-tk4b_cal0.pb
