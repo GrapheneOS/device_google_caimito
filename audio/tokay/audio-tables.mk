@@ -16,6 +16,12 @@
 
 AUDIO_TABLE_FOLDER := tokay
 
+# Choose AIDL config by build flag.
+ifeq ($(RELEASE_PIXEL_AIDL_AUDIO_HAL),true)
+PRODUCT_SOONG_NAMESPACES += device/google/caimito/audio/$(AUDIO_TABLE_FOLDER)/aidl_config
+PRODUCT_PACKAGES += audio_aidl_configs
+
+else
 # Platform Configuration for AudioHAL / SoundTriggerHAL
 PRODUCT_COPY_FILES += \
     device/google/caimito/audio/$(AUDIO_TABLE_FOLDER)/config/audio_policy_configuration_bluetooth_legacy_hal.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_bluetooth_legacy_hal.xml \
@@ -33,6 +39,7 @@ PRODUCT_COPY_FILES += \
 # Mixer Path Configuration for AudioHAL
 PRODUCT_COPY_FILES += \
     device/google/caimito/audio/$(AUDIO_TABLE_FOLDER)/config/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
+endif
 
 # Speaker firmware files
 SPK_FIRMWARE_PATH := $(AUDIO_TABLE_FOLDER)/cs35l41/fw
