@@ -46,6 +46,8 @@ $(call soong_config_set,lyric,camera_hardware,caiman)
 $(call soong_config_set,lyric,tuning_product,caiman)
 $(call soong_config_set,google3a_config,target_device,caiman)
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.ignore_hdr_camera_layers=true
+
 # Init files
 PRODUCT_COPY_FILES += \
 	device/google/caimito/conf/init.caiman.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.caiman.rc
