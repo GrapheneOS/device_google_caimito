@@ -22,7 +22,8 @@ endif
 
 PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
-	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_charge_$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json
+	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_charge_$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json \
+	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/vt_estimation_model_$(TARGET_DEVICE).tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_estimation_model.tflite
 
 ifneq (,$(filter $(TARGET_DEVICE),komodo caiman tokay))
 PRODUCT_COPY_FILES += \
