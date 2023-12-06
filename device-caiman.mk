@@ -213,10 +213,6 @@ PRODUCT_PACKAGES += \
 # Display LBE
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
 
-#Thermal VT estimator
-PRODUCT_PACKAGES += \
-    libthermal_tflite_wrapper
-
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
 	vendor.zram.size=50p \
