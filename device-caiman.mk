@@ -235,7 +235,8 @@ endif
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.primarydisplay.op.hs_hz=120 \
     vendor.primarydisplay.op.ns_hz=60 \
-    vendor.primarydisplay.op.ns_min_dbv=1088
+    vendor.primarydisplay.op.ns_min_dbv=440 \
+    vendor.primarydisplay.op.hist_delta_th=15
 
 # Vibrator HAL
 ACTUATOR_MODEL := luxshare_ict_081545
