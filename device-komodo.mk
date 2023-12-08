@@ -61,7 +61,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.ignore_hdr_camera_layer
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.primarydisplay.op.hs_hz=120 \
     vendor.primarydisplay.op.ns_hz=60 \
-    vendor.primarydisplay.op.ns_min_dbv=1088
+    vendor.primarydisplay.op.ns_min_dbv=440 \
+    vendor.primarydisplay.op.hist_delta_th=15
 
 # Init files
 PRODUCT_COPY_FILES += \
