@@ -24,7 +24,7 @@
       <argument name="PollWaitMs" value="20000" />
       <argument name="ThermistorName" value="VIRTUAL-SKIN-SPEAKER" />
       <argument name="ThermistorType" value="UNKNOWN" />
-      <argument name="ThrottlingSeverity" value="MODERATE" />
+      <argument name="ThrottlingSeverity" value="LIGHT" />
     </feature>
     <feature name="RuntimeTuningDump" />
   </features>
@@ -55,6 +55,7 @@
     <tuner type="playback" name="waves">
       <argument name="Sink" value="SPK" />
       <argument name="ThermistorsName" value="VIRTUAL-SKIN-SPEAKER" />
+      <argument name="Extensions" value="StereoSpatializerIndicator" />
     </tuner>
     <tuner type="telephony" name="fortemedia">
       <argument name="VoIP_DLCHs" value="SPK:2,USB:2" />
