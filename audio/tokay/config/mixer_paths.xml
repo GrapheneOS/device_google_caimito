@@ -664,7 +664,7 @@
     <path name="voice-hac">
         <ctl name="Boost Peak Current Limit" value="3.50A"/>
         <ctl name="PCM Source" value="ASP"/>
-        <ctl name="AMP PCM Gain" value="11"/>
+        <ctl name="AMP PCM Gain" value="9"/>
         <ctl name="Main AMP Enable Switch" value="1"/>
     </path>
 
