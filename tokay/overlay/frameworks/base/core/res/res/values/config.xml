@@ -86,8 +86,12 @@
           <item>20000</item>
           <item>25000</item>
           <item>31000</item>
+          <item>41000</item>
           <item>51000</item>
+          <item>61000</item>
+          <item>71000</item>
           <item>81000</item>
+          <item>91000</item>
           <item>100000</item>
      </integer-array>
 
@@ -130,10 +134,14 @@
           <item>1041.39662279</item> <!-- 14000 - 20000 -->
           <item>1227.52633489</item> <!-- 20000 - 25000 -->
           <item>1331.28933608</item> <!-- 25000 - 31000 -->
-          <item>1414.57566867</item> <!-- 31000 - 51000 -->
-          <item>1553.22826182</item> <!-- 51000 - 81000 -->
-          <item>1614.01031782</item> <!-- 81000 - 100000 -->
-          <item>1800</item>          <!-- 100000+ -->
+          <item>1428.421149</item>   <!-- 31000 - 41000 -->
+          <item>1575.787970</item>   <!-- 41000 - 51000 -->
+          <item>1703.973078</item>   <!-- 51000 - 61000 -->
+          <item>1811.651453</item>   <!-- 61000 - 71000 -->
+          <item>1897.082235</item>   <!-- 71000 - 81000 -->
+          <item>1958.157391</item>   <!-- 81000 - 91000 -->
+          <item>1992.433376</item>   <!-- 91000 - 100000 -->
+          <item>2000</item>          <!-- 100000+  -->
      </array>
 
      <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
