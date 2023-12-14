@@ -585,7 +585,7 @@
             "Formula":"MAXIMUM",
             "Combination":["VIRTUAL-SKIN"],
             "Coefficient":[1.0],
-            "HotThreshold":["NAN", "NAN", "NAN", "NAN", "NAN", 64.0, "NAN"],
+            "HotThreshold":["NAN", "NAN", "NAN", "NAN", "NAN", 54.0, "NAN"],
             "HotHysteresis":[0.0, 0.0, 0.0, 0.0, 0.0, 1.9, 0.0],
             "Multiplier":0.001,
             "SendCallback":true,
