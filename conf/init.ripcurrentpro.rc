@@ -1,5 +1,5 @@
 # RipcurrentPro specific init.rc
-import /vendor/etc/init/hw/init.zumapro.rc
+import /vendor/etc/init/hw/init.${ro.board.platform}.board.rc
 
 on init && property:ro.vendor.factory=1
     import /vendor/etc/init/hw/init.factory.rc
