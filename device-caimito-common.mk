@@ -26,7 +26,8 @@ PRODUCT_COPY_FILES += \
 
 ifneq (,$(filter $(TARGET_DEVICE),komodo caiman tokay))
 PRODUCT_COPY_FILES += \
-	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_$(TARGET_DEVICE)_proto.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_proto.json
+	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/thermal_info_config_$(TARGET_DEVICE)_proto.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_proto.json \
+	$(TARGET_VENDOR_THERMAL_CONFIG_PATH)/vt_estimation_model_$(TARGET_DEVICE).tflite:$(TARGET_COPY_OUT_VENDOR)/etc/vt_estimation_model.tflite
 endif
 
 # Power HAL config
@@ -38,7 +39,3 @@ PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_PERF_CONFIG_PATH)/powerhint-$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_PERF_CONFIG_PATH)/powerhint-zuma.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint-proto.json
-
-# Copy init.zuma.rc for proto devices
-PRODUCT_COPY_FILES += \
-	device/google/zumapro/conf/init.zuma.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.zuma.rc
