@@ -62,6 +62,7 @@
       <argument name="VoIP_Rate" value="32000" />
       <argument name="BOOST_USB_SWB_CLK" value="y" />
       <argument name="BOOST_HANDSET_SWB_CLK" value="y" />
+      <argument name="MCPS_TABLE" value="y" />
       <argument name="CCA" value="UnsupportBands:48000,ExSharedBands:48000,VoIPMode:Dl" />
     </tuner>
     <tuner type="capture" name="gs_capture" />
