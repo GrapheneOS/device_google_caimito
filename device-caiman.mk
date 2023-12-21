@@ -21,7 +21,7 @@ ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
     USE_UWBFIELDTESTQM := true
 endif
 ifeq ($(filter factory_caiman, $(TARGET_PRODUCT)),)
-    include device/google/caimito/uwb/uwb_calibration.mk
+    include device/google/caimito/caiman/uwb/uwb_calibration.mk
 endif
 
 $(call inherit-product-if-exists, vendor/google_devices/caimito/prebuilts/device-vendor-caiman.mk)
@@ -198,7 +198,7 @@ PRODUCT_SOONG_NAMESPACES += vendor/google_devices/caimito/prebuilts
 
 # UWB
 PRODUCT_SOONG_NAMESPACES += \
-    device/google/caimito/uwb
+    device/google/caimito/caiman/uwb
 
 # Location
 # SDK build system
@@ -303,4 +303,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # LE Audio Unicast Allowlist
 PRODUCT_PRODUCT_PROPERTIES += \
    persist.bluetooth.leaudio.allow_list=SM-R510
+
+# Keyboard height ratio and bottom padding in dp for portrait mode
+PRODUCT_PRODUCT_PROPERTIES += \
+          ro.com.google.ime.kb_pad_port_b=8 \
+          ro.com.google.ime.height_ratio=1.12
 
