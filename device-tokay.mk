@@ -26,8 +26,8 @@ $(call inherit-product-if-exists, vendor/qorvo/uwb/qm35-hal/Device.mk)
 # display
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/tokay/overlay
 
-include device/google/caimito/audio/tokay/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
+include device/google/caimito/audio/tokay/audio-tables.mk
 include hardware/google/pixel/vibrator/cs40l26/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/syna/syna20.mk
