@@ -704,6 +704,12 @@
         <ctl name="R Main AMP Enable Switch" value="1"/>
     </path>
 
+    <path name="hdmi">
+    </path>
+
+    <path name="hdmi-post">
+    </path>
+
     <!-- Tx device -->
     <path name="handset-mic">
         <ctl name="Mic Spatial Module Enable" value="1"/>
