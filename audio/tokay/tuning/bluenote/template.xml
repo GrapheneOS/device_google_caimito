@@ -43,7 +43,24 @@
       <param default="0" id="27" name="ch0_assignFrom" type="int32"/>
       <param default="1" id="28" name="ch1_assignFrom" type="int32"/>
       <param default="2" id="29" name="ch2_assignFrom" type="int32"/>
-      <param default="0.333" id="30" max="1" min="0.01" name="alphaEnhancedRate" type="float"/>
+      <param default="0.33" id="30" name="alpha_enhancedRate" type="float"/>
+      <param default="0" id="31" name="swapOutputLR" type="int32"/>
+      <struct id="32">
+        <param default="0.0" name="CB_alpha_lowband" type="float"/>
+        <param default="0.0" name="CB_alpha_midband" type="float"/>
+        <param default="0.0" name="CB_alpha_highband" type="float"/>
+      </struct>
+      <struct id="33">
+        <param default="0.0" name="CB_epsilon_lowband" type="float"/>
+        <param default="0.0" name="CB_epsilon_midband" type="float"/>
+        <param default="0.0" name="CB_epsilon_highband" type="float"/>
+      </struct>
+      <struct id="34">
+        <param default="13" name="CB_fc_low_mid" type="int32"/>
+        <param default="22" name="CB_fc_mid_high" type="int32"/>
+        <param default="5" name="CB_smooth_span" type="int32"/>
+        <param default="1.0" name="CB_forget_factor" type="float"/>
+      </struct>
     </module>
     <module id="7" name="Multi Channel IIR 2">
       <param default="0" id="0" max="3" name="opMode_" type="uint32"/>
