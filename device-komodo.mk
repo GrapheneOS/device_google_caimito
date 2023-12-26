@@ -37,6 +37,7 @@ include device/google/caimito/audio/komodo/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
 include hardware/google/pixel/vibrator/cs40l26/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
+include device/google/gs-common/touch/gti/gti.mk
 include device/google/gs-common/touch/syna/syna20.mk
 include device/google/caimito/fingerprint/ultrasonic_udfps.mk
 -include vendor/samsung_slsi/gps/s5400/location/gnssd/device-gnss.mk
