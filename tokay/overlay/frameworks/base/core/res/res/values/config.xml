@@ -50,7 +50,7 @@
      <integer name="config_defaultRefreshRate">0</integer>
 
      <!-- The default peak refresh rate. -->
-     <integer name="config_defaultPeakRefreshRate">60</integer>
+     <integer name="config_defaultPeakRefreshRate">120</integer>
 
      <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
        The N entries of this array define N  1 zones as follows:
