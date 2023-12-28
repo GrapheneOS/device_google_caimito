@@ -136,7 +136,7 @@
     <bool translatable="false" name="config_wifiUseHalApiToDisableFwRoaming">true</bool>
 
     <!-- Indicate the driver doesn't support NL80211 Reg changed event -->
-    <bool translatable="false" name="config_wifiDriverSupportedNl80211RegChangedEvent">false</bool>
+    <bool translatable="false" name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
 
     <!-- boolean indicating whether or not to disable shutdown idle instance timer in the bridged mode when connected to a power source -->
     <bool translatable="false" name ="config_wifiFrameworkSoftApDisableBridgedModeShutdownIdleInstanceWhenCharging">true</bool>
@@ -167,7 +167,22 @@
     device mobility state and client mode RSSI monitoring. -->
     <bool translatable="false" name="config_wifiAdjustPollRssiIntervalEnabled">true</bool>
 
+    <!-- Boolean indicating whether the framework updates country from scan results when there is
+         no telephony country code. This is applied to all generic cases and might require the
+         regulatory approval (for example, FCC pre-approval is required according to "594280 D01
+         Software Configuration Control v02r01").-->
+    <bool translatable="false" name ="config_wifiUpdateCountryCodeFromScanResultGeneric">true</bool>
+
+    <!-- boolean indicating whether the caller thread needs to wait for destroyed listeners -->
+    <bool translatable="false" name ="config_wifiWaitForDestroyedListeners">true</bool>
+
+     <!-- Enable aggregation of Wifi link layer radio stats from all radios -->
+    <bool translatable="false" name="config_wifiLinkLayerAllRadiosStatsAggregationEnabled">true</bool>
+
     <bool translatable="false" name="config_wifiSaeUpgradeEnabled">false</bool>
+
+    <!-- Enable WPA2 to WPA3 auto-upgrade offload to capable Driver/Firmware -->
+    <bool translatable="false" name="config_wifiSaeUpgradeOffloadEnabled">true</bool>
 
     <!-- Boolean indicating performing a partial initial scan is enabled -->
     <bool translatable="false" name="config_wifiEnablePartialInitialScan">true</bool>
