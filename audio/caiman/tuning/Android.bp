@@ -36,6 +36,11 @@ prebuilt_etc {
     defaults: ["aoc_defaults"],
 }
 prebuilt_etc {
+    name: "smartfeature.gstf",
+    src: "bluenote/smartfeature.gstf",
+    defaults: ["aoc_defaults"],
+}
+prebuilt_etc {
     name: "template.xml",
     src: "bluenote/template.xml",
     defaults: ["aoc_defaults"],
