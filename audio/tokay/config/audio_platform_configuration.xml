@@ -249,7 +249,7 @@
 
     <features>
         <feature name="BatteryThrottle=Type:BCL_VOLTAGE,Name:BCL_AUDIO_BAACL,Strategy:MediaSpeakerAndScreenOn"/>
-        <feature name="PlaybackThermalThrottle=PollWaitMs:20000,ThermistorName:VIRTUAL-SKIN-SPEAKER,ThermistorType:UNKNOWN,ThrottlingSeverity:LIGHT"/>
+        <feature name="PlaybackThermalThrottle=PollWaitMs:20000,ThermistorName:VIRTUAL-SKIN-SPEAKER,ThermistorType:UNKNOWN,ThrottlingSeverity:LIGHT,SpeakerPowerPollWaitMs:5000"/>
     </features>
 
     <cfg_attr>
