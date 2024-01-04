@@ -1,0 +1,4 @@
+service vendor.threadnetwork_hal /apex/com.android.hardware.threadnetwork/bin/hw/android.hardware.threadnetwork-service spinel+socket:///data/vendor/bluetooth/thread_dispatcher_socket
+    class hal
+    user thread_network
+    group system
