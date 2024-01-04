@@ -114,6 +114,9 @@
     <ctl name="R Fast Use Case Switch Enable" value="0" />
     <ctl name="R Fast Use Case Delta File" value="fast_switch5.txt" />
 
+    <!-- HAC Max Amp switch init -->
+    <ctl name="HAC AMP EN" value="0"/>
+
     <!-- default EP volume -->
     <ctl name="PCM Playback Switch" value="1"/>
     <ctl name="PCM Playback Volume" value="10"/>
