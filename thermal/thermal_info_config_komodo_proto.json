@@ -901,6 +901,41 @@
             ]
         },
         {
+            "Name": "VIRTUAL-USB-THROTTLING",
+            "Type": "UNKNOWN",
+            "VirtualSensor": true,
+            "Formula": "WEIGHTED_AVG",
+            "TriggerSensor": "usb_pwr_therm",
+            "Combination": ["usb_pwr_therm"],
+            "Coefficient": [1.0],
+            "HotThreshold": ["NaN", "NaN", "NaN", "NaN", 55.0, "NaN", "NaN"],
+            "HotHysteresis": [0.0, 0.0, 0.0, 0.0, 1.9, 0.0, 0.0],
+            "BindedCdevInfo": [
+                {
+                    "CdevRequest": "usbc-port",
+                    "LimitInfo": [0, 0, 0, 0, 1, 1, 1]
+                }
+            ],
+            "Multiplier": 0.001,
+            "PollingDelay": 300000,
+            "PassiveDelay": 7000
+        },
+        {
+            "Name": "VIRTUAL-USB-UI",
+            "Type": "USB_PORT",
+            "VirtualSensor": true,
+            "Formula": "WEIGHTED_AVG",
+            "TriggerSensor": "usb_pwr_therm",
+            "Combination": ["usb_pwr_therm"],
+            "Coefficient": [1.0],
+            "HotThreshold": ["NaN", "NaN", "NaN", "NaN", "NaN", 57.0, "NaN"],
+            "HotHysteresis": [0.0, 0.0, 0.0, 0.0, 0.0, 1.9, 0.0],
+            "Multiplier": 0.001,
+            "PollingDelay": 300000,
+            "PassiveDelay": 7000,
+            "SendCallback": true
+        },
+        {
             "Name":"LITTLE",
             "Type":"CPU",
             "Multiplier":0.001
