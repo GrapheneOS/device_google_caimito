@@ -26,6 +26,10 @@ $(call inherit-product-if-exists, vendor/qorvo/uwb/qm35-hal/Device.mk)
 # display
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/tokay/overlay
 
+ifeq ($(RELEASE_PIXEL_AIDL_AUDIO_HAL),true)
+USE_AUDIO_HAL_AIDL := true
+endif
+
 include device/google/caimito/audio/tokay/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
 include hardware/google/pixel/vibrator/cs40l26/device.mk
