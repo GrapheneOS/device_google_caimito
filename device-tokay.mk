@@ -295,3 +295,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
    persist.bluetooth.leaudio.allow_list=SM-R510
 
+# Exynos RIL and telephony
+# Support RIL Domain-selection
+SUPPORT_RIL_DOMAIN_SELECTION := true
