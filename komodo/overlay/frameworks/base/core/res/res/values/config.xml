@@ -305,4 +305,9 @@
     <!-- Boolean indicating whether allow sending null to modem to clear the previous initial attach
          data profile -->
     <bool name="allow_clear_initial_attach_data_profile">true</bool>
+
+    <!-- MMS user agent string -->
+    <string name="config_mms_user_agent" translatable="false">ggx8b</string>
+    <!-- MMS user agent profile url -->
+    <string name="config_mms_user_agent_profile_url" translatable="false">http://www.gstatic.com/android/sms/GGX8B.xml</string>
 </resources>
