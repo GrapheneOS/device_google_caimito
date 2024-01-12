@@ -58,4 +58,6 @@ on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_complet
 
 # Start the twoshay touch service
 on property:sys.boot_completed=1
+    chown system input /dev/touch_offload
+    chmod 660 /dev/touch_offload
     start twoshay
