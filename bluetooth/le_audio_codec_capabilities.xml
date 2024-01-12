@@ -32,9 +32,6 @@
     <scenario encode="OneChanMono_24_2" decode="invalid"/>
     <scenario encode="TwoChanStereo_24_2" decode="invalid"/>
     <scenario encode="OneChanStereo_24_2" decode="invalid"/>
-    <scenario encode="OneChanMono_32_2" decode="invalid"/>
-    <scenario encode="TwoChanStereo_32_2" decode="invalid"/>
-    <scenario encode="OneChanStereo_32_2" decode="invalid"/>
     <scenario encode="OneChanMono_48_2" decode="invalid"/>
     <scenario encode="TwoChanStereo_48_2" decode="invalid"/>
     <scenario encode="OneChanStereo_48_2" decode="invalid"/>
