@@ -90,45 +90,10 @@
             "Type":"BCL_VOLTAGE"
         },
         {
-            "Name":"FLASH_LED_REDUCE",
-            "Type":"UNKNOWN",
-            "VirtualSensor":true,
-            "Formula":"COUNT_THRESHOLD",
-            "TriggerSensor": "vdroop2",
-            "Combination":["battery", "battery_cycle", "vdroop2"],
-            "Coefficient":[-10000, 400, 1000],
-            "HotThreshold":["NAN", "NAN", "NAN", "NAN", 3.00, "NAN", "NAN"],
-            "Multiplier":1,
-            "PollingDelay":0,
-            "PassiveDelay":1000,
-            "SendCallback":true,
-            "SendPowerHint":true
-        },
-        {
             "Name":"soc",
             "Type":"BCL_PERCENTAGE",
             "HotThreshold":["NAN", "NAN", 80, "NAN", "NAN", "NAN", "NAN"],
             "Multiplier":1
-        },
-        {
-            "Name":"batoilo",
-            "Type":"BCL_CURRENT",
-            "HotThreshold":["NAN", "NAN", "NAN", "NAN", 5000, "NAN", "NAN"],
-            "HotHysteresis":[0.0, 0.0, 0.0, 0.0, 100, 0.0, 0.0],
-            "Multiplier":1,
-            "SendCallback":true,
-            "PollingDelay":0,
-            "PassiveDelay":1000
-        },
-        {
-            "Name":"batoilo2",
-            "Type":"BCL_CURRENT",
-            "HotThreshold":["NAN", "NAN", "NAN", "NAN", 8000, "NAN", "NAN"],
-            "HotHysteresis":[0.0, 0.0, 0.0, 0.0, 100, 0.0, 0.0],
-            "Multiplier":1,
-            "SendCallback":true,
-            "PollingDelay":0,
-            "PassiveDelay":1000
         },
         {
             "Name":"BCL_AUDIO_BAACL",
@@ -143,36 +108,6 @@
             "PassiveDelay":1000,
             "Multiplier":1,
             "SendCallback":true
-        },
-        {
-            "Name":"vdroop1",
-            "Type":"BCL_VOLTAGE",
-            "HotThreshold":["NAN", "NAN", "NAN", "NAN", 1200, "NAN", "NAN"],
-            "HotHysteresis":[0.0, 0.0, 0.0, 0.0, 100, 0.0, 0.0],
-            "Multiplier":1,
-            "SendCallback":true,
-            "PollingDelay":0,
-            "PassiveDelay":1000
-        },
-        {
-            "Name":"vdroop2",
-            "Type":"BCL_VOLTAGE",
-            "HotThreshold":["NAN", "NAN", "NAN", "NAN", 1000, "NAN", "NAN"],
-            "HotHysteresis":[0.0, 0.0, 0.0, 0.0, 100, 0.0, 0.0],
-            "Multiplier":1,
-            "SendCallback":true,
-            "PollingDelay":0,
-            "PassiveDelay":1000
-        },
-        {
-            "Name":"smpl_gm",
-            "Type":"BCL_VOLTAGE",
-            "HotThreshold":["NAN", "NAN", "NAN", "NAN", 1100, "NAN", "NAN"],
-            "HotHysteresis":[0.0, 0.0, 0.0, 0.0, 100, 0.0, 0.0],
-            "Multiplier":1,
-            "SendCallback":true,
-            "PollingDelay":0,
-            "PassiveDelay":1000
         },
         {
             "Name":"VIRTUAL-BTS-WINDOW-PARTIAL",
