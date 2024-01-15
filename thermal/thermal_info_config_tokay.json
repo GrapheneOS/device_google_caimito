@@ -154,20 +154,70 @@
             "Multiplier": 0.001
         },
         {
-            "Name":"VIRTUAL-SKIN",
-            "Type":"SKIN",
+            "Name": "VIRTUAL-SKIN-LEGACY",
+            "Type": "UNKNOWN",
             "Version":"7.0",
-            "VirtualSensor":true,
-            "TriggerSensor": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
-            "Formula":"MAXIMUM",
+            "VirtualSensor": true,
+            "Formula": "MAXIMUM",
             "Combination": ["VIRTUAL-SKIN-SUB-0", "VIRTUAL-SKIN-SUB-1", "VIRTUAL-SKIN-SUB-2", "VIRTUAL-SKIN-SUB-3"],
             "Coefficient": [1.0, 1.0, 1.0, 1.0],
-            "HotThreshold":["NAN", 39.0, 43.0, 45.0, 46.5, 52.0, 55.0],
-            "HotHysteresis":[0.0, 1.9, 1.9, 1.9, 1.4, 1.9, 1.9],
-            "Multiplier":0.001,
-            "SendCallback":true,
-            "PollingDelay":300000,
-            "PassiveDelay":7000,
+            "Multiplier": 0.001,
+            "PollingDelay": 300000,
+            "PassiveDelay": 7000
+        },
+        {
+            "Name": "VIRTUAL-SKIN-MODEL",
+            "Type": "UNKNOWN",
+            "VirtualSensor": true,
+            "ModelPath": "vt_estimation_model.tflite",
+            "Formula": "USE_ML_MODEL",
+            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
+            "Coefficient": [1.0],
+            "Multiplier": 0.001,
+            "PollingDelay": 300000,
+            "PassiveDelay": 7000
+        },
+        {
+            "Name": "VIRTUAL-SKIN-MODEL-LEGACY-DIFF",
+            "Type": "UNKNOWN",
+            "VirtualSensor": true,
+            "Hidden": true,
+            "Formula": "WEIGHTED_AVG",
+            "Combination": ["VIRTUAL-SKIN-MODEL", "VIRTUAL-SKIN-LEGACY"],
+            "Coefficient": [1.0, -1.0],
+            "Multiplier": 1,
+            "PollingDelay": 300000,
+            "PassiveDelay": 7000
+        },
+        {
+            "Name": "STATS-UPDATOR",
+            "Type": "UNKNOWN",
+            "VirtualSensor": true,
+            "Hidden": true,
+            "TriggerSensor": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
+            "Formula": "WEIGHTED_AVG",
+            "Combination": ["VIRTUAL-SKIN-MODEL", "VIRTUAL-SKIN-LEGACY", "VIRTUAL-SKIN-MODEL-LEGACY-DIFF"],
+            "Coefficient": [0.0, 0.0, 0.0],
+            "Multiplier": 1,
+            "SendPowerHint": true,
+            "PollingDelay": 300000,
+            "PassiveDelay": 7000
+        },
+        {
+            "Name": "VIRTUAL-SKIN",
+            "Type": "SKIN",
+            "Version": "6.1",
+            "VirtualSensor": true,
+            "TriggerSensor": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
+            "Formula": "MAXIMUM",
+            "Combination": ["VIRTUAL-SKIN-LEGACY"],
+            "Coefficient": [1],
+            "HotThreshold": ["NAN", 39.0, 43.0, 45.0, 46.5, 52.0, 55.0],
+            "HotHysteresis": [0.0, 1.9, 1.9, 1.9, 1.4, 1.9, 1.9],
+            "Multiplier": 0.001,
+            "SendCallback": true,
+            "PollingDelay": 300000,
+            "PassiveDelay": 7000,
             "BindedCdevInfo": [
                 {
                     "CdevRequest": "tpu_cooling",
@@ -178,22 +228,6 @@
                     "LimitInfo": [0, 0, 0, 0, 0, 6, 6]
                 }
             ]
-        },
-        {
-            "Name":"VIRTUAL-SKIN-MODEL",
-            "Type":"UNKNOWN",
-            "VirtualSensor":true,
-            "ModelPath":"vt_estimation_model.tflite",
-            "TriggerSensor":["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "btmspkr_therm"],
-            "Formula":"USE_ML_MODEL",
-            "Combination":["north_therm","soc_therm","charging_therm","disp_therm","battery","quiet_therm","usb_pwr_therm","rfpa_therm","btmspkr_therm"],
-            "Coefficient":[1.0],
-            "HotThreshold":["NAN", 39.0, 43.0, 45.0, 46.5, 52.0, 55.0],
-            "HotHysteresis":[0.0, 1.9, 1.9, 1.9, 1.4, 1.9, 1.9],
-            "Multiplier":0.001,
-            "SendPowerHint":true,
-            "PollingDelay":300000,
-            "PassiveDelay":7000
         },
         {
             "Name":"VIRTUAL-SKIN-HINT",
@@ -840,10 +874,6 @@
                     "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
                 },
                 {
-                    "Name": "VIRTUAL-SKIN",
-                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
-                },
-                {
                     "Name": "VIRTUAL-SKIN-SUB-0",
                     "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
                 },
@@ -858,8 +888,50 @@
                 {
                     "Name": "VIRTUAL-SKIN-SUB-3",
                     "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
+                },
+                {
+                    "Name": "VIRTUAL-SKIN",
+                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
+                },
+                {
+                    "Name": "VIRTUAL-SKIN-LEGACY",
+                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
+                },
+                {
+                    "Name": "VIRTUAL-SKIN-MODEL",
+                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
+                },
+                {
+                    "Name": "VIRTUAL-SKIN-MODEL-LEGACY-DIFF",
+                    "LoggingName": "MODEL-LEGACY-0.5",
+                    "Thresholds": [
+                        -4500, -4000, -3500, -3000, -2500, -2000, -1500, -1000, -500, 0,
+                        500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500
+                    ]
+                },
+                {
+                    "Name": "VIRTUAL-SKIN-MODEL-LEGACY-DIFF",
+                    "LoggingName": "MODEL-LEGACY-1",
+                    "Thresholds": [
+                        -13000, -12000, -11000, -10000, -9000, -8000, -7000, -6000, -5000,
+                        -4000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000
+                    ]
                 }
-            ]
+            ],
+            "Abnormality": {
+                "Outlier": {
+                    "Configs": [
+                        {
+                            "Monitor": ["VIRTUAL-SKIN-MODEL"],
+                            "TempRange": [0.0, 55.0]
+                        },
+                        {
+                            "Monitor": ["VIRTUAL-SKIN-MODEL-LEGACY-DIFF"],
+                            "TempRange": [-12000, 12000]
+                        }
+                    ]
+                }
+            }
         },
         "CoolingDevices": {
             "RecordVotePerSensor": {
