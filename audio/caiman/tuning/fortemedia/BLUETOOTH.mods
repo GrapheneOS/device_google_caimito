@@ -3,7 +3,7 @@
 #EXPORT_FLAG  BLUETOOTH
 #PARAM_MODE   FULL
 #SAVE_MODE  3
-#SAVE_TIME  2023-12-21 16:51:54
+#SAVE_TIME  2024-01-11 16:48:20
 
 #CASE_NAME  BLUETOOTH-BT_HAC-VOICE_GENERIC-NB
 #PARAM_TYPE  TX+2RX
@@ -8124,9 +8124,9 @@
 27    0x0FF7    //TX_PGA_0
 28    0x0FF7    //TX_PGA_1
 29    0x0FF7    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0001    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -13514,9 +13514,9 @@
 27    0x0B0B    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -16209,9 +16209,9 @@
 27    0x0A6D    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -18904,9 +18904,9 @@
 27    0x0915    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -21599,9 +21599,9 @@
 27    0x0915    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0000    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -24294,9 +24294,9 @@
 27    0x0915    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -26989,9 +26989,9 @@
 27    0x0B0B    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -29684,9 +29684,9 @@
 27    0x0A6D    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -32379,9 +32379,9 @@
 27    0x0915    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -35074,9 +35074,9 @@
 27    0x0915    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0000    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -37769,9 +37769,9 @@
 27    0x0915    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -40464,9 +40464,9 @@
 27    0x0B0B    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -43159,9 +43159,9 @@
 27    0x0A6D    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -45854,9 +45854,9 @@
 27    0x0915    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -48549,9 +48549,9 @@
 27    0x0915    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0000    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -51244,9 +51244,9 @@
 27    0x0915    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -53939,9 +53939,9 @@
 27    0x0B0B    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -56634,9 +56634,9 @@
 27    0x0A6D    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -59329,9 +59329,9 @@
 27    0x0915    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -62024,9 +62024,9 @@
 27    0x0915    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0000    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -64719,9 +64719,9 @@
 27    0x0915    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0002    //TX_MICS_FOR_BF
@@ -67414,9 +67414,9 @@
 27    0x0800    //TX_PGA_0
 28    0x0800    //TX_PGA_1
 29    0x0800    //TX_PGA_2
-30    0x0000    //TX_PGA_3
-31    0x0000    //TX_PGA_4
-32    0x0000    //TX_PGA_5
+30    0x0800    //TX_PGA_3
+31    0x0800    //TX_PGA_4
+32    0x0800    //TX_PGA_5
 33    0x0000    //TX_MIC_PAIRS
 34    0x0000    //TX_MIC_PAIRS_HS
 35    0x0000    //TX_MICS_FOR_BF
