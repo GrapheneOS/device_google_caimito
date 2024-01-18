@@ -338,3 +338,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
           ro.com.google.ime.kb_pad_port_b=8 \
           ro.com.google.ime.height_ratio=1.12
 
+# Exynos RIL and telephony
+# Support RIL Domain-selection
+SUPPORT_RIL_DOMAIN_SELECTION := true
