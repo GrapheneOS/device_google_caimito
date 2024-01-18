@@ -63,4 +63,11 @@
 
     <!-- The time (in ms) needed to trigger the lock icon view's long-press affordance -->
     <integer name="config_lockIconLongPress" translatable="false">100</integer>
+
+    <!-- The properties of the face auth camera in pixels -->
+    <integer-array name="config_face_auth_props">
+      <item>640</item>  <!-- sensorLocationX -->
+      <item>68</item>   <!-- sensorLocationY -->
+      <item>34</item>   <!--sensorRadius -->
+    </integer-array>
 </resources>
