@@ -170,9 +170,17 @@
             "Formula": "MAXIMUM",
             "Combination": ["VIRTUAL-SKIN-SUB-0", "VIRTUAL-SKIN-SUB-1", "VIRTUAL-SKIN-SUB-2", "VIRTUAL-SKIN-SUB-3"],
             "Coefficient": [1.0, 1.0, 1.0, 1.0],
-            "Multiplier": 0.001,
-            "PollingDelay": 300000,
-            "PassiveDelay": 7000
+            "Multiplier": 0.001
+        },
+        {
+            "Name": "VIRTUAL-SKIN-LEGACY-SHUTDOWN",
+            "Type": "UNKNOWN",
+            "Hidden": true,
+            "VirtualSensor": true,
+            "Formula": "COUNT_THRESHOLD",
+            "Combination": ["VIRTUAL-SKIN-LEGACY"],
+            "Coefficient": [55.0],
+            "Multiplier": 1.0
         },
         {
             "Name": "VIRTUAL-SKIN-MODEL",
@@ -183,9 +191,7 @@
             "Combination": ["VSYS_PWR_CAMERA", "VSYS_PWR_DISPLAY", "VSYS_PWR_MMWAVE", "VSYS_PWR_MODEM", "VSYS_PWR_RFFE", "VSYS_PWR_WLAN_BT", "battery", "btmspkr_therm", "charging_therm", "disp_therm", "north_therm", "quiet_therm", "rfpa_therm", "soc_therm", "usb_pwr_therm"],
             "CombinationType":["ODPM", "ODPM", "ODPM", "ODPM", "ODPM", "ODPM", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR"],
             "Coefficient": [1.0],
-            "Multiplier": 0.001,
-            "PollingDelay": 300000,
-            "PassiveDelay": 7000
+            "Multiplier": 0.001
         },
         {
             "Name": "VIRTUAL-SKIN-MODEL-LEGACY-DIFF",
@@ -195,9 +201,7 @@
             "Formula": "WEIGHTED_AVG",
             "Combination": ["VIRTUAL-SKIN-MODEL", "VIRTUAL-SKIN-LEGACY"],
             "Coefficient": [1.0, -1.0],
-            "Multiplier": 1,
-            "PollingDelay": 300000,
-            "PassiveDelay": 7000
+            "Multiplier": 1
         },
         {
             "Name": "STATS-UPDATOR",
@@ -220,8 +224,9 @@
             "VirtualSensor": true,
             "TriggerSensor": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
             "Formula": "MAXIMUM",
-            "Combination": ["VIRTUAL-SKIN-LEGACY"],
-            "Coefficient": [1],
+            "Combination": ["VIRTUAL-SKIN-MODEL", "VIRTUAL-SKIN-LEGACY"],
+            "Coefficient": [1.0, "VIRTUAL-SKIN-LEGACY-SHUTDOWN"],
+            "CoefficientType":["CONSTANT", "SENSOR"],
             "HotThreshold": ["NAN", 39.0, 43.0, 45.0, 46.5, 52.0, 55.0],
             "HotHysteresis": [0.0, 1.9, 1.9, 1.9, 1.4, 1.9, 1.9],
             "Multiplier": 0.001,
