@@ -29,7 +29,6 @@ include hardware/google/pixel/vibrator/cs40l26/device-stereo.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/stm/stm20.mk
 include device/google/caimito/fingerprint/ultrasonic_udfps.mk
--include vendor/samsung_slsi/gps/s5400/location/gnssd/device-gnss.mk
 
 # go/lyric-soong-variables
 # Set to 'ripcurrent' as ripcurrent camera service is compatible with ripcurrent24.
@@ -199,6 +198,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/caimito/prebuilts
 
 # Location
+# iGNSS
+-include vendor/samsung_slsi/gps/s5400/device-gnss.mk
+# gps.cfg
+PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/ripcurrent24
+$(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
+PRODUCT_PACKAGES += gps.cfg
+# eGNSS
 # SDK build system
 $(call soong_config_set, include_libsitril-gps-wifi, board_without_radio, $(BOARD_WITHOUT_RADIO))
 include device/google/gs-common/gps/brcm/device.mk
