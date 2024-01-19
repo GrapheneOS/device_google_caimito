@@ -17,7 +17,8 @@
 <!-- Phone app resources that may need to be customized
      for different hardware or product builds. -->
 <resources>
-    <!-- Flag specifying whether the AOSP domain selection is enabled or
-         the device should fallback to the modem based domain selection architecture. -->
-    <bool name="config_enable_aosp_domain_selection">true</bool>
+    <!-- The component name(a flattened ComponentName string) for the telephony domain selection
+         service. The device should fallback to the modem based domain selection architecture
+         if this is not configured. -->
+    <string name="config_domain_selection_service_component_name" translatable="false">com.android.phone/com.android.services.telephony.domainselection.TelephonyDomainSelectionService</string>
 </resources>
