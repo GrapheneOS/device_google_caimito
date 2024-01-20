@@ -22,6 +22,7 @@ soong_config_string_variable {
         "factory",
         "user",
         "userdebug",
+        "eng",
     ],
 }
 
@@ -42,12 +43,15 @@ gps_prebuilt_etc {
             userdebug: {
                 src: "userdebug/gps.xml",
             },
+            eng: {
+                src: "userdebug/gps.xml",
+            },
             factory: {
                 src: "factory/gps.xml",
             },
             conditions_default: {
                 src: "user/gps.xml",
-            }
+            },
         },
     },
     relative_install_path: "gnss",
@@ -64,12 +68,15 @@ gps_prebuilt_etc {
             userdebug: {
                 src: "userdebug/lhd.conf",
             },
+            eng: {
+                src: "userdebug/lhd.conf",
+            },
             factory: {
                 src: "factory/lhd.conf",
             },
             conditions_default: {
-               src: "user/lhd.conf",
-            }
+                src: "user/lhd.conf",
+            },
         },
     },
     relative_install_path: "gnss",
@@ -86,12 +93,15 @@ gps_prebuilt_etc {
             userdebug: {
                 src: "userdebug/scd.conf",
             },
+            eng: {
+                src: "userdebug/scd.conf",
+            },
             factory: {
                 src: "factory/scd.conf",
             },
             conditions_default: {
                 src: "user/scd.conf",
-            }
+            },
         },
     },
     relative_install_path: "gnss",
