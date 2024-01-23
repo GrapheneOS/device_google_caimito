@@ -277,6 +277,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 	bluetooth.profile.ccp.server.enabled=true \
 	bluetooth.profile.vcp.controller.enabled=true
 
+# Set support one-handed mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
+
 ifeq ($(RELEASE_PIXEL_BROADCAST_ENABLED), true)
 PRODUCT_PRODUCT_PROPERTIES += \
 	bluetooth.profile.bap.broadcast.assist.enabled=true \
