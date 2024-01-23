@@ -116,6 +116,9 @@
   <ctl name="R Fast Use Case Switch Enable" value="0" />
   <ctl name="R Fast Use Case Delta File" value="fast_switch5.txt" />
 
+  <!-- HAC Max Amp switch init -->
+  <ctl name="HAC AMP EN" value="0" />
+
   <!-- default EP volume -->
   <ctl name="PCM Playback Switch" value="1" />
   <ctl name="PCM Playback Volume" value="10" />
@@ -233,6 +236,7 @@
   <ctl name="EP6 TX Mixer INCALL_TX" value="0" />
   <ctl name="NoHost1 TX Mixer INCALL_TX" value="0" />
 
+  <ctl name="EP5 TX Mixer INTERNAL_MIC_US_TX" value="0" />
   <ctl name="EP4 TX Mixer I2S_2_TX" value="0" />
 
   <!-- AoC Mic setting -->
@@ -241,7 +245,7 @@
   <ctl name="MIC Record Soft Gain (dB)" value="-40" />
 
   <!-- USB setting v2 -->
-  <ctl name="USB Bus ID v2" value="2" />
+  <ctl name="USB Bus ID v2" value="1" />
   <ctl name="USB Dev ID v2" value="2" />
   <ctl name="USB Playback EP ID v2" value="1" />
   <ctl name="USB Playback FORMAT v2" value="0" />
@@ -266,6 +270,12 @@
   <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="-1" />
   <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1" />
   <ctl name="Audio Capture Mic Source" value="Builtin_MIC" />
+
+  <!-- audio Ultrasound mic default state -->
+  <ctl name="BUILDIN US MIC ID CAPTURE LIST" id="0" value="-1" />
+  <ctl name="BUILDIN US MIC ID CAPTURE LIST" id="1" value="-1" />
+  <ctl name="BUILDIN US MIC ID CAPTURE LIST" id="2" value="-1" />
+  <ctl name="BUILDIN US MIC ID CAPTURE LIST" id="3" value="-1" />
 
   <!-- sidetone controls -->
   <ctl name="Sidetone Enable" value="0" />
@@ -317,7 +327,6 @@
   <ctl name="Decoder Reference Enable" value="0" />
   <ctl name="LVM Enable" value="0" />
 
-  <ctl name="AoC Chirp Enable" value="0" />
   <!-- sidetone dynamic control -->
   <path name="sidetone-for handset">
     <!-- 1065353216 = 0x3f800000 = 1.0 -->
@@ -1080,6 +1089,38 @@
 
   <path name="microphones -> hotword-lookback-capture-0" />
 
+  <path name="ultrasound-microphones -> ultrasound-capture-0">
+    <ctl name="EP5 TX Mixer INTERNAL_MIC_US_TX" value="1" />
+  </path>
+
+  <path name="microphones -> mmap-capture-0">
+    <ctl name="EP2 TX Mixer INTERNAL_MIC_TX" value="1" />
+  </path>
+
+  <path name="back-microphones -> mmap-capture-0">
+    <path name="microphones -> mmap-capture-0" />
+  </path>
+
+  <path name="usb-microphones -> mmap-capture-0">
+    <ctl name="EP2 TX Mixer USB_TX" value="1" />
+  </path>
+
+  <path name="usb-headset-microphones -> mmap-capture-0">
+    <path name="usb-microphones -> mmap-capture-0" />
+  </path>
+
+  <path name="usb-device-microphones -> mmap-capture-0">
+    <path name="usb-microphones -> mmap-capture-0" />
+  </path>
+
+  <path name="bluetooth-sco-headset-microphones -> mmap-capture-0">
+    <ctl name="EP2 TX Mixer BT_TX" value="1" />
+  </path>
+
+  <path name="bluetooth-low-energy-headset-microphones -> mmap-capture-0">
+    <ctl name="EP2 TX Mixer BT_TX" value="1" />
+  </path>
+
   <!-- voice-call dynamic route -->
   <path name="voice-call-downlink-0 -> speaker">
     <ctl name="TDM_0_RX Mixer EP5" value="1" />
@@ -1177,7 +1218,7 @@
     <ctl name="Incall Capture Stream0" value="UL_DL" />
   </path>
 
-  <path name="telephony-rx (MIC) -> in-call-capture-0">
+  <path name="telephony-rx -> in-call-capture-0">
     <ctl name="Incall Capture Stream0" value="DL" />
   </path>
 
@@ -1193,7 +1234,7 @@
     <ctl name="Incall Capture Stream1" value="UL_DL" />
   </path>
 
-  <path name="telephony-rx (MIC) -> in-call-capture-1">
+  <path name="telephony-rx -> in-call-capture-1">
     <ctl name="Incall Capture Stream1" value="DL" />
   </path>
 
@@ -1209,32 +1250,8 @@
     <ctl name="Incall Capture Stream2" value="UL_DL" />
   </path>
 
-  <path name="telephony-rx (MIC) -> in-call-capture-2">
+  <path name="telephony-rx -> in-call-capture-2">
     <ctl name="Incall Capture Stream2" value="DL" />
-  </path>
-
-  <path name="microphones -> mmap-capture-0">
-    <ctl name="EP2 TX Mixer INTERNAL_MIC_TX" value="1" />
-  </path>
-
-  <path name="usb-microphones -> mmap-capture-0">
-    <ctl name="EP2 TX Mixer USB_TX" value="1" />
-  </path>
-
-  <path name="usb-headset-microphones -> mmap-capture-0">
-    <path name="usb-microphones -> mmap-capture-0" />
-  </path>
-
-  <path name="usb-device-microphones -> mmap-capture-0">
-    <path name="usb-microphones -> mmap-capture-0" />
-  </path>
-
-  <path name="bluetooth-sco-headset-microphones -> mmap-capture-0">
-    <ctl name="EP2 TX Mixer BT_TX" value="1" />
-  </path>
-
-  <path name="bluetooth-low-energy-headset-microphones -> mmap-capture-0">
-    <ctl name="EP2 TX Mixer BT_TX" value="1" />
   </path>
 
   <!-- codec setting -->
@@ -1249,7 +1266,13 @@
     <ctl name="PCM Source" value="ASP" />
     <ctl name="AMP PCM Gain" value="7" />
     <ctl name="Main AMP Enable Switch" value="1" />
-    <ctl name="AoC Chirp Enable" value="1" />
+  </path>
+
+  <path name="speaker-earpiece (VOICE,HAC)">
+    <ctl name="PCM Source" value="ASP" />
+    <ctl name="AMP PCM Gain" value="10" />
+    <ctl name="Main AMP Enable Switch" value="1" />
+    <ctl name="HAC AMP EN" value="1" />
   </path>
 
   <path name="speaker">
@@ -1281,30 +1304,29 @@
   </path>
 
   <!-- Tx device -->
-  <path name="microphones">
+  <path name="builtin-mic-id-capture-list">
     <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0" />
     <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1" />
     <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2" />
     <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1" />
+  </path>
+
+  <path name="microphones">
+    <path name="builtin-mic-id-capture-list" />
+    <ctl name="Mic Spatial Module Enable" value="1" />
     <ctl name="MIC DC Blocker" value="1" />
     <ctl name="MIC Record Soft Gain (dB)" value="22" />
   </path>
 
   <path name="microphones (VOICE)">
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1" />
+    <path name="builtin-mic-id-capture-list" />
     <ctl name="MIC DC Blocker" value="1" />
     <ctl name="MIC HW Gain At High Power Mode (cB)" value="130" />
     <ctl name="MIC Record Soft Gain (dB)" value="0" />
   </path>
 
   <path name="microphones (VOICE_RECOGNITION)">
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1" />
+    <path name="builtin-mic-id-capture-list" />
     <ctl name="MIC DC Blocker" value="1" />
     <ctl name="MIC Record Soft Gain (dB)" value="22" />
   </path>
@@ -1316,91 +1338,51 @@
   </path>
 
   <path name="microphones (SOUND_TRIGGER_AEC)">
-    <ctl name="Audio Capture Eraser Enable" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1" />
+    <path name="builtin-mic-id-capture-list" />
     <ctl name="MIC DC Blocker" value="1" />
+    <ctl name="Audio Capture Eraser Enable" value="1" />
     <ctl name="Audio Capture Mic Source" value="ERASER" />
     <ctl name="MIC Record Soft Gain (dB)" value="0" />
   </path>
 
-  <path name="back-microphones">
+  <path name="microphones (CAMCORDER)">
+    <path name="builtin-mic-id-capture-list" />
     <ctl name="Mic Spatial Module Enable" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1" />
     <ctl name="MIC DC Blocker" value="1" />
-    <ctl name="MIC Record Soft Gain (dB)" value="22" />
+    <ctl name="MIC Record Soft Gain (dB)" value="0" />
+  </path>
+
+  <path name="microphones (UNPROCESSED)">
+    <path name="builtin-mic-id-capture-list" />
+    <ctl name="MIC DC Blocker" value="1" />
+    <ctl name="MIC Record Soft Gain (dB)" value="5" />
+  </path>
+
+  <path name="back-microphones">
+    <path name="microphones" />
   </path>
 
   <path name="back-microphones (VOICE)">
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1" />
-    <ctl name="MIC DC Blocker" value="1" />
-    <ctl name="MIC HW Gain At High Power Mode (cB)" value="130" />
-    <ctl name="MIC Record Soft Gain (dB)" value="0" />
-  </path>
-
-  <path name="microphones (CAMCORDER)">
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1" />
-    <ctl name="MIC DC Blocker" value="1" />
-    <ctl name="MIC Record Soft Gain (dB)" value="0" />
+    <path name="microphones (VOICE)" />
   </path>
 
   <path name="back-microphones (CAMCORDER)">
     <path name="microphones (CAMCORDER)" />
   </path>
 
-  <path name="camcorder-mic">
-    <ctl name="Mic Spatial Module Enable" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1" />
-    <ctl name="MIC DC Blocker" value="1" />
-    <ctl name="MIC Record Soft Gain (dB)" value="0" />
+  <path name="back-microphones (UNPROCESSED)">
+    <path name="microphones (UNPROCESSED)" />
   </path>
 
-  <path name="unprocessed-mic">
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1" />
-    <ctl name="MIC DC Blocker" value="1" />
-    <ctl name="MIC Record Soft Gain (dB)" value="5" />
-  </path>
-
-  <path name="unprocessed-dual-mic">
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1" />
-    <ctl name="MIC DC Blocker" value="1" />
-    <ctl name="MIC Record Soft Gain (dB)" value="5" />
-  </path>
-
-  <path name="unprocessed-triple-mic">
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1" />
-    <ctl name="MIC DC Blocker" value="1" />
-    <ctl name="MIC Record Soft Gain (dB)" value="5" />
+  <path name="ultrasound-microphones">
+    <ctl name="BUILDIN US MIC ID CAPTURE LIST" id="0" value="0" />
+    <ctl name="BUILDIN US MIC ID CAPTURE LIST" id="1" value="1" />
+    <ctl name="BUILDIN US MIC ID CAPTURE LIST" id="2" value="-1" />
+    <ctl name="BUILDIN US MIC ID CAPTURE LIST" id="3" value="-1" />
   </path>
 
   <path name="bluetooth-sco-headset-microphones">
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1" />
+    <path name="builtin-mic-id-capture-list" />
     <ctl name="Audio Capture Mic Source" value="BT_MIC" />
     <ctl name="Voice Call Mic Source" value="BT_MIC" />
     <ctl name="MIC Record Soft Gain (dB)" value="0" />
@@ -1411,10 +1393,7 @@
   </path>
 
   <path name="usb-headset-microphones">
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="0" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="1" value="1" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="2" value="2" />
-    <ctl name="BUILDIN MIC ID CAPTURE LIST" id="3" value="-1" />
+    <path name="builtin-mic-id-capture-list" />
     <ctl name="Audio Capture Mic Source" value="USB_MIC" />
     <ctl name="Voice Call Mic Source" value="USB_MIC" />
     <ctl name="MIC Record Soft Gain (dB)" value="0" />
