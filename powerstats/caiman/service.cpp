@@ -33,29 +33,7 @@ using aidl::android::hardware::power::stats::PowerStatsEnergyConsumer;
 
 void addDisplay(std::shared_ptr<PowerStats> p) {
     // Add display residency stats
-    std::vector<std::string> states = {
-        "Off",
-        "LP: 960x2142@1",
-        "LP: 960x2142@30",
-        "On: 960x2142@1",
-        "On: 960x2142@30",
-        "On: 960x2142@60",
-        "On: 960x2142@120",
-        "HBM: 960x2142@60",
-        "HBM: 960x2142@120",
-        "LP: 1280x2856@1",
-        "LP: 1280x2856@30",
-        "On: 1280x2856@1",
-        "On: 1280x2856@30",
-        "On: 1280x2856@60",
-        "On: 1280x2856@120",
-        "HBM: 1280x2856@60",
-        "HBM: 1280x2856@120"};
-
-    p->addStateResidencyDataProvider(std::make_unique<DisplayStateResidencyDataProvider>(
-            "Display",
-            "/sys/class/backlight/panel0-backlight/state",
-            states));
+    addDisplayMrr(p);
 
     // Add display energy consumer
     p->addEnergyConsumer(PowerStatsEnergyConsumer::createMeterConsumer(
