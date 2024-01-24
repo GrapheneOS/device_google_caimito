@@ -5,7 +5,50 @@ package {
 }
 
 soong_config_module_type {
-    name: "gps_prebuilt_etc",
+    name: "ignss_prebuilt_etc",
+    module_type: "prebuilt_etc",
+    config_namespace: "gpssdk",
+    variables: [
+        "buildtype",
+    ],
+    properties: [
+        "src",
+    ],
+}
+
+soong_config_string_variable {
+    name: "buildtype",
+    values: [
+        "user",
+        "userdebug",
+        "eng",
+    ],
+}
+
+ignss_prebuilt_etc {
+    name: "gps.cfg",
+    soong_config_variables: {
+        buildtype: {
+            user: {
+                src: "user/gps.cfg",
+            },
+            userdebug: {
+                src: "userdebug/gps.cfg",
+            },
+            eng: {
+                src: "userdebug/gps.cfg",
+            },
+            conditions_default: {
+                src: "user/gps.cfg",
+            },
+        },
+    },
+    relative_install_path: "gnss",
+    vendor: true,
+}
+
+soong_config_module_type {
+    name: "egnss_prebuilt_etc",
     module_type: "prebuilt_etc",
     config_namespace: "gpssdk",
     variables: [
@@ -33,7 +76,7 @@ prebuilt_etc {
     vendor: true,
 }
 
-gps_prebuilt_etc {
+egnss_prebuilt_etc {
     name: "gps.xml",
     soong_config_variables: {
         gpsconf: {
@@ -58,7 +101,7 @@ gps_prebuilt_etc {
     vendor: true,
 }
 
-gps_prebuilt_etc {
+egnss_prebuilt_etc {
     name: "lhd.conf",
     soong_config_variables: {
         gpsconf: {
@@ -83,7 +126,7 @@ gps_prebuilt_etc {
     vendor: true,
 }
 
-gps_prebuilt_etc {
+egnss_prebuilt_etc {
     name: "scd.conf",
     soong_config_variables: {
         gpsconf: {
