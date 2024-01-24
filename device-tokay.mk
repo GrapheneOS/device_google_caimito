@@ -21,7 +21,6 @@ $(call inherit-product-if-exists, vendor/google_devices/caimito/prebuilts/device
 $(call inherit-product-if-exists, vendor/google_devices/zumapro/prebuilts/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/zumapro/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/caimito/proprietary/tokay/device-vendor-tokay.mk)
-$(call inherit-product-if-exists, vendor/qorvo/uwb/qm35-hal/Device.mk)
 
 # display
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/tokay/overlay
