@@ -341,3 +341,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Exynos RIL and telephony
 # Support RIL Domain-selection
 SUPPORT_RIL_DOMAIN_SELECTION := true
+
+# Set support one-handed mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
