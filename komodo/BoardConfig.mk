@@ -14,6 +14,16 @@
 # limitations under the License.
 #
 
+# Enable load module in parallel
+BOARD_BOOTCONFIG += androidboot.load_modules_parallel=true
+
+# The modules which need to be loaded in sequential
+BOARD_KERNEL_CMDLINE += exynos_drm.load_sequential=1
+BOARD_KERNEL_CMDLINE += g2d.load_sequential=1
+BOARD_KERNEL_CMDLINE += samsung_iommu_v9.load_sequential=1
+BOARD_KERNEL_CMDLINE += vh_sched.load_sequential=1
+BOARD_KERNEL_CMDLINE += pcie_exynos_gs.load_sequential=1
+
 TARGET_BOARD_INFO_FILE := device/google/caimito/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := komodo
 TARGET_SCREEN_DENSITY := 480
