@@ -170,7 +170,7 @@
             "VirtualSensor": true,
             "Formula": "COUNT_THRESHOLD",
             "Combination": ["VIRTUAL-SKIN-LEGACY"],
-            "Coefficient": [55.0],
+            "Coefficient": [55000.0],
             "Multiplier": 1.0
         },
         {
