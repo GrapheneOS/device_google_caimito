@@ -443,7 +443,6 @@
       <param id="299" name="cleaner_post_gain" type="uint32"/>
     </module>
     <module id="10002" name="CHRE">
-      <param id="297" name="chre_gain" type="uint32"/>
       <param id="345" name="chre_aec_timeout" type="uint32"/>
       <param id="346" name="chre_pdm_gain" type="int32"/>
       <param id="347" name="chre_aec_gain" type="int32"/>
