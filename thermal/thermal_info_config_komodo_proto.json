@@ -212,7 +212,7 @@
             "VirtualSensor": true,
             "Formula": "COUNT_THRESHOLD",
             "Combination": ["VIRTUAL-SKIN-LEGACY"],
-            "Coefficient": [55.0],
+            "Coefficient": [55000.0],
             "Multiplier": 1.0
         },
         {
@@ -224,7 +224,8 @@
             "Combination": ["VSYS_PWR_CAMERA", "VSYS_PWR_DISPLAY", "VSYS_PWR_MMWAVE", "VSYS_PWR_MODEM", "VSYS_PWR_RFFE", "VSYS_PWR_WLAN_BT", "battery", "btmspkr_therm", "charging_therm", "disp_therm", "north_therm", "quiet_therm", "rfpa_therm", "soc_therm", "usb_pwr_therm"],
             "CombinationType":["ODPM", "ODPM", "ODPM", "ODPM", "ODPM", "ODPM", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR"],
             "Coefficient": [1.0],
-            "Multiplier": 0.001
+            "Multiplier": 0.001,
+            "Offset": 500
         },
         {
             "Name": "VIRTUAL-SKIN-MODEL-LEGACY-DIFF",
