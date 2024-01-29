@@ -411,6 +411,33 @@
       "ResetOnInit": true
     },
     {
+      "Name": "TAPreferredIdleMaskHigh",
+      "Path": "/proc/vendor_sched/groups/ta/preferred_idle_mask_high",
+      "Values": [
+        "0xff",
+        "0x7f"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAPreferredIdleMaskMid",
+      "Path": "/proc/vendor_sched/groups/ta/preferred_idle_mask_mid",
+      "Values": [
+        "0xff",
+        "0x7f"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAPreferredIdleMaskLow",
+      "Path": "/proc/vendor_sched/groups/ta/preferred_idle_mask_low",
+      "Values": [
+        "0xff",
+        "0x7f"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "FGPreferIdle",
       "Path": "/proc/vendor_sched/groups/fg/prefer_idle",
       "Values": [
@@ -930,6 +957,18 @@
       "Node": "TAPreferIdle",
       "Duration": 5000,
       "Value": "1"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAPreferredIdleMaskHigh",
+      "Duration": 5000,
+      "Value": "0xff"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAPreferredIdleMaskMid",
+      "Duration": 5000,
+      "Value": "0xff"
     },
     {
       "PowerHint": "LAUNCH",
