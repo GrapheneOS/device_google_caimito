@@ -237,6 +237,10 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     WifiOverlay2024
 
+# Settings Overlay
+PRODUCT_PACKAGES += \
+    SettingsKomodoOverlay
+
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/caimito/prebuilts
 
