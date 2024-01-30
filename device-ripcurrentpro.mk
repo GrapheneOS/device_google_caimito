@@ -201,7 +201,7 @@ PRODUCT_SOONG_NAMESPACES += vendor/google_devices/caimito/prebuilts
 
 # Location
 # iGNSS
--include vendor/samsung_slsi/gps/s5400/device-gnss.mk
+include device/google/gs-common/gps/lsi/s5400.mk
 # gps.cfg
 PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/ripcurrentpro
 $(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
