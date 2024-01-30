@@ -260,9 +260,13 @@
 
   <ctl name="AoC Modem Downlink ASRC Mode" value="ASP_ON" />
   <ctl name="Voice Call Mic Source" value="Builtin_MIC" />
-  <ctl name="Mic Spatial Module Enable" value="0" />
   <ctl name="Audio Capture Eraser Enable" value="0" />
   <ctl name="Hotword Tap Enable" value="0" />
+
+  <!-- In AIDL Hal, this controlled by audio hal directly to avoid aoc"     -->
+  <!-- crashing since speicifc order is needed between dsp mode and"        -->
+  <!-- spatial module."                                                     -->
+  <ctl name="Mic Spatial Module Enable" value="0" />
 
   <!-- audio PDM mic default state -->
   <ctl name="BUILDIN MIC ID CAPTURE LIST" id="0" value="-1" />
@@ -1313,7 +1317,6 @@
 
   <path name="microphones">
     <path name="builtin-mic-id-capture-list" />
-    <ctl name="Mic Spatial Module Enable" value="1" />
     <ctl name="MIC DC Blocker" value="1" />
     <ctl name="MIC Record Soft Gain (dB)" value="22" />
   </path>
@@ -1347,7 +1350,6 @@
 
   <path name="microphones (CAMCORDER)">
     <path name="builtin-mic-id-capture-list" />
-    <ctl name="Mic Spatial Module Enable" value="1" />
     <ctl name="MIC DC Blocker" value="1" />
     <ctl name="MIC Record Soft Gain (dB)" value="0" />
   </path>
