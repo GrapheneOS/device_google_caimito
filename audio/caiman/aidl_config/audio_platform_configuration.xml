@@ -65,7 +65,7 @@
       <argument name="BOOST_HANDSET_SWB_CLK" value="y" />
       <argument name="MCPS_TABLE" value="y" />
       <argument name="APPLY_WB_TUNING_FOR_NB_VOICE" value="y" />
-      <argument name="CCA" value="UnsupportBands:48000,ExSharedBands:48000,VoIPMode:Dl" />
+      <argument name="CCA" value="UnsupportBands:48000,ExSharedBands:48000,VoIPMode:Dl,SupportBWE:y" />
     </tuner>
     <tuner type="capture" name="gs_capture" />
     <tuner type="compensation" name="TelephonySpeakerCompensation">
