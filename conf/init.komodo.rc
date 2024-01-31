@@ -64,6 +64,12 @@ on property:persist.vendor.touch_sensitivity_mode=0 && property:sys.boot_complet
 on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_completed=1
     write /sys/devices/virtual/goog_touch_interface/gti.0/screen_protector_mode_enabled 1
 
+# ODPM
+on early-boot && property:ro.boot.hardware.sku=GZC4K
+    write /sys/bus/iio/devices/iio:device0/enabled_rails "CH11=BUCK12S"
+on early-boot && property:ro.boot.hardware.sku=GQ57S
+    write /sys/bus/iio/devices/iio:device0/enabled_rails "CH11=BUCK12S"
+
 # Start the twoshay touch service
 on property:sys.boot_completed=1
     chown system input /dev/touch_offload
