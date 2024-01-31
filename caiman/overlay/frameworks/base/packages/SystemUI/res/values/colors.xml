@@ -18,5 +18,5 @@
 -->
 <resources>
     <!-- The dark background color behind the shade. -->
-    <color name="shade_scrim_background_dark">#FFFF0101</color>
+    <color name="shade_scrim_background_dark">#FF010101</color>
 </resources>
