@@ -94,7 +94,8 @@ PRODUCT_PACKAGES += \
     camera_front_dbr_coex_table \
     camera_front_mipi_coex_table \
     camera_rear_main_mipi_coex_table \
-    camera_rear_wide_mipi_coex_table
+    camera_rear_wide_mipi_coex_table \
+    display_primary_mipi_coex_table
 
 # Bluetooth Tx power caps
 PRODUCT_COPY_FILES += \

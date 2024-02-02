@@ -179,8 +179,8 @@
             "VirtualSensor": true,
             "ModelPath": "vt_estimation_model.tflite",
             "Formula": "USE_ML_MODEL",
-            "Combination": ["VSYS_PWR_CAMERA", "VSYS_PWR_DISPLAY", "VSYS_PWR_MMWAVE", "VSYS_PWR_MODEM", "VSYS_PWR_RFFE", "VSYS_PWR_WLAN_BT", "battery", "btmspkr_therm", "charging_therm", "disp_therm", "north_therm", "quiet_therm", "rfpa_therm", "soc_therm", "usb_pwr_therm"],
-            "CombinationType":["ODPM", "ODPM", "ODPM", "ODPM", "ODPM", "ODPM", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR"],
+            "Combination": ["VSYS_PWR_CAMERA", "battery", "btmspkr_therm", "charging_therm", "disp_therm", "north_therm", "quiet_therm", "rfpa_therm", "soc_therm", "usb_pwr_therm"],
+            "CombinationType":["ODPM", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR"],
             "Coefficient": [1.0],
             "Multiplier": 0.001
         },
@@ -910,34 +910,9 @@
     ],
     "PowerRails":[
         {
-            "Name":"VSYS_PWR_MMWAVE",
-            "PowerSampleDelay":7000,
-            "PowerSampleCount":1
-        },
-        {
-            "Name":"VSYS_PWR_MODEM",
-            "PowerSampleDelay":7000,
-            "PowerSampleCount":1
-        },
-        {
-            "Name":"VSYS_PWR_WLAN_BT",
-            "PowerSampleDelay":7000,
-            "PowerSampleCount":1
-        },
-        {
             "Name":"VSYS_PWR_CAMERA",
             "PowerSampleDelay":7000,
-            "PowerSampleCount":1
-        },
-        {
-            "Name":"VSYS_PWR_DISPLAY",
-            "PowerSampleDelay":7000,
-            "PowerSampleCount":1
-        },
-        {
-            "Name":"VSYS_PWR_RFFE",
-            "PowerSampleDelay":7000,
-            "PowerSampleCount":1
+            "PowerSampleCount":15
         },
         {
             "Name":"S2M_VDD_CPUCL1",
