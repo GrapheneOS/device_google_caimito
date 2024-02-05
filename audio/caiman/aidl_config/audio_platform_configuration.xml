@@ -28,6 +28,7 @@
       <argument name="SpeakerPowerPollWaitMs" value="5000" />
     </feature>
     <feature name="RuntimeTuningDump" />
+    <feature name="SoundDose" />
   </features>
 
   <voipVolume>
