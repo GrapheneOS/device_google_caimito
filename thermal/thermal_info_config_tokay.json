@@ -674,8 +674,8 @@
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 1,
                     "BindedPowerRail": "S2S_VDD_G3D",
-                    "CdevCeiling": [0, 8, 8, 8, 9, 11, 11],
-                    "LimitInfo": [0, 0, 0, 0, 0, 11, 11]
+                    "CdevCeiling": [0, 9, 9, 9, 10, 12, 12],
+                    "LimitInfo": [0, 0, 0, 0, 0, 12, 12]
                 }
             ]
         },
@@ -708,7 +708,7 @@
                 {
                     "CdevRequest": "thermal-gpufreq-0",
                     "CdevWeightForPID": [1, 1, 1, 1, 1, 1, 1],
-                    "CdevCeiling": [0, 8, 8, 9, 11, 11, 11]
+                    "CdevCeiling": [0, 9, 9, 10, 12, 12, 12]
                 }
             ]
         },
