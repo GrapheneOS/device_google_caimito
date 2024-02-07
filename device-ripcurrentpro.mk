@@ -95,6 +95,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
        ro.audio.spatializer_enabled=true
 
+# declare use of stereo spatialization
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.audio.stereo_spatialization_enabled=true
+
 # Bluetooth hci_inject test tool
 PRODUCT_PACKAGES_DEBUG += \
     hci_inject
@@ -208,7 +212,7 @@ $(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
 PRODUCT_PACKAGES += gps.cfg
 # eGNSS
 # SDK build system
-$(call soong_config_set, include_libsitril-gps-wifi, board_without_radio, $(BOARD_WITHOUT_RADIO))
+$(call soong_config_set, include_libsitril_gps_wifi, board_without_radio, $(BOARD_WITHOUT_RADIO))
 include device/google/gs-common/gps/brcm/device.mk
 PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/ripcurrentpro
 SOONG_CONFIG_NAMESPACES += gpssdk
