@@ -30,7 +30,7 @@
     <feature name="RuntimeTuningDump" />
     <feature name="SoundDose" />
     <feature name="MicrophoneCompensation" />
-    <!-- <feature name="spatializer-offload" /> -->
+    <feature name="spatializer-offload" />
   </features>
 
   <voipVolume>
