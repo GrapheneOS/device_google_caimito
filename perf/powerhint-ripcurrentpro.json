@@ -412,6 +412,18 @@
       "ResetOnInit": true
     },
     {
+      "PowerHint": "LAUNCH",
+      "Node": "TAPreferredIdleMaskHigh",
+      "Duration": 5000,
+      "Value": "0xff"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAPreferredIdleMaskMid",
+      "Duration": 5000,
+      "Value": "0xff"
+    },
+    {
       "Name": "TAPreferredIdleMaskHigh",
       "Path": "/proc/vendor_sched/groups/ta/preferred_idle_mask_high",
       "Values": [
@@ -964,18 +976,6 @@
       "Node": "FGPreferIdle",
       "Duration": 5000,
       "Value": "1"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "TAPreferredIdleMaskHigh",
-      "Duration": 5000,
-      "Value": "0xff"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "TAPreferredIdleMaskMid",
-      "Duration": 5000,
-      "Value": "0xff"
     },
     {
       "PowerHint": "LAUNCH_EXTEND",
