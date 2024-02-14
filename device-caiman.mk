@@ -17,6 +17,8 @@
 TARGET_KERNEL_DIR ?= device/google/caimito-kernel
 TARGET_BOARD_KERNEL_HEADERS := device/google/caimito-kernel/kernel-headers
 
+LOCAL_PATH := device/google/caimito
+
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
     USE_UWBFIELDTESTQM := true
 endif

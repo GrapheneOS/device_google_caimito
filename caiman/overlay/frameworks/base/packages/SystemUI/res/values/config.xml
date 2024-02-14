@@ -67,7 +67,7 @@
     <!-- The properties of the face auth camera in pixels -->
     <integer-array name="config_face_auth_props">
       <item>640</item>  <!-- sensorLocationX -->
-      <item>68</item>   <!-- sensorLocationY -->
-      <item>34</item>   <!--sensorRadius -->
+      <item>101</item>   <!-- sensorLocationY -->
+      <item>48</item>   <!--sensorRadius -->
     </integer-array>
 </resources>
