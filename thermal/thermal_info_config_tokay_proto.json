@@ -167,10 +167,11 @@
             "VirtualSensor": true,
             "ModelPath": "vt_estimation_model.tflite",
             "Formula": "USE_ML_MODEL",
-            "Combination": ["VSYS_PWR_CAMERA", "battery", "btmspkr_therm", "charging_therm", "disp_therm", "north_therm", "quiet_therm", "rfpa_therm", "soc_therm", "usb_pwr_therm"],
-            "CombinationType":["ODPM", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR"],
+            "Combination": ["battery", "btmspkr_therm", "charging_therm", "disp_therm", "north_therm", "quiet_therm", "rfpa_therm", "soc_therm", "usb_pwr_therm"],
+            "CombinationType":["SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR"],
             "Coefficient": [1.0],
-            "Multiplier": 0.001
+            "Multiplier": 0.001,
+            "PreviousSampleCount": 5
         },
         {
             "Name": "VIRTUAL-SKIN-MODEL-LEGACY-DIFF",
