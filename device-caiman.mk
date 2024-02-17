@@ -268,24 +268,9 @@ PRODUCT_SOONG_NAMESPACES += \
     device/google/caimito/caiman/uwb
 
 # Location
-# iGNSS
-# gps.cfg
 PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/caiman
 $(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
 PRODUCT_PACKAGES += gps.cfg
-# eGNSS
-# SDK build system
-$(call soong_config_set, include_libsitril_gps_wifi, board_without_radio, $(BOARD_WITHOUT_RADIO))
-include device/google/gs-common/gps/brcm/device.mk
-PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/caiman
-SOONG_CONFIG_NAMESPACES += gpssdk
-SOONG_CONFIG_gpssdk += gpsconf
-SOONG_CONFIG_gpssdk_gpsconf ?= $(TARGET_BUILD_VARIANT)
-PRODUCT_PACKAGES += \
-	gps.cer \
-	gps.xml \
-	scd.conf \
-	lhd.conf
 
 # Display LBE
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
