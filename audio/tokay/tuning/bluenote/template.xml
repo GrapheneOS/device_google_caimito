@@ -466,6 +466,7 @@
     <signalflow id="2" name="General Mic Recording">
       <block id="137">
         <moduleRef id="14"/>
+        <moduleRef id="11"/>
         <moduleRef id="7"/>
         <moduleRef id="5"/>
         <moduleRef id="40"/>
