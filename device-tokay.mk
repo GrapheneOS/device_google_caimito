@@ -45,7 +45,7 @@ $(call soong_config_set,google3a_config,target_device,tokay)
 
 # display
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/tokay/overlay
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_idle_timer_ms=1500
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_idle_timer_ms=1000
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.ignore_hdr_camera_layers=true
 
 # Init files
