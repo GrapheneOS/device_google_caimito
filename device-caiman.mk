@@ -266,9 +266,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
 PRODUCT_PACKAGES += \
     libthermal_tflite_wrapper
 
-# Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
-	vendor.zram.size=50p \
 	persist.device_config.configuration.disable_rescue_party=true
 
 PRODUCT_VENDOR_PROPERTIES += \
