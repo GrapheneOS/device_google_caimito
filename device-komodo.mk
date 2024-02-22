@@ -405,3 +405,8 @@ PRODUCT_PACKAGES += \
 #Component Override for Pixel Troubleshooting App
 PRODUCT_COPY_FILES += \
     device/google/caimito/komodo/komodo-component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/komodo-component-overrides.xml
+
+# Keyboard height ratio and bottom padding in dp for portrait mode
+PRODUCT_PRODUCT_PROPERTIES += \
+          ro.com.google.ime.kb_pad_port_b=9.6 \
+          ro.com.google.ime.height_ratio=1.13
