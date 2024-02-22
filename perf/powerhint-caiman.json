@@ -1898,7 +1898,7 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "EM_Profile",
       "Duration": 0,
-      "Value": "cam3"
+      "Value": "cam2"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
@@ -1916,7 +1916,7 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "CDPreferHighCap",
       "Duration": 0,
-      "Value": "1"
+      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
