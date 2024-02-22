@@ -227,7 +227,7 @@
             "Coefficient": [1.0],
             "Multiplier": 0.001,
             "Offset": 500,
-            "PreviousSampleCount": 5
+            "PreviousSampleCount": 3
         },
         {
             "Name": "VIRTUAL-SKIN-MODEL-LEGACY-DIFF",
