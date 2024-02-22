@@ -275,6 +275,9 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.front_720P_always_binning=true
 
+# Media Performance Class 14
+PRODUCT_PRODUCT_PROPERTIES += ro.odm.build.media_performance_class=34
+
 # Vibrator HAL
 ACTUATOR_MODEL := luxshare_ict_081545
 ADAPTIVE_HAPTICS_FEATURE := adaptive_haptics_v1
