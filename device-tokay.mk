@@ -45,7 +45,7 @@ $(call soong_config_set,google3a_config,target_device,tokay)
 
 # display
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/tokay/overlay
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_idle_timer_ms=1500
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_idle_timer_ms=1000
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.ignore_hdr_camera_layers=true
 
 # Init files
@@ -96,7 +96,8 @@ PRODUCT_PACKAGES += \
     camera_front_mipi_coex_table \
     camera_rear_main_mipi_coex_table \
     camera_rear_wide_mipi_coex_table \
-    display_primary_mipi_coex_table
+    display_primary_mipi_coex_table \
+    display_primary_ssc_coex_table
 
 # Bluetooth Tx power caps
 PRODUCT_COPY_FILES += \
