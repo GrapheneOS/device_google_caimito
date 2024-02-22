@@ -50,6 +50,7 @@ include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/gti/gti.mk
 include device/google/gs-common/touch/syna/syna20.mk
 include device/google/caimito/fingerprint/ultrasonic_udfps.mk
+include device/google/gs-common/modem/radio_ext/radio_ext.mk
 
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,caiman)
