@@ -19,9 +19,12 @@ TARGET_BOARD_KERNEL_HEADERS := device/google/caimito-kernel/kernel-headers
 
 $(call inherit-product-if-exists, vendor/google_devices/caimito/prebuilts/device-vendor-tokay.mk)
 $(call inherit-product-if-exists, vendor/google_devices/zumapro/prebuilts/device-vendor.mk)
-$(call inherit-product-if-exists, vendor/google_devices/caimito/proprietary/WallpapersTokay.mk)
 $(call inherit-product-if-exists, vendor/google_devices/zumapro/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/caimito/proprietary/tokay/device-vendor-tokay.mk)
+
+ifeq ($(filter factory_tokay, $(TARGET_PRODUCT)),)
+    $(call inherit-product-if-exists, vendor/google_devices/caimito/proprietary/WallpapersTokay.mk)
+endif
 
 # display
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/tokay/overlay
