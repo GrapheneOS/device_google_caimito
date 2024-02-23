@@ -14,10 +14,6 @@ on init
 on late-init && property:ro.boot.hardware.revision=PROTO1.0
     setprop persist.vendor.se.reset.chip_en false
 
-    # Display permission for SSC mode
-    chown system system /sys/class/backlight/panel0-backlight/ssc_mode
-    chmod 664 /sys/class/backlight/panel0-backlight/ssc_mode
-
 on early-boot
     # Wait for insmod_sh to finish all common modules
     wait_for_prop vendor.common.modules.ready 1
@@ -37,6 +33,10 @@ on property:vendor.mfgapi.touchpanel.permission=1
 # Permissions for display
 on fs
     chown system system /sys/class/backlight/panel0-backlight/acl_mode
+
+    # Permission for SSC mode enable
+    chown system system /sys/class/backlight/panel0-backlight/ssc_en
+    chmod 664 /sys/class/backlight/panel0-backlight/ssc_en
 
 # WiFi
 on post-fs-data

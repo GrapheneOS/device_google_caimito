@@ -67,3 +67,9 @@ on property:sys.boot_completed=1
     chown system input /dev/touch_offload
     chmod 660 /dev/touch_offload
     start twoshay
+
+# Permissions for display
+on fs
+    # Permission for SSC mode enable
+    chown system system /sys/class/backlight/panel0-backlight/ssc_en
+    chmod 664 /sys/class/backlight/panel0-backlight/ssc_en
