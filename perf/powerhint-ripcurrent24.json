@@ -1092,6 +1092,12 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
+      "Node": "ReducePreferIdle",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "CDHighCpusetCpus",
       "Duration": 0,
       "Value": "8"
@@ -1230,6 +1236,12 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
+      "Node": "ReducePreferIdle",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "CDHighCpusetCpus",
       "Duration": 0,
       "Value": "8"
@@ -1322,7 +1334,7 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "CDPreferHighCap",
       "Duration": 0,
-      "Value": "1"
+      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
