@@ -39,3 +39,11 @@ PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_PERF_CONFIG_PATH)/powerhint-$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_PERF_CONFIG_PATH)/powerhint-zuma.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint-proto.json
+
+# Battery Mitigation Config
+ifeq (,$(TARGET_VENDOR_BATTERY_MITIGATION_CONFIG_PATH))
+TARGET_VENDOR_BATTERY_MITIGATION_CONFIG_PATH := device/google/caimito/battery_mitigation
+endif
+
+PRODUCT_COPY_FILES += \
+	$(TARGET_VENDOR_BATTERY_MITIGATION_CONFIG_PATH)/bm_config_$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/bm_config.json
