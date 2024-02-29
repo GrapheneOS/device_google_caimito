@@ -1,0 +1,15 @@
+prebuilt_etc {
+    name: "caimito_threadnetwork_hal_service.rc",
+    src: "threadnetwork_hal_service.rc",
+    installable: false,
+}
+
+override_apex {
+    name: "com.google.caimito.hardware.threadnetwork",
+    base: "com.android.hardware.threadnetwork",
+    prebuilts: [
+        "caimito_threadnetwork_hal_service.rc",
+        "threadnetwork-default.xml",
+        "android.hardware.thread_network.prebuilt.xml",
+    ],
+}
