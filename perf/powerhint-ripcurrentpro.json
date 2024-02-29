@@ -970,18 +970,6 @@
       "Value": "1"
     },
     {
-      "PowerHint": "LAUNCH",
-      "Node": "TAPreferredIdleMaskHigh",
-      "Duration": 5000,
-      "Value": "0xff"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "TAPreferredIdleMaskMid",
-      "Duration": 5000,
-      "Value": "0xff"
-    },
-    {
       "PowerHint": "LAUNCH_EXTEND",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 2000,
