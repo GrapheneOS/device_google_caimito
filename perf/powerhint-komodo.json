@@ -213,25 +213,7 @@
       ],
       "ResetOnInit": true
     },
-    {
-      "Name": "BigClusterPowerDownTargetResidency",
-      "Path": "/sys/devices/platform/cpupm/cpupm/cpd_cl2_target_residency",
-      "Values": [
-        "10000"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "MidClusterPowerDownTargetResidency",
-      "Path": "/sys/devices/platform/cpupm/cpupm/cpd_cl1_target_residency",
-      "Values": [
-        "10000"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
+        {
       "Name": "CPUUtilThreshold",
       "Path": "/proc/vendor_sched/util_threshold",
       "Values": [
@@ -279,6 +261,16 @@
       "Values": [
         "130",
         "512"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "Dex2oatUClampMaxBoost",
+      "Path": "/proc/vendor_sched/groups/dex2oat/uclamp_max",
+      "Values": [
+        "-2",
+        "615"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -1009,6 +1001,24 @@
     },
     {
       "PowerHint": "LAUNCH_EXTEND",
+      "Node": "CPUUClampMaxFilterEnable",
+      "Duration": 2000,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "LAUNCH_EXTEND",
+      "Node": "BGUClampMaxBoost",
+      "Duration": 2000,
+      "Value": "512"
+    },
+    {
+      "PowerHint": "LAUNCH_EXTEND",
+      "Node": "Dex2oatUClampMaxBoost",
+      "Duration": 2000,
+      "Value": "615"
+    },
+    {
+      "PowerHint": "LAUNCH_EXTEND",
       "Node": "CPULittleClusterDownRateLimitUs",
       "Duration": 2000,
       "Value": "5000"
@@ -1042,6 +1052,113 @@
       "Node": "PMU_POLL",
       "Duration": 3000,
       "Value": "0"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "ReducePreferIdle",
+      "Duration": 5000,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE_GPU",
+      "Node": "GPUDvfsPeriod",
+      "Duration": 1000,
+      "Value": "10"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Type": "DoHint",
+      "Value": "DISPLAY_CHANGE_GPU"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 5000,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "CPUMidClusterMaxFreq",
+      "Duration": 5000,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "CPULittleClusterMaxFreq",
+      "Duration": 5000,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "TAUClampBoost",
+      "Duration": 5000,
+      "Value": "765"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "FGUClampBoost",
+      "Duration": 5000,
+      "Value": "159"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "MemFreq",
+      "Duration": 5000,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "DsuMinFreq",
+      "Duration": 5000,
+      "Value": "1800000"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "BCIMinFreq",
+      "Duration": 5000,
+      "Value": "1401000"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "CPUDVFSHeadroom",
+      "Duration": 5000,
+      "Value": "1280"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "CPUTaperedDVFSHeadroomEnable",
+      "Duration": 5000,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "CPULittleClusterDownRateLimitUs",
+      "Duration": 5000,
+      "Value": "5000"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "CPUMidClusterDownRateLimitUs",
+      "Duration": 5000,
+      "Value": "20000"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "CPUBigClusterDownRateLimitUs",
+      "Duration": 5000,
+      "Value": "20000"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "TAPreferIdle",
+      "Duration": 5000,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "FGPreferIdle",
+      "Duration": 5000,
+      "Value": "1"
     },
     {
       "PowerHint": "CPU_LOAD_RESET",
@@ -1096,19 +1213,7 @@
       "Type": "EndHint",
       "Value": "DISPLAY_UPDATE_IMMINENT"
     },
-    {
-      "PowerHint": "DISPLAY_INACTIVE",
-      "Node": "BigClusterPowerDownTargetResidency",
-      "Duration": 0,
-      "Value": "10000"
-    },
-    {
-      "PowerHint": "DISPLAY_INACTIVE",
-      "Node": "MidClusterPowerDownTargetResidency",
-      "Duration": 0,
-      "Value": "10000"
-    },
-    {
+        {
       "PowerHint": "DISPLAY_INACTIVE",
       "Node": "TAPreferIdle",
       "Duration": 0,
