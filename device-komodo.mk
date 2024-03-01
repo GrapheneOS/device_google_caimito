@@ -371,3 +371,7 @@ SUPPORT_RIL_DOMAIN_SELECTION := true
 # Set support one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
+
+# Thread HAL
+PRODUCT_PACKAGES += \
+   com.google.caimito.hardware.threadnetwork
