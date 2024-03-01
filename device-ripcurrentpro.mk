@@ -253,3 +253,6 @@ PRODUCT_PRODUCT_PROPERTIES += persist.arm64.memtag.app.com.android.nfc=off
 PRODUCT_PRODUCT_PROPERTIES += persist.arm64.memtag.system_server=off
 endif
 
+# Thread HAL
+PRODUCT_PACKAGES += \
+   com.google.caimito.hardware.threadnetwork
