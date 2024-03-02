@@ -22,4 +22,5 @@
     <item>G1B60</item>
   </string-array>
   <bool name="tag_intent_app_pref_supported">true</bool>
+  <bool name="nfc_observe_mode_supported">true</bool>
 </resources>
