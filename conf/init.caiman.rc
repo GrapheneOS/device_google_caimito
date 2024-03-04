@@ -71,3 +71,10 @@ on property:sys.boot_completed=1
     chown system input /dev/touch_offload
     chmod 660 /dev/touch_offload
     start twoshay
+
+# ETM
+on init && property:ro.build.flavor=caiman-userdebug
+    import /vendor/etc/init/hw/init.etm.rc
+
+on init && property:ro.build.flavor=caiman-eng
+    import /vendor/etc/init/hw/init.etm.rc
