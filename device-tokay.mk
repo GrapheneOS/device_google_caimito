@@ -345,3 +345,8 @@ SUPPORT_RIL_DOMAIN_SELECTION := true
 # Thread HAL
 PRODUCT_PACKAGES += \
    com.google.caimito.hardware.threadnetwork
+
+# Keyboard height ratio and bottom padding in dp for portrait mode
+PRODUCT_PRODUCT_PROPERTIES += \
+          ro.com.google.ime.kb_pad_port_b=8 \
+          ro.com.google.ime.height_ratio=1.09
