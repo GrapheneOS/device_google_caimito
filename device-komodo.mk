@@ -156,10 +156,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.stereo_spatialization_enabled=true
 
-# Sound Dose
+ifneq ($(USE_AUDIO_HAL_AIDL),true)
+# HIDL Sound Dose
 PRODUCT_PACKAGES += \
 	android.hardware.audio.sounddose-vendor-impl \
-	audio_sounddose_aoc \
+	audio_sounddose_aoc
+endif
 
 # Audio CCA property
 PRODUCT_PROPERTY_OVERRIDES += \
