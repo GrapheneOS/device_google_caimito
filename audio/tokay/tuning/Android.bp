@@ -128,3 +128,35 @@ prebuilt_etc {
     src: "waves/tests/test_preset.mps",
     soc_specific: true,
 }
+
+prebuilt_etc {
+    name: "vendor.google.whitechapel.audio.hal.effect.spatializer.base",
+    src: "spatializer/base",
+    soc_specific: true,
+    filename_from_src: true,
+    relative_install_path: "spatializer",
+}
+
+prebuilt_etc {
+    name: "vendor.google.whitechapel.audio.hal.effect.spatializer.mode_2_ch",
+    src: "spatializer/mode_2_ch",
+    soc_specific: true,
+    filename_from_src: true,
+    relative_install_path: "spatializer",
+}
+
+prebuilt_etc {
+    name: "vendor.google.whitechapel.audio.hal.effect.spatializer.mode_6_ch",
+    src: "spatializer/mode_6_ch",
+    soc_specific: true,
+    filename_from_src: true,
+    relative_install_path: "spatializer",
+}
+
+prebuilt_etc {
+    name: "vendor.google.whitechapel.audio.hal.effect.spatializer.mode_xaural",
+    src: "spatializer/mode_xaural",
+    soc_specific: true,
+    filename_from_src: true,
+    relative_install_path: "spatializer",
+}
