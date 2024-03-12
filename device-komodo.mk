@@ -156,10 +156,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.stereo_spatialization_enabled=true
 
-# Sound Dose
+ifneq ($(USE_AUDIO_HAL_AIDL),true)
+# HIDL Sound Dose
 PRODUCT_PACKAGES += \
 	android.hardware.audio.sounddose-vendor-impl \
-	audio_sounddose_aoc \
+	audio_sounddose_aoc
+endif
 
 # Audio CCA property
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -264,7 +266,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Location
 # iGNSS
-include device/google/gs-common/gps/lsi/s5400.mk
 # gps.cfg
 PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/komodo
 $(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))

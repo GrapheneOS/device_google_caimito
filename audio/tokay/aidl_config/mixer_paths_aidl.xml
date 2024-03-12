@@ -1087,11 +1087,15 @@
     <ctl name="EP3 TX Mixer BT_TX" value="1" />
   </path>
 
-  <path name="microphones -> sound-trigger-capture-0" />
+  <path name="sound-trigger-microphones -> sound-trigger-capture-0" />
 
-  <path name="microphones -> sound-trigger-tap-capture-0" />
+  <path name="sound-trigger-microphones -> sound-trigger-tap-capture-0">
+    <ctl name="Audio Capture Eraser Enable" value="1" />
+    <ctl name="Hotword Tap Enable" value="1" />
+    <ctl name="MIC Record Soft Gain (dB)" value="0" />
+  </path>
 
-  <path name="microphones -> hotword-lookback-capture-0" />
+  <path name="sound-trigger-microphones -> hotword-lookback-capture-0" />
 
   <path name="ultrasound-microphones -> ultrasound-capture-0">
     <ctl name="EP5 TX Mixer INTERNAL_MIC_US_TX" value="1" />
@@ -1332,12 +1336,6 @@
     <path name="builtin-mic-id-capture-list" />
     <ctl name="MIC DC Blocker" value="1" />
     <ctl name="MIC Record Soft Gain (dB)" value="22" />
-  </path>
-
-  <path name="microphones (VOICE_RECOGNITION,SOUND_TRIGGER_TAP)">
-    <ctl name="Audio Capture Eraser Enable" value="1" />
-    <ctl name="Hotword Tap Enable" value="1" />
-    <ctl name="MIC Record Soft Gain (dB)" value="0" />
   </path>
 
   <path name="microphones (SOUND_TRIGGER_AEC)">
