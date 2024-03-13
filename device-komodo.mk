@@ -78,6 +78,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.primarydisplay.op.hs_switch_min_dbv=1088 \
     vendor.primarydisplay.op.hist_delta_th=8
 
+# Display fixed TE2
+PRODUCT_VENDOR_PROPERTIES += vendor.primarydisplay.fixed_te2.default_rate_hz=120
+
 # Init files
 PRODUCT_COPY_FILES += \
 	device/google/caimito/conf/init.komodo.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.komodo.rc

@@ -306,6 +306,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.primarydisplay.op.hs_switch_min_dbv=1088 \
     vendor.primarydisplay.op.hist_delta_th=8
 
+# Display fixed TE2
+PRODUCT_VENDOR_PROPERTIES += vendor.primarydisplay.fixed_te2.default_rate_hz=120
+
 # Vibrator HAL
 ACTUATOR_MODEL := luxshare_ict_081545
 ADAPTIVE_HAPTICS_FEATURE := adaptive_haptics_v1
