@@ -81,8 +81,8 @@
     <latency source="primary-playback" sink="speaker" milliseconds="20" />
     <latency source="primary-playback" sink="usb-device" milliseconds="10" />
     <latency source="primary-playback" sink="usb-headset" milliseconds="10" />
-    <latency source="primary-playback" sink="bluetooth-a2dp-device" milliseconds="10" />
-    <latency source="primary-playback" sink="bluetooth-low-energy-speaker" milliseconds="10" />
+    <latency source="primary-playback" sink="bluetooth-a2dp-device" milliseconds="100" />
+    <latency source="primary-playback" sink="bluetooth-low-energy-speaker" milliseconds="100" />
 
     <latency source="deep-buffer-playback" sink="speaker" milliseconds="70" />
     <latency source="deep-buffer-playback" sink="usb-device" milliseconds="70" />
@@ -96,9 +96,11 @@
 
     <latency source="immersive-playback" sink="bluetooth-a2dp-device" milliseconds="100" />
 
-    <latency source="microphones" sink="primary-capture" milliseconds="160" />
-    <latency source="back-microphones" sink="primary-capture" milliseconds="160" />
-    <latency source="bluetooth-sco-headset" sink="primary-capture" milliseconds="40" />
+    <latency source="microphones" sink="primary-capture" milliseconds="300" />
+    <latency source="back-microphones" sink="primary-capture" milliseconds="300" />
+    <latency source="bluetooth-sco-headset" sink="primary-capture" milliseconds="160" />
+    <latency source="usb-device-microphones" sink="primary-capture" milliseconds="100" />
+    <latency source="usb-headset-microphones" sink="primary-capture" milliseconds="100" />
   </latencies>
 
   <spatialCapture>
