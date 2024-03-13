@@ -292,6 +292,7 @@
       "Path": "/proc/vendor_sched/groups/cam/uclamp_min",
       "Values": [
         "765",
+        "250",
         "0"
       ],
       "ResetOnInit": true
@@ -359,9 +360,10 @@
         "0-3",
         "4-7",
         "4-6",
-        "0-6",
-        "0-7"
+        "0-7",
+        "0-6"
       ],
+      "DefaultIndex": 3,
       "ResetOnInit": true
     },
     {
@@ -1409,6 +1411,30 @@
       "Node": "PMU_POLL",
       "Duration": 3000,
       "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_THERMAL_SEVERE_BOOST",
+      "Node": "CDPreferHighCap",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_THERMAL_SEVERE_BOOST",
+      "Node": "CAMUClampBoost",
+      "Duration": 0,
+      "Value": "250"
+    },
+    {
+      "PowerHint": "CAMERA_THERMAL_SEVERE_BOOST",
+      "Node": "CPUSkipMask",
+      "Duration": 0,
+      "Value": "0x0"
+    },
+    {
+      "PowerHint": "CAMERA_THERMAL_SEVERE_BOOST",
+      "Node": "CDCpuset",
+      "Duration": 0,
+      "Value": "0-7"
     },
     {
       "PowerHint": "CAMERA_SHOT",
