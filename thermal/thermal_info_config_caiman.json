@@ -189,14 +189,27 @@
             "Multiplier": 1
         },
         {
+            "Name": "VIRTUAL-SKIN-LSTM-MODEL",
+            "Type": "UNKNOWN",
+            "VirtualSensor": true,
+            "ModelPath": "vt_prediction_lstm_model.tflite",
+            "Formula": "USE_ML_MODEL",
+            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
+            "PreviousSampleCount": 11,
+            "OutputLabelCount": 6,
+            "Multiplier": 0.001,
+            "SupportUnderStampling": true,
+            "ValidateInput": true
+        },
+        {
             "Name": "STATS-UPDATOR",
             "Type": "UNKNOWN",
             "VirtualSensor": true,
             "Hidden": true,
             "TriggerSensor": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
             "Formula": "WEIGHTED_AVG",
-            "Combination": ["VIRTUAL-SKIN-MODEL", "VIRTUAL-SKIN-LEGACY", "VIRTUAL-SKIN-MODEL-LEGACY-DIFF"],
-            "Coefficient": [0.0, 0.0, 0.0],
+            "Combination": ["VIRTUAL-SKIN-MODEL", "VIRTUAL-SKIN-LEGACY", "VIRTUAL-SKIN-MODEL-LEGACY-DIFF", "VIRTUAL-SKIN-LSTM-MODEL"],
+            "Coefficient": [0.0, 0.0, 0.0, 0.0],
             "Multiplier": 1,
             "SendPowerHint": true,
             "PollingDelay": 300000,
@@ -218,6 +231,9 @@
             "SendCallback": true,
             "PollingDelay": 300000,
             "PassiveDelay": 7000,
+            "PredictorInfo": {
+                "Sensor": "VIRTUAL-SKIN-LSTM-MODEL"
+            },
             "BindedCdevInfo": [
                 {
                     "CdevRequest": "tpu_cooling",
