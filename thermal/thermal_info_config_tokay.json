@@ -462,7 +462,7 @@
                     "CdevWeightForPID": [0.156, 0.156, 0.156, 0.156, 0.156, 0.156, 0.156],
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 1,
-                    "CdevCeiling": [0, 10, 10, 10, 10, 10, 10]
+                    "CdevCeiling": [0, 9, 9, 9, 9, 9, 9]
                 },
                 {
                     "CdevRequest": "thermal-cpufreq-1",
@@ -560,8 +560,8 @@
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 1,
                     "BindedPowerRail": "S4M_VDD_CPUCL0",
-                    "CdevCeiling": [0, 10, 10, 10, 10, 11, 11],
-                    "LimitInfo": [0, 0, 0, 0, 0, 11, 11]
+                    "CdevCeiling": [0, 9, 9, 9, 9, 9, 9],
+                    "LimitInfo": [0, 0, 0, 0, 0, 9, 9]
                 },
                 {
                     "CdevRequest": "thermal-cpufreq-1",
