@@ -315,6 +315,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.front_720P_always_binning=true
 
+# Enable camera exif model/make reporting
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.camera.exif_reveal_make_model=true
+
 # Media Performance Class 14
 PRODUCT_PRODUCT_PROPERTIES += ro.odm.build.media_performance_class=34
 
