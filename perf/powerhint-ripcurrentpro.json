@@ -220,7 +220,7 @@
         "2048 1280 1280",
         "1280",
         "1100",
-        "1100 1078 1024"
+        "1100 1024 1100"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -231,7 +231,7 @@
       "Values": [
         "1280",
         "1100",
-        "1100 1078 1024"
+        "1280 1100 1055"
       ],
       "DefaultIndex": 1,
       "ResetOnInit": true
@@ -1854,13 +1854,13 @@
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "CPUDVFSHeadroom",
       "Duration": 0,
-      "Value": "1100 1078 1024"
+      "Value": "1100"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "CPUUtilThreshold",
       "Duration": 0,
-      "Value": "1100 1078 1024"
+      "Value": "1100"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
@@ -1933,12 +1933,6 @@
       "Node": "BCIMinFreq",
       "Duration": 0,
       "Value": "700000"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_STANDARD",
-      "Node": "CPUDVFSHeadroom",
-      "Duration": 0,
-      "Value": "1280"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
@@ -2016,7 +2010,13 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "CPUUtilThreshold",
       "Duration": 0,
-      "Value": "1280"
+      "Value": "1100 1024 1100"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_STANDARD",
+      "Node": "CPUDVFSHeadroom",
+      "Duration": 0,
+      "Value": "1280 1100 1055"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
