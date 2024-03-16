@@ -377,3 +377,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Thread HAL
 PRODUCT_PACKAGES += \
    com.google.caimito.hardware.threadnetwork
+
+# ETM
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+$(call inherit-product-if-exists, device/google/common/etm/device-userdebug-modules.mk)
+endif
