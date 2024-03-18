@@ -80,3 +80,10 @@ PRODUCT_COPY_FILES += \
     device/google/caimito/audio/$(AUDIO_TABLE_FOLDER)/cs35l41/crus_sp_cal_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/crus_sp_cal_mixer_paths.xml
 
 endif
+
+# Offload spatializer config
+PRODUCT_PACKAGES += \
+    vendor.google.whitechapel.audio.hal.effect.spatializer.base \
+    vendor.google.whitechapel.audio.hal.effect.spatializer.mode_2_ch \
+    vendor.google.whitechapel.audio.hal.effect.spatializer.mode_6_ch \
+    vendor.google.whitechapel.audio.hal.effect.spatializer.mode_xaural
