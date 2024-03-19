@@ -50,7 +50,6 @@
     <device name="usb" />
     <device name="speaker" codec="cs35l41">
       <argument name="SpeakerNum" value="2" />
-      <argument name="Rotation" />
       <argument name="AcousticShockProtection" />
     </device>
   </devices>
