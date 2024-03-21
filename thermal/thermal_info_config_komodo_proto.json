@@ -215,10 +215,12 @@
             "Formula": "USE_ML_MODEL",
             "Combination": ["battery", "btmspkr_therm", "charging_therm", "disp_therm", "north_therm", "quiet_therm", "rfpa_therm", "soc_therm", "usb_pwr_therm"],
             "CombinationType":["SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR"],
-            "Coefficient": [1.0],
             "Multiplier": 0.001,
-            "Offset": 500,
-            "PreviousSampleCount": 3
+            "PreviousSampleCount": 3,
+            "BackupSensor" : "VIRTUAL-SKIN-LEGACY",
+            "OffsetThresholds" : [50000, 53000],
+            "OffsetValues" : [500, 1000],
+            "ValidateInput": true
         },
         {
             "Name": "VIRTUAL-SKIN-MODEL-LEGACY-DIFF",
@@ -281,7 +283,8 @@
             "Coefficient": [0.02, 0.0, 0.0, 0.05, 0.0, 0.0, 0.05, 0.01, 0.04,
                             0.0, 0.0, 0.01, 0.01, 0.0, 0.0, 0.01, 0.0, 0.0,
                             0.31, 0.03, 0.0, 0.05, 0.0, 0.0, 0.0, 0.25, 0.08],
-            "Offset": 2660.0,
+            "OffsetThresholds" : [0.0],
+            "OffsetValues" : [2660.0],
             "Multiplier": 0.001
         },
         {
@@ -294,7 +297,8 @@
             "Coefficient": [0.19, 0.06, 0.0, 0.01, 0.0, 0.0, 0.07, 0.1, 0.09,
                             0.02, 0.03, 0.0, 0.0, 0.05, 0.0, 0.04, 0.03, 0.01,
                             0.05, 0.01, 0.0, 0.0, 0.01, 0.0, 0.03, 0.07, 0.04],
-            "Offset": 2860.0,
+            "OffsetThresholds" : [0.0],
+            "OffsetValues" : [2860.0],
             "Multiplier": 0.001
         },
         {
@@ -307,7 +311,8 @@
             "Coefficient": [0.21, 0.02, 0.0, 0.44, 0.0, 0.0, 0.0, 0.12, 0.0,
                             0.04, 0.0, 0.0, 0.03, 0.0, 0.0, 0.0, 0.04, 0.0,
                             0.01, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.05, 0.0],
-            "Offset": 1330.0,
+            "OffsetThresholds" : [0.0],
+            "OffsetValues" : [1330.0],
             "Multiplier": 0.001
         },
         {
@@ -320,7 +325,8 @@
             "Coefficient": [0.07, 0.03, 0.0, 0.05, 0.0, 0.0, 0.07, 0.1, 0.03,
                             0.11, 0.0, 0.0, 0.06, 0.0, 0.02, 0.05, 0.07, 0.05,
                             0.07, 0.0, 0.0, 0.04, 0.0, 0.02, 0.05, 0.03, 0.03],
-            "Offset": 2070.0,
+            "OffsetThresholds" : [0.0],
+            "OffsetValues" : [2070.0],
             "Multiplier": 0.001
         },
         {
@@ -333,7 +339,8 @@
             "Coefficient": [0.18, 0.0, 0.0, 0.03, 0.1, 0.04, 0.09, 0.13, 0.05,
                             0.07, 0.0, 0.0, 0.0, 0.06, 0.0, 0.02, 0.05, 0.07,
                             0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.02, 0.07],
-            "Offset": 10.0,
+            "OffsetThresholds" : [0.0],
+            "OffsetValues" : [10.0],
             "Multiplier": 0.001
         },
         {
