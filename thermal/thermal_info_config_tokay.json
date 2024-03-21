@@ -161,10 +161,12 @@
             "ModelPath": "vt_estimation_model.tflite",
             "Formula": "USE_ML_MODEL",
             "Combination": ["battery", "btmspkr_therm", "charging_therm", "disp_therm", "north_therm", "quiet_therm", "rfpa_therm", "soc_therm", "usb_pwr_therm"],
-            "CombinationType":["SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR", "SENSOR"],
-            "Coefficient": [1.0],
             "Multiplier": 0.001,
-            "PreviousSampleCount": 5
+            "PreviousSampleCount": 3,
+            "BackupSensor" : "VIRTUAL-SKIN-LEGACY",
+            "OffsetThresholds" : [50000, 53000],
+            "OffsetValues" : [500, 1000],
+            "ValidateInput": true
         },
         {
             "Name": "VIRTUAL-SKIN-MODEL-LEGACY-DIFF",
@@ -228,6 +230,8 @@
                             0.061, 0.034, 0.034, 0.067, 0.046, 0.068, 0.033, 0.001, 0.079,
                             0.043, 0.006, 0.005, 0.026, 0.033, 0.015, 0.062, 0.009, 0.03],
             "Offset": -1087.0,
+            "OffsetThresholds": [0.0],
+            "OffsetValues": [-1087.0],
             "Multiplier": 0.001
         },
         {
@@ -241,6 +245,8 @@
                             0.023, 0.049, 0.018, 0.082, 0.008, 0.066, 0.065, 0.02, 0.006,
                             0.048, 0.033, 0.009, 0.085, 0.018, 0.019, 0.05, 0.005, 0.073],
             "Offset": -127.0,
+            "OffsetThresholds": [0.0],
+            "OffsetValues": [-127.0],
             "Multiplier": 0.001
         },
         {
@@ -253,7 +259,8 @@
             "Coefficient": [0.067, 0.036, 0.02, 0.001, 0.02, 0.041, 0.011, 0.0, 0.08,
                             0.054, 0.041, 0.017, 0.019, 0.041, 0.074, 0.069, 0.004, 0.044,
                             0.077, 0.006, 0.012, 0.077, 0.043, 0.071, 0.055, 0.011, 0.009],
-            "Offset": -333.0,
+            "OffsetThresholds": [0.0],
+            "OffsetValues": [-333.0],
             "Multiplier": 0.001
         },
         {
