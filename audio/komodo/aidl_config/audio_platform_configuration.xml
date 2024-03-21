@@ -20,6 +20,12 @@
       <argument name="Name" value="BCL_AUDIO_BAACL" />
       <argument name="Strategy" value="MediaSpeakerAndScreenOn" />
     </feature>
+    <feature name="BatteryMitigation">
+      <argument name="TargetDigitalVolume" value="809" />
+      <argument name="PcmRampMs" value="15ms" />
+      <argument name="ThrottleDurationMs" value="3000" />
+      <argument name="ThrottleMitigationLevel" value="LIGHT" />
+    </feature>
     <feature name="PlaybackThermalThrottle">
       <argument name="PollWaitMs" value="20000" />
       <argument name="ThermistorName" value="VIRTUAL-SKIN-SPEAKER" />
