@@ -771,6 +771,17 @@
       "ResetOnInit": true
     },
     {
+      "Name": "VIRTUAL-SKIN-CPU-LIGHT-ODPM",
+      "Path": "vendor.thermal.VIRTUAL-SKIN-CPU-LIGHT-ODPM.profile",
+      "Values": [
+        "",
+        "game"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true,
+      "Type": "Property"
+    },
+    {
       "Name": "VIRTUAL-SKIN-CPU-MID",
       "Path": "vendor.thermal.VIRTUAL-SKIN-CPU-MID.profile",
       "Values": [
@@ -2600,6 +2611,12 @@
       "Node": "GPUMinFreq",
       "Duration": 0,
       "Value": "419000"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "VIRTUAL-SKIN-CPU-LIGHT-ODPM",
+      "Duration": 0,
+      "Value": "game"
     },
     {
       "PowerHint": "GAME",
