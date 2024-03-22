@@ -362,6 +362,31 @@
                     "BindedPowerRail": "S3M_VDD_CPUCL2",
                     "CdevCeiling": [0, 12, 12, 12, 12, 12, 12]
                 }
+            ],
+            "Profile": [
+                {
+                    "Mode": "game",
+                    "BindedCdevInfo": [
+                        {
+                           "CdevRequest": "thermal-cpufreq-0",
+                           "BindedPowerRail": "S4M_VDD_CPUCL0",
+                           "MaxReleaseStep": 1,
+                           "Disabled":true
+                        },
+                        {
+                           "CdevRequest": "thermal-cpufreq-1",
+                           "BindedPowerRail": "S2M_VDD_CPUCL1",
+                           "MaxReleaseStep": 1,
+                           "Disabled":true
+                        },
+                        {
+                           "CdevRequest": "thermal-cpufreq-2",
+                           "BindedPowerRail": "S3M_VDD_CPUCL2",
+                           "MaxReleaseStep": 1,
+                           "Disabled":true
+                        }
+                    ]
+                }
             ]
         },
         {
