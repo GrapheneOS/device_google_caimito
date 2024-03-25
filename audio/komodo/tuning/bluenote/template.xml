@@ -60,6 +60,10 @@
         <param default="5" name="CB_smooth_span" type="int32"/>
         <param default="1.0" name="CB_forget_factor" type="float"/>
       </struct>
+      <struct id="35">
+        <param name="IIR_lowpass" size="5" type="float"/>
+        <param name="IIR_highpass" size="5" type="float"/>
+      </struct>
     </module>
     <module id="7" name="Multi Channel IIR 2">
       <param default="0" id="0" max="3" name="opMode_" type="uint32"/>
