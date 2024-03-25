@@ -257,6 +257,16 @@
       "ResetOnInit": true
     },
     {
+      "Name": "CPUSkipMask",
+      "Path": "/proc/vendor_sched/cpu_skip_mask",
+      "Values": [
+        "0x0",
+        "0x80"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
       "Name": "BGUClampMaxBoost",
       "Path": "/proc/vendor_sched/groups/bg/uclamp_max",
       "Values": [
@@ -1946,6 +1956,12 @@
       "Value": "700000"
     },
     {
+      "PowerHint": "CAMERA_STREAMING_HIGH",
+      "Node": "CPUSkipMask",
+      "Duration": 0,
+      "Value": "0x80"
+    },
+    {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PowerHALCameraRunning",
       "Duration": 0,
@@ -2049,6 +2065,12 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
+      "Node": "TAPreferIdle",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "MemFreq",
       "Duration": 0,
       "Value": "1352000"
@@ -2088,6 +2110,12 @@
       "Node": "VIRTUAL-SKIN-CPU-HIGH",
       "Duration": 0,
       "Value": "camera"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_STANDARD",
+      "Node": "CPUSkipMask",
+      "Duration": 0,
+      "Value": "0x80"
     },
     {
       "PowerHint": "CAMERA_STREAMING_LOW",
