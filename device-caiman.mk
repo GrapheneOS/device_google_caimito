@@ -389,3 +389,7 @@ endif
 
 # Window Extensions
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
+
+# Connectivity Resources Overlay
+PRODUCT_PACKAGES += \
+    ConnectivityResourcesOverlayCaimitoOverride
