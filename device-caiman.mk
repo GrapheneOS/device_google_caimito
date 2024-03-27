@@ -279,6 +279,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.udfps.als_feed_forward_supported=true \
     persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
 
+# OIS with system imu
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.camera.ois_with_system_imu=true
+
 # Camera Vendor property
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.front_720P_always_binning=true
@@ -395,3 +399,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Window Extensions
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
+
+# Connectivity Resources Overlay
+PRODUCT_PACKAGES += \
+    ConnectivityResourcesOverlayCaimitoOverride
