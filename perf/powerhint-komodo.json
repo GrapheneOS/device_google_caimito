@@ -2860,9 +2860,21 @@
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
+      "Node": "CPUDVFSHeadroom",
+      "Duration": 0,
+      "Value": "1280"
+    },
+    {
+      "PowerHint": "CAMERA_PROJECT11",
       "Node": "PowerHALCameraRunning",
       "Duration": 0,
       "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_PROJECT11",
+      "Node": "PMU_LIT_LIMIT_FREQ",
+      "Duration": 0,
+      "Value": "1098000"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
@@ -2874,7 +2886,13 @@
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "0"
+      "Value": "42"
+    },
+    {
+      "PowerHint": "CAMERA_PROJECT11",
+      "Node": "PMU_MID_LIMIT_FREQ",
+      "Duration": 0,
+      "Value": "1328000"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
@@ -2886,13 +2904,13 @@
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "50"
+      "Value": "18"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_BIG_LIMIT_FREQ",
       "Duration": 0,
-      "Value": "1885000"
+      "Value": "1298000"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
@@ -2904,25 +2922,25 @@
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_BIG_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "50"
+      "Value": "22"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_POLL",
       "Duration": 0,
-      "Value": "0"
+      "Value": "1"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "EM_Profile",
       "Duration": 0,
-      "Value": "cam1"
+      "Value": "cam2"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "CDPreferHighCap",
       "Duration": 0,
-      "Value": "1"
+      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
@@ -2934,25 +2952,7 @@
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "TAPreferHighCap",
       "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "CAMERA_PROJECT11",
-      "Node": "CPUBigClusterMaxFreq",
-      "Duration": 0,
-      "Value": "1885000"
-    },
-    {
-      "PowerHint": "CAMERA_PROJECT11",
-      "Node": "CPUMidClusterMaxFreq",
-      "Duration": 0,
-      "Value": "1549000"
-    },
-    {
-      "PowerHint": "CAMERA_PROJECT11",
-      "Node": "CPULittleClusterMaxFreq",
-      "Duration": 0,
-      "Value": "1425000"
+      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
@@ -2983,6 +2983,18 @@
       "Node": "CDCpuset",
       "Duration": 0,
       "Value": "0-7"
+    },
+    {
+      "PowerHint": "CAMERA_PROJECT11",
+      "Node": "VIRTUAL-SKIN-CPU-MID",
+      "Duration": 0,
+      "Value": "camera"
+    },
+    {
+      "PowerHint": "CAMERA_PROJECT11",
+      "Node": "VIRTUAL-SKIN-CPU-HIGH",
+      "Duration": 0,
+      "Value": "camera"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
