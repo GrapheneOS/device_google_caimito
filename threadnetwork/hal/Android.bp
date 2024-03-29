@@ -7,6 +7,7 @@ prebuilt_etc {
 override_apex {
     name: "com.google.caimito.hardware.threadnetwork",
     base: "com.android.hardware.threadnetwork",
+    package_name: "com.google.android.hardware.threadnetwork",
     prebuilts: [
         "caimito_threadnetwork_hal_service.rc",
         "threadnetwork-default.xml",
