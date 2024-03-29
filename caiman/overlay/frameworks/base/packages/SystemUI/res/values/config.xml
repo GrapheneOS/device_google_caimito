@@ -70,4 +70,7 @@
       <item>101</item>   <!-- sensorLocationY -->
       <item>48</item>   <!--sensorRadius -->
     </integer-array>
+
+    <!--  Whether to use a machine learning model for back gesture falsing. -->
+    <bool name="config_useBackGestureML">false</bool>
 </resources>
