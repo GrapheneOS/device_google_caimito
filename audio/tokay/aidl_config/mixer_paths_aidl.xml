@@ -895,6 +895,18 @@
     <ctl name="BT_RX Mixer EP4" value="1" />
   </path>
 
+  <path name="spatializer-offload-playback-0 -> bluetooth-sco-default">
+    <path name="spatializer-offload-playback -> bt" />
+  </path>
+
+  <path name="spatializer-offload-playback-0 -> bluetooth-sco-headset">
+    <path name="spatializer-offload-playback -> bt" />
+  </path>
+
+  <path name="spatializer-offload-playback-0 -> bluetooth-sco-car-kit">
+    <path name="spatializer-offload-playback -> bt" />
+  </path>
+
   <path name="spatializer-offload-playback-0 -> bluetooth-a2dp-device">
     <path name="spatializer-offload-playback -> bt" />
   </path>
