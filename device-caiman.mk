@@ -52,6 +52,7 @@ include device/google/gs-common/touch/gti/gti.mk
 include device/google/gs-common/touch/syna/syna20.mk
 include device/google/caimito/fingerprint/ultrasonic_udfps.mk
 include device/google/gs-common/modem/radio_ext/radio_ext.mk
+include device/google/gs-common/pixelsupport/pixelsupport.mk
 
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,caiman)
@@ -307,6 +308,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.primarydisplay.op.ns_min_dbv=440 \
     vendor.primarydisplay.op.hs_switch_min_dbv=1088 \
     vendor.primarydisplay.op.hist_delta_th=8
+
+# Display fixed TE2
+PRODUCT_VENDOR_PROPERTIES += vendor.primarydisplay.fixed_te2.default_rate_hz=120
 
 # Vibrator HAL
 ACTUATOR_MODEL := luxshare_ict_081545
