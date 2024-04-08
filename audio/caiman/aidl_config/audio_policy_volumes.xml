@@ -85,31 +85,31 @@ volume index from 0 to 100.
     <volume stream="AUDIO_STREAM_MUSIC" deviceCategory="DEVICE_CATEGORY_HEADSET"
                                         ref="DEFAULT_MEDIA_VOLUME_CURVE"/>
     <volume stream="AUDIO_STREAM_MUSIC" deviceCategory="DEVICE_CATEGORY_SPEAKER">
-        <point>1,-9000</point>
-        <point>4,-6370</point>
-        <point>8,-6105</point>
-        <point>12,-5810</point>
-        <point>16,-5520</point>
-        <point>20,-5220</point>
-        <point>24,-4870</point>
-        <point>28,-4490</point>
-        <point>32,-4278</point>
-        <point>36,-4027</point>
-        <point>40,-3770</point>
-        <point>44,-3560</point>
-        <point>48,-3300</point>
-        <point>52,-3080</point>
-        <point>56,-2800</point>
-        <point>60,-2620</point>
-        <point>64,-2350</point>
-        <point>68,-2200</point>
-        <point>72,-2100</point>
-        <point>76,-1930</point>
-        <point>80,-1700</point>
-        <point>84,-1460</point>
-        <point>88,-1190</point>
-        <point>92,-850</point>
-        <point>96,-510</point>
+        <point>1,-9999</point>
+        <point>4,-6350</point>
+        <point>8,-5940</point>
+        <point>12,-5587</point>
+        <point>16,-5222</point>
+        <point>20,-4923</point>
+        <point>24,-4602</point>
+        <point>28,-4299</point>
+        <point>32,-4027</point>
+        <point>36,-3789</point>
+        <point>40,-3548</point>
+        <point>44,-3292</point>
+        <point>48,-3004</point>
+        <point>52,-2699</point>
+        <point>56,-2389</point>
+        <point>60,-2154</point>
+        <point>64,-1941</point>
+        <point>68,-1744</point>
+        <point>72,-1555</point>
+        <point>76,-1374</point>
+        <point>80,-1070</point>
+        <point>84,-915</point>
+        <point>88,-590</point>
+        <point>92,-392</point>
+        <point>96,-194</point>
         <point>100,0</point>
     </volume>
     <volume stream="AUDIO_STREAM_MUSIC" deviceCategory="DEVICE_CATEGORY_EARPIECE"
