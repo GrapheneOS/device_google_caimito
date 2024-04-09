@@ -348,10 +348,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Support RIL Domain-selection
 SUPPORT_RIL_DOMAIN_SELECTION := true
 
-# Thread HAL
-PRODUCT_PACKAGES += \
-   com.google.caimito.hardware.threadnetwork
-
 # Window Extensions
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
