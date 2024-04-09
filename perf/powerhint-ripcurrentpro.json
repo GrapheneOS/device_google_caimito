@@ -215,6 +215,16 @@
       "ResetOnInit": true
     },
     {
+      "Name": "AutoPreferIdle",
+      "Path": "/proc/vendor_sched/auto_prefer_idle",
+      "Values": [
+        "0",
+        "1"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
       "Name": "CPUUtilThreshold",
       "Path": "/proc/vendor_sched/util_threshold",
       "Values": [
@@ -849,6 +859,12 @@
       "Value": "0"
     },
     {
+      "PowerHint": "LAUNCH",
+      "Node": "AutoPreferIdle",
+      "Duration": 5000,
+      "Value": "0"
+    },
+    {
       "PowerHint": "LAUNCH_GPU",
       "Node": "GPUDvfsPeriod",
       "Duration": 1000,
@@ -1062,6 +1078,12 @@
       "Value": "1"
     },
     {
+      "PowerHint": "LAUNCH_EXTEND",
+      "Node": "AutoPreferIdle",
+      "Duration": 2000,
+      "Value": "0"
+    },
+    {
       "PowerHint": "LAUNCH_PMU",
       "Node": "PMU_POLL",
       "Duration": 3000,
@@ -1070,6 +1092,12 @@
     {
       "PowerHint": "DISPLAY_CHANGE",
       "Node": "ReducePreferIdle",
+      "Duration": 5000,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "AutoPreferIdle",
       "Duration": 5000,
       "Value": "0"
     },
@@ -1235,6 +1263,12 @@
     },
     {
       "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "AutoPreferIdle",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
       "Node": "FGPreferIdle",
       "Duration": 0,
       "Value": "0"
@@ -1322,6 +1356,12 @@
       "Node": "CDPreferIdle",
       "Duration": 1000,
       "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "AutoPreferIdle",
+      "Duration": 1000,
+      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
@@ -1466,6 +1506,12 @@
       "Node": "CDPreferIdle",
       "Duration": 100,
       "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_ZOOMING_BOOST",
+      "Node": "AutoPreferIdle",
+      "Duration": 100,
+      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_ZOOMING_BOOST",
@@ -1775,6 +1821,12 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
+      "Node": "AutoPreferIdle",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "CDHighCpusetCpus",
       "Duration": 0,
       "Value": "7"
@@ -1931,6 +1983,12 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
+      "Node": "AutoPreferIdle",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "CDHighCpusetCpus",
       "Duration": 0,
       "Value": "7"
@@ -1976,6 +2034,12 @@
       "Node": "CPUSkipMask",
       "Duration": 0,
       "Value": "0x80"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_STANDARD",
+      "Node": "AutoPreferIdle",
+      "Duration": 0,
+      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
@@ -2129,6 +2193,12 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_LOW",
+      "Node": "AutoPreferIdle",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_LOW",
       "Node": "CPUDVFSHeadroom",
       "Duration": 0,
       "Value": "1280"
@@ -2238,6 +2308,12 @@
     {
       "PowerHint": "CAMERA_STREAMING_VIDEO_CALL",
       "Node": "TAPreferIdle",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_VIDEO_CALL",
+      "Node": "AutoPreferIdle",
       "Duration": 0,
       "Value": "0"
     },
@@ -2689,6 +2765,12 @@
     {
       "PowerHint": "GAME",
       "Node": "TAPreferIdle",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "AutoPreferIdle",
       "Duration": 0,
       "Value": "0"
     },

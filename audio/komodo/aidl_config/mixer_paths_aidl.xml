@@ -1298,10 +1298,10 @@
   <path name="speaker">
     <ctl name="Main AMP Enable Switch" value="1" />
     <ctl name="R Main AMP Enable Switch" value="1" />
-    <ctl name="Fast Use Case Delta File" value="fast_switch3.txt" />
+    <!--ctl name="Fast Use Case Delta File" value="fast_switch3.txt" />
     <ctl name="Fast Use Case Switch Enable" value="1" />
     <ctl name="R Fast Use Case Delta File" value="fast_switch4.txt" />
-    <ctl name="R Fast Use Case Switch Enable" value="1" />
+    <ctl name="R Fast Use Case Switch Enable" value="1" /-->
   </path>
 
   <path name="speaker (VOICE)">
@@ -1310,17 +1310,17 @@
     <ctl name="R Main AMP Enable Switch" value="1" />
     <ctl name="Main AMP Enable Switch" value="1" />
     <!-- load Enable FIR -->
-    <ctl name="Fast Use Case Delta File" value="fast_switch1.txt" />
+    <!--ctl name="Fast Use Case Delta File" value="fast_switch1.txt" />
     <ctl name="Fast Use Case Switch Enable" value="1" />
     <ctl name="R Fast Use Case Delta File" value="fast_switch2.txt" />
-    <ctl name="R Fast Use Case Switch Enable" value="1" />
+    <ctl name="R Fast Use Case Switch Enable" value="1" /-->
   </path>
 
   <path name="speaker-safe">
     <ctl name="R Main AMP Enable Switch" value="1" />
     <!-- load Bypass FIR -->
-    <ctl name="R Fast Use Case Delta File" value="fast_switch4.txt" />
-    <ctl name="R Fast Use Case Switch Enable" value="1" />
+    <!--ctl name="R Fast Use Case Delta File" value="fast_switch4.txt" />
+    <ctl name="R Fast Use Case Switch Enable" value="1" /-->
   </path>
 
   <!-- Tx device -->
