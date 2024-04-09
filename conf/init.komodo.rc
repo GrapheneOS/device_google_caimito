@@ -66,9 +66,9 @@ on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_complet
 
 # ODPM
 on early-boot && property:ro.boot.hardware.sku=GZC4K
-    write /sys/bus/iio/devices/iio:device0/enabled_rails "CH11=BUCK12S"
+    write /sys/bus/iio/devices/iio:device1/enabled_rails "CH11=BUCK12S"
 on early-boot && property:ro.boot.hardware.sku=GQ57S
-    write /sys/bus/iio/devices/iio:device0/enabled_rails "CH11=BUCK12S"
+    write /sys/bus/iio/devices/iio:device1/enabled_rails "CH11=BUCK12S"
 
 # Start the twoshay touch service
 on property:sys.boot_completed=1
