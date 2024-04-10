@@ -1111,7 +1111,7 @@
                         },
                         {
                             "Monitor": ["VIRTUAL-SKIN-MODEL-LEGACY-DIFF"],
-                            "TempRange": [-12000, 12000]
+                            "TempRange": [-10000, 10000]
                         }
                     ]
                 }
