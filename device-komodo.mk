@@ -401,3 +401,7 @@ endif
 # Connectivity Resources Overlay
 PRODUCT_PACKAGES += \
     ConnectivityResourcesOverlayCaimitoOverride
+
+#Component Override for Pixel Troubleshooting App
+PRODUCT_COPY_FILES += \
+    device/google/caimito/komodo/komodo-component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/komodo-component-overrides.xml
