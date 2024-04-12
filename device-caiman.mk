@@ -411,3 +411,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 # Connectivity Resources Overlay
 PRODUCT_PACKAGES += \
     ConnectivityResourcesOverlayCaimitoOverride
+
+#Component Override for Pixel Troubleshooting App
+PRODUCT_COPY_FILES += \
+    device/google/caimito/caiman/caiman-component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/caiman-component-overrides.xml
