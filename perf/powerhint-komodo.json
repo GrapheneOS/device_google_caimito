@@ -25,59 +25,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "MemFreq",
-      "Path": "/sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/min_freq",
-      "Values": [
-        "9999999",
-        "1539000",
-        "1352000",
-        "1014000",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "IntFreq",
-      "Path": "/sys/devices/platform/17000020.devfreq_int/devfreq/17000020.devfreq_int/min_freq",
-      "Values": [
-        "9999999",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "DsuMinFreq",
-      "Path": "/sys/devices/platform/17000090.devfreq_dsu/devfreq/17000090.devfreq_dsu/min_freq",
-      "Values": [
-        "9999999",
-        "1800000",
-        "1548000",
-        "820000",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "DsuMaxFreq",
-      "Path": "/sys/devices/platform/17000090.devfreq_dsu/devfreq/17000090.devfreq_dsu/max_freq",
-      "Values": [
-        "9999999"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "BCIMinFreq",
-      "Path": "/sys/devices/platform/170000a0.devfreq_bci/devfreq/170000a0.devfreq_bci/min_freq",
-      "Values": [
-        "9999999",
-        "1401000",
-        "700000",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "CPULittleClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
@@ -520,36 +467,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "INTCAMFreq",
-      "Path": "/sys/devices/platform/17000030.devfreq_intcam/devfreq/17000030.devfreq_intcam/min_freq",
-      "Values": [
-        "664000",
-        "233000",
-        "67000"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "TNRMaxFreq",
-      "Path": "/sys/devices/platform/17000060.devfreq_tnr/devfreq/17000060.devfreq_tnr/max_freq",
-      "Values": [
-        "664000",
-        "111000"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "TNRFreq",
-      "Path": "/sys/devices/platform/17000060.devfreq_tnr/devfreq/17000060.devfreq_tnr/min_freq",
-      "Values": [
-        "664000",
-        "233000",
-        "67000"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "BigTjOffset",
       "Path": "/sys/devices/platform/100a0000.BIG/offset_enabled",
       "Values": [
@@ -834,6 +751,89 @@
       "Values": [
         "20 80",
         "20 40"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "MemFreq",
+      "Path": "/sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/min_freq",
+      "Values": [
+        "9999999",
+        "1539000",
+        "1352000",
+        "1014000",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "IntFreq",
+      "Path": "/sys/devices/platform/17000020.devfreq_int/devfreq/17000020.devfreq_int/min_freq",
+      "Values": [
+        "9999999",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "DsuMinFreq",
+      "Path": "/sys/devices/platform/17000090.devfreq_dsu/devfreq/17000090.devfreq_dsu/min_freq",
+      "Values": [
+        "9999999",
+        "1800000",
+        "1548000",
+        "820000",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "DsuMaxFreq",
+      "Path": "/sys/devices/platform/17000090.devfreq_dsu/devfreq/17000090.devfreq_dsu/max_freq",
+      "Values": [
+        "9999999"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "BCIMinFreq",
+      "Path": "/sys/devices/platform/170000a0.devfreq_bci/devfreq/170000a0.devfreq_bci/min_freq",
+      "Values": [
+        "9999999",
+        "1401000",
+        "700000",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "INTCAMFreq",
+      "Path": "/sys/devices/platform/17000030.devfreq_intcam/devfreq/17000030.devfreq_intcam/min_freq",
+      "Values": [
+        "664000",
+        "233000",
+        "67000"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TNRMaxFreq",
+      "Path": "/sys/devices/platform/17000060.devfreq_tnr/devfreq/17000060.devfreq_tnr/max_freq",
+      "Values": [
+        "664000",
+        "111000"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TNRFreq",
+      "Path": "/sys/devices/platform/17000060.devfreq_tnr/devfreq/17000060.devfreq_tnr/min_freq",
+      "Values": [
+        "664000",
+        "233000",
+        "67000"
       ],
       "ResetOnInit": true
     }
