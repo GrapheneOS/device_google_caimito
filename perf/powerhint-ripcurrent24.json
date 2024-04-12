@@ -2169,7 +2169,7 @@
       "PowerHint": "FACE_UNLOCK_BOOST",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 500,
-      "Value": "9999999"
+      "Value": "1852000"
     },
     {
       "PowerHint": "FACE_UNLOCK_BOOST",
@@ -2187,7 +2187,7 @@
       "PowerHint": "FP_BOOST",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 1000,
-      "Value": "1852000"
+      "Value": "9999999"
     },
     {
       "PowerHint": "FP_BOOST",
