@@ -364,3 +364,8 @@ endif
 # Connectivity Resources Overlay
 PRODUCT_PACKAGES += \
     ConnectivityResourcesOverlayCaimitoOverride
+
+#Component Override for Pixel Troubleshooting App
+PRODUCT_COPY_FILES += \
+    device/google/caimito/tokay/tokay-component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/tokay-component-overrides.xml
+

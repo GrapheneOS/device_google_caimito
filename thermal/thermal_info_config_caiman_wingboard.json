@@ -353,6 +353,31 @@
                     "BindedPowerRail": "S3M_VDD_CPUCL2",
                     "CdevCeiling": [0, 15, 15, 15, 15, 15, 15]
                 }
+            ],
+            "Profile": [
+                {
+                    "Mode": "game",
+                    "BindedCdevInfo": [
+                        {
+                           "CdevRequest": "thermal-cpufreq-0",
+                           "BindedPowerRail": "S4M_VDD_CPUCL0",
+                           "MaxReleaseStep": 1,
+                           "Disabled":true
+                        },
+                        {
+                           "CdevRequest": "thermal-cpufreq-1",
+                           "BindedPowerRail": "S2M_VDD_CPUCL1",
+                           "MaxReleaseStep": 1,
+                           "Disabled":true
+                        },
+                        {
+                           "CdevRequest": "thermal-cpufreq-2",
+                           "BindedPowerRail": "S3M_VDD_CPUCL2",
+                           "MaxReleaseStep": 1,
+                           "Disabled":true
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -400,7 +425,7 @@
                     "CdevWeightForPID": [0.342, 0.342, 0.342, 0.342, 0.342, 0.342, 0.342],
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 2,
-                    "CdevCeiling": [0, 16, 16, 16, 16, 16, 16]
+                    "CdevCeiling": [0, 17, 17, 17, 17, 17, 17]
                 }
             ],
             "Profile": [
@@ -575,8 +600,8 @@
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 1,
                     "BindedPowerRail": "S4M_VDD_CPUCL0",
-                    "CdevCeiling": [0, 9, 9, 9, 9, 11, 11],
-                    "LimitInfo": [0, 0, 0, 0, 0, 11, 11]
+                    "CdevCeiling": [0, 9, 9, 9, 9, 9, 9],
+                    "LimitInfo": [0, 0, 0, 0, 0, 9, 9]
                 },
                 {
                     "CdevRequest": "thermal-cpufreq-1",
@@ -768,21 +793,6 @@
             "Combination": ["VIRTUAL-SKIN-CHARGE-SUB-0", "VIRTUAL-SKIN-CHARGE-SUB-1", "VIRTUAL-SKIN-CHARGE-SUB-2", "VIRTUAL-SKIN-CHARGE-SUB-3"],
             "Coefficient": [1.0, 1.0, 1.0, 1.0],
             "Multiplier":0.001
-        },
-        {
-            "Name":"thb_hda",
-            "Type":"UNKNOWN",
-            "Multiplier":1
-        },
-        {
-            "Name":"IS_WIRED_CHARGE",
-            "Type":"UNKNOWN",
-            "Hidden":true,
-            "VirtualSensor":true,
-            "Formula":"COUNT_THRESHOLD",
-            "Combination":["thb_hda"],
-            "Coefficient":[-1],
-            "Multiplier":1
         },
         {
             "Name": "VIRTUAL-USB-THROTTLING",
@@ -979,7 +989,7 @@
                         },
                         {
                             "Monitor": ["VIRTUAL-SKIN-MODEL-LEGACY-DIFF"],
-                            "TempRange": [-12000, 12000]
+                            "TempRange": [-10000, 10000]
                         }
                     ]
                 }
