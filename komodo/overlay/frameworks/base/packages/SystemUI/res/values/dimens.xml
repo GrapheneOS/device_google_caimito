@@ -21,5 +21,8 @@
 
     <!-- Pixel pitch of the device. um/px -->
     <item name="pixel_pitch" format="float" type="dimen">52.28</item>
+
+    <!-- Volume panel corner radius -->
+    <dimen name="volume_panel_corner_radius">52dp</dimen>
 </resources>
 
