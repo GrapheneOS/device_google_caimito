@@ -302,6 +302,16 @@
       "ResetOnInit": true
     },
     {
+      "Name": "SystemCpuset",
+      "Path": "/dev/cpuset/system/cpus",
+      "Values": [
+        "0-7",
+        "0-6"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
       "Name": "FGCpuset",
       "Path": "/dev/cpuset/foreground/cpus",
       "Values": [
@@ -2688,6 +2698,12 @@
       "PowerHint": "DISPLAY_IDLE",
       "Type": "EndHint",
       "Value": "DISPLAY_UPDATE_IMMINENT"
+    },
+    {
+      "PowerHint": "DISPLAY_IDLE",
+      "Node": "SystemCpuset",
+      "Duration": 0,
+      "Value": "0-6"
     },
     {
       "PowerHint": "DISPLAY_UPDATE_IMMINENT",
