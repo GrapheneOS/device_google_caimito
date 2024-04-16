@@ -1018,7 +1018,7 @@
                 "MinAllocPower":["NAN", "NAN", 0, "NAN", "NAN", "NAN", "NAN"],
                 "MaxAllocPower":["NAN", "NAN", 6219, "NAN", "NAN", "NAN", "NAN"],
                 "I_Cutoff":["NAN", "NAN", 6, "NAN", "NAN", "NAN", "NAN"],
-                "I_Default":1302
+                "I_Default":846
             },
             "ExcludedPowerInfo": [
                 {
