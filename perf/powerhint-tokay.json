@@ -302,6 +302,16 @@
       "ResetOnInit": true
     },
     {
+      "Name": "SystemCpuset",
+      "Path": "/dev/cpuset/system/cpus",
+      "Values": [
+        "0-7",
+        "0-6"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
       "Name": "FGCpuset",
       "Path": "/dev/cpuset/foreground/cpus",
       "Values": [
@@ -2690,6 +2700,12 @@
       "Value": "DISPLAY_UPDATE_IMMINENT"
     },
     {
+      "PowerHint": "DISPLAY_IDLE",
+      "Node": "SystemCpuset",
+      "Duration": 0,
+      "Value": "0-6"
+    },
+    {
       "PowerHint": "DISPLAY_UPDATE_IMMINENT",
       "Node": "CPULittleClusterDownRateLimitUs",
       "Duration": 50,
@@ -3170,6 +3186,7 @@
       "HBoostOffMissedCycles": 5,
       "HBoostPidPuFactor": 0.5,
       "HBoostUclampMin": 722,
+      "JunkCheckTimeFactor": 1.2,
       "LowFrameRateThreshold": 25,
       "MaxRecordsNum": 300
     },
@@ -3202,6 +3219,7 @@
       "HBoostOffMissedCycles": 5,
       "HBoostPidPuFactor": 0.5,
       "HBoostUclampMin": 722,
+      "JunkCheckTimeFactor": 1.2,
       "LowFrameRateThreshold": 25,
       "MaxRecordsNum": 300
     },
@@ -3234,6 +3252,7 @@
       "HBoostOffMissedCycles": 5,
       "HBoostPidPuFactor": 0.5,
       "HBoostUclampMin": 722,
+      "JunkCheckTimeFactor": 1.2,
       "LowFrameRateThreshold": 25,
       "MaxRecordsNum": 300
     },
