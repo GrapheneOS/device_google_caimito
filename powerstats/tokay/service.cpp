@@ -62,6 +62,7 @@ int main() {
 
     std::shared_ptr<PowerStats> p = ndk::SharedRefBase::make<PowerStats>();
 
+    addPixelStateResidencyDataProvider(p, "");
     addZumaProCommonDataProviders(p);
     addDisplay(p);
 
