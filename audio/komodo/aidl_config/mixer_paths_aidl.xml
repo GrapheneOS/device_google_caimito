@@ -423,6 +423,10 @@
     <path name="primary-playback -> bt" />
   </path>
 
+  <path name="primary-playback-0 -> bluetooth-low-energy-broadcast">
+    <path name="primary-playback -> bt" />
+  </path>
+
   <path name="primary-playback-0 -> usb">
     <ctl name="USB_RX Mixer EP2" value="1" />
   </path>
@@ -495,6 +499,10 @@
     <path name="raw-playback -> bt" />
   </path>
 
+  <path name="raw-playback-0 -> bluetooth-low-energy-broadcast">
+    <path name="raw-playback -> bt" />
+  </path>
+
   <path name="raw-playback-0 -> usb">
     <ctl name="USB_RX Mixer RAW" value="1" />
   </path>
@@ -564,6 +572,10 @@
   </path>
 
   <path name="deep-buffer-playback-0 -> bluetooth-low-energy-speaker">
+    <path name="deep-buffer-playback -> bt" />
+  </path>
+
+  <path name="deep-buffer-playback-0 -> bluetooth-low-energy-broadcast">
     <path name="deep-buffer-playback -> bt" />
   </path>
 
@@ -644,6 +656,10 @@
     <path name="compress-offload-playback -> bt" />
   </path>
 
+  <path name="compress-offload-playback-0 -> bluetooth-low-energy-broadcast">
+    <path name="compress-offload-playback -> bt" />
+  </path>
+
   <path name="compress-offload-playback-0 -> usb">
     <ctl name="USB_RX Mixer EP7" value="1" />
   </path>
@@ -713,6 +729,10 @@
   </path>
 
   <path name="mmap-playback-0 -> bluetooth-low-energy-speaker">
+    <path name="mmap-playback -> bt" />
+  </path>
+
+  <path name="mmap-playback-0 -> bluetooth-low-energy-broadcast">
     <path name="mmap-playback -> bt" />
   </path>
 
@@ -800,6 +820,10 @@
     <path name="voip-playback -> bt" />
   </path>
 
+  <path name="voip-playback-0 -> bluetooth-low-energy-broadcast">
+    <path name="voip-playback -> bt" />
+  </path>
+
   <path name="voip-playback-0 -> usb">
     <ctl name="USB_RX Mixer VOIP" value="1" />
   </path>
@@ -857,6 +881,10 @@
   </path>
 
   <path name="immersive-playback-0 -> bluetooth-low-energy-speaker">
+    <path name="immersive-playback -> bt" />
+  </path>
+
+  <path name="immersive-playback-0 -> bluetooth-low-energy-broadcast">
     <path name="immersive-playback -> bt" />
   </path>
 
@@ -921,6 +949,10 @@
   </path>
 
   <path name="spatializer-offload-playback-0 -> bluetooth-low-energy-speaker">
+    <path name="spatializer-offload-playback -> bt" />
+  </path>
+
+  <path name="spatializer-offload-playback-0 -> bluetooth-low-energy-broadcast">
     <path name="spatializer-offload-playback -> bt" />
   </path>
 
@@ -991,6 +1023,10 @@
   </path>
 
   <path name="haptic-playback-0 -> bluetooth-low-energy-speaker">
+    <path name="haptic-playback -> bt" />
+  </path>
+
+  <path name="haptic-playback-0 -> bluetooth-low-energy-broadcast">
     <path name="haptic-playback -> bt" />
   </path>
 
@@ -1168,6 +1204,10 @@
   </path>
 
   <path name="voice-call-downlink-0 -> bluetooth-low-energy-speaker">
+    <path name="voice-call-downlink-0 -> bt" />
+  </path>
+
+  <path name="voice-call-downlink-0 -> bluetooth-low-energy-broadcast">
     <path name="voice-call-downlink-0 -> bt" />
   </path>
 
