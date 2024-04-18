@@ -312,6 +312,7 @@
       "Path": "/proc/vendor_sched/groups/ta/uclamp_min",
       "Values": [
         "765",
+        "600",
         "1"
       ],
       "ResetOnInit": true
@@ -1440,6 +1441,12 @@
       "Node": "PMU_POLL",
       "Duration": 3000,
       "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
+      "Node": "TAUClampBoost",
+      "Duration": 3000,
+      "Value": "600"
     },
     {
       "PowerHint": "CAMERA_THERMAL_SEVERE_BOOST",
