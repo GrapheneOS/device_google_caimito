@@ -49,7 +49,7 @@ int main() {
 
     std::shared_ptr<PowerStats> p = ndk::SharedRefBase::make<PowerStats>();
 
-    addDisplayVrr(p, "Display");
+    addPixelStateResidencyDataProvider(p, "Display");
     addZumaProCommonDataProviders(p);
     addDisplay(p);
 
