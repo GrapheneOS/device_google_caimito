@@ -3116,13 +3116,13 @@
       "PowerHint": "GAME",
       "Node": "CPUMidClusterDownRateLimitUs",
       "Duration": 0,
-      "Value": "3000"
+      "Value": "500"
     },
     {
       "PowerHint": "GAME",
       "Node": "CPUBigClusterDownRateLimitUs",
       "Duration": 0,
-      "Value": "3000"
+      "Value": "500"
     },
     {
       "PowerHint": "GAME",
@@ -3152,13 +3152,13 @@
       "PowerHint": "GAME",
       "Node": "AutoMigrationMarginsEnable",
       "Duration": 0,
-      "Value": "0"
+      "Value": "1"
     },
     {
       "PowerHint": "GAME",
       "Node": "AutoDvfsHeadroomEnable",
       "Duration": 0,
-      "Value": "0"
+      "Value": "1"
     },
     {
       "PowerHint": "GAME",
@@ -3176,7 +3176,7 @@
       "PowerHint": "GAME",
       "Node": "PerTaskMaxIowaitBoost",
       "Duration": 0,
-      "Value": "0"
+      "Value": "512"
     },
     {
       "PowerHint": "FACE_UNLOCK_BOOST",
