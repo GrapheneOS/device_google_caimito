@@ -71,8 +71,6 @@
   <ctl name="R ASPTX4 Slot Position" value="7" />
 
   <!-- Cirrus Booster Amp DRE and VBST config-->
-  <ctl name="VBSTMON Output Switch" value="1" />
-  <ctl name="R VBSTMON Output Switch" value="1" />
   <ctl name="DRE DRE Switch" value="1" />
   <ctl name="R DRE DRE Switch" value="1" />
 
@@ -144,7 +142,6 @@
   <ctl name="TDM_1_RX Mixer EP5" value="0" />
   <ctl name="TDM_1_RX Mixer EP6" value="0" />
   <ctl name="TDM_1_RX Mixer EP7" value="0" />
-  <ctl name="TDM_1_RX Mixer EP8" value="0" />
   <ctl name="TDM_1_RX Mixer NoHost1" value="0" />
 
   <ctl name="USB_RX Mixer EP1" value="0" />
@@ -1226,53 +1223,9 @@
     <ctl name="NoHost1 TX Mixer TDM_0_TX" value="1" />
   </path>
 
-  <path name="telephony-rx (VOICE_DOWNLINK) -> in-call-capture-0">
-    <ctl name="Incall Capture Stream0" value="DL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_UPLINK) -> in-call-capture-0">
-    <ctl name="Incall Capture Stream0" value="UL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_CALL) -> in-call-capture-0">
-    <ctl name="Incall Capture Stream0" value="UL_DL" />
-  </path>
-
-  <path name="telephony-rx -> in-call-capture-0">
-    <ctl name="Incall Capture Stream0" value="DL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_DOWNLINK) -> in-call-capture-1">
-    <ctl name="Incall Capture Stream1" value="DL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_UPLINK) -> in-call-capture-1">
-    <ctl name="Incall Capture Stream1" value="UL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_CALL) -> in-call-capture-1">
-    <ctl name="Incall Capture Stream1" value="UL_DL" />
-  </path>
-
-  <path name="telephony-rx -> in-call-capture-1">
-    <ctl name="Incall Capture Stream1" value="DL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_DOWNLINK) -> in-call-capture-2">
-    <ctl name="Incall Capture Stream2" value="DL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_UPLINK) -> in-call-capture-2">
-    <ctl name="Incall Capture Stream2" value="UL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_CALL) -> in-call-capture-2">
-    <ctl name="Incall Capture Stream2" value="UL_DL" />
-  </path>
-
-  <path name="telephony-rx -> in-call-capture-2">
-    <ctl name="Incall Capture Stream2" value="DL" />
-  </path>
+  <path name="in-call-capture-source-0 -> in-call-capture-0" />
+  <path name="in-call-capture-source-1 -> in-call-capture-1" />
+  <path name="in-call-capture-source-2 -> in-call-capture-2" />
 
   <!-- codec setting -->
   <!-- Rx device -->
@@ -1417,6 +1370,54 @@
 
   <path name="usb-device-microphones">
     <path name="usb-microphones" />
+  </path>
+
+  <path name="in-call-capture-source-0 (VOICE_DOWNLINK)">
+    <ctl name="Incall Capture Stream0" value="DL" />
+  </path>
+
+  <path name="in-call-capture-source-0 (VOICE_UPLINK)">
+    <ctl name="Incall Capture Stream0" value="UL" />
+  </path>
+
+  <path name="in-call-capture-source-0 (VOICE_CALL)">
+    <ctl name="Incall Capture Stream0" value="UL_DL" />
+  </path>
+
+  <path name="in-call-capture-source-0">
+    <path name="in-call-capture-source-0 (VOICE_DOWNLINK)" />
+  </path>
+
+  <path name="in-call-capture-source-1 (VOICE_DOWNLINK)">
+    <ctl name="Incall Capture Stream1" value="DL" />
+  </path>
+
+  <path name="in-call-capture-source-1 (VOICE_UPLINK)">
+    <ctl name="Incall Capture Stream1" value="UL" />
+  </path>
+
+  <path name="in-call-capture-source-1 (VOICE_CALL)">
+    <ctl name="Incall Capture Stream1" value="UL_DL" />
+  </path>
+
+  <path name="in-call-capture-source-1">
+    <path name="in-call-capture-source-1 (VOICE_DOWNLINK)" />
+  </path>
+
+  <path name="in-call-capture-source-2 (VOICE_DOWNLINK)">
+    <ctl name="Incall Capture Stream2" value="DL" />
+  </path>
+
+  <path name="in-call-capture-source-2 (VOICE_UPLINK)">
+    <ctl name="Incall Capture Stream2" value="UL" />
+  </path>
+
+  <path name="in-call-capture-source-2 (VOICE_CALL)">
+    <ctl name="Incall Capture Stream2" value="UL_DL" />
+  </path>
+
+  <path name="in-call-capture-source-2">
+    <path name="in-call-capture-source-2 (VOICE_DOWNLINK)" />
   </path>
 
   <!-- cs35l41 specific path to load firmware in cs35l41.c -->
