@@ -614,6 +614,7 @@
       "Path": "/sys/devices/system/cpu/cpufreq/policy0/sched_pixel/spc_threshold",
       "Values": [
         "70",
+        "55",
         "42",
         "35",
         "30",
@@ -2081,7 +2082,7 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "42"
+      "Value": "55"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
@@ -2099,7 +2100,7 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "18"
+      "Value": "30"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
@@ -3177,7 +3178,7 @@
       "HBoostOffMissedCycles": 5,
       "HBoostPidPuFactor": 0.5,
       "HBoostUclampMin": 722,
-      "JunkCheckTimeFactor": 1.2,
+      "JankCheckTimeFactor": 1.43,
       "LowFrameRateThreshold": 25,
       "MaxRecordsNum": 300
     },
@@ -3210,7 +3211,7 @@
       "HBoostOffMissedCycles": 5,
       "HBoostPidPuFactor": 0.5,
       "HBoostUclampMin": 722,
-      "JunkCheckTimeFactor": 1.2,
+      "JankCheckTimeFactor": 1.43,
       "LowFrameRateThreshold": 25,
       "MaxRecordsNum": 300
     },
@@ -3243,7 +3244,7 @@
       "HBoostOffMissedCycles": 5,
       "HBoostPidPuFactor": 0.5,
       "HBoostUclampMin": 722,
-      "JunkCheckTimeFactor": 1.2,
+      "JankCheckTimeFactor": 1.43,
       "LowFrameRateThreshold": 25,
       "MaxRecordsNum": 300
     },
