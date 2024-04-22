@@ -729,6 +729,7 @@
       "Path": "/sys/devices/system/cpu/cpufreq/policy4/sched_pixel/spc_threshold",
       "Values": [
         "50",
+        "32",
         "30",
         "20",
         "18"
@@ -1897,7 +1898,7 @@
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "35"
+      "Value": "55"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
@@ -1915,7 +1916,7 @@
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "20"
+      "Value": "32"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
