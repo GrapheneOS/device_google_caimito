@@ -16,5 +16,6 @@
 <config>
     <component-override package="com.google.android.apps.pixel.support" >
         <component class="com.google.android.apps.pixel.support.navigationroot.TouchNavigationRootActivity" enabled="true" />
+        <component class="com.google.android.apps.pixel.support.navigationroot.TouchDiagnosticsSearchProvider" enabled="true" />
     </component-override>
 </config>
