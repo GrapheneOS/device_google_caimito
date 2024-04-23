@@ -23,6 +23,6 @@
     <item name="pixel_pitch" format="float" type="dimen">60.16</item>
 
     <!-- Volume panel corner radius -->
-    <dimen name="volume_panel_corner_radius">52dp</dimen>
+    <dimen name="bottom_sheet_corner_radius">52dp</dimen>
 </resources>
 
