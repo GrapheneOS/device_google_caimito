@@ -53,6 +53,7 @@
         "1800000",
         "1548000",
         "820000",
+        "610000",        
         "0"
       ],
       "ResetOnInit": true
@@ -1879,7 +1880,7 @@
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "DsuMinFreq",
       "Duration": 0,
-      "Value": "820000"
+      "Value": "610000"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
@@ -1986,6 +1987,12 @@
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "TAPreferIdle",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_HIGH",
+      "Node": "CDPreferIdle",
       "Duration": 0,
       "Value": "0"
     },
