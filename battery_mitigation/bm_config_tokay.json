@@ -14,5 +14,9 @@
             "State":["START", "LIGHT", "MEDIUM", "HEAVY", "DISABLED"],
             "Condition":"BASIC"
         }
-    ]
+    ],
+    "MitigationConfig": {
+        "QuickSaveStats": 1,
+        "TriggerDeglitchMS": 1000
+    }
 }
