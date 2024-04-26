@@ -198,7 +198,7 @@
             "PreviousSampleCount": 11,
             "OutputLabelCount": 6,
             "Multiplier": 0.001,
-            "SupportUnderStampling": true,
+            "SupportUnderSampling": true,
             "ValidateInput": true
         },
         {
