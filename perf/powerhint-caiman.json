@@ -600,15 +600,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "PMU_LIT_LCPI_THRESHOLD",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy0/sched_pixel/lcpi_threshold",
-      "Values": [
-        "2",
-        "0"
-      ],
-      "DefaultIndex": 0
-    },
-    {
       "Name": "PMU_LIT_SPC_THRESHOLD",
       "Path": "/sys/devices/system/cpu/cpufreq/policy0/sched_pixel/spc_threshold",
       "Values": [
@@ -633,14 +624,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "PMU_MID_LCPI_THRESHOLD",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy4/sched_pixel/lcpi_threshold",
-      "Values": [
-        "3"
-      ],
-      "DefaultIndex": 0
-    },
-    {
       "Name": "PMU_MID_SPC_THRESHOLD",
       "Path": "/sys/devices/system/cpu/cpufreq/policy4/sched_pixel/spc_threshold",
       "Values": [
@@ -659,14 +642,6 @@
         "2363000",
         "1885000",
         "1298000"
-      ],
-      "DefaultIndex": 0
-    },
-    {
-      "Name": "PMU_BIG_LCPI_THRESHOLD",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy7/sched_pixel/lcpi_threshold",
-      "Values": [
-        "3"
       ],
       "DefaultIndex": 0
     },
@@ -1768,12 +1743,6 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
-      "Node": "PMU_LIT_LCPI_THRESHOLD",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
       "Value": "20"
@@ -1786,12 +1755,6 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
-      "Node": "PMU_MID_LCPI_THRESHOLD",
-      "Duration": 0,
-      "Value": "3"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
       "Value": "30"
@@ -1801,12 +1764,6 @@
       "Node": "PMU_BIG_LIMIT_FREQ",
       "Duration": 0,
       "Value": "1298000"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_EXTREME",
-      "Node": "PMU_BIG_LCPI_THRESHOLD",
-      "Duration": 0,
-      "Value": "3"
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
@@ -1924,12 +1881,6 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "PMU_LIT_LCPI_THRESHOLD",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
       "Value": "55"
@@ -1942,12 +1893,6 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "PMU_MID_LCPI_THRESHOLD",
-      "Duration": 0,
-      "Value": "3"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
       "Value": "32"
@@ -1957,12 +1902,6 @@
       "Node": "PMU_BIG_LIMIT_FREQ",
       "Duration": 0,
       "Value": "1298000"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "PMU_BIG_LCPI_THRESHOLD",
-      "Duration": 0,
-      "Value": "3"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
@@ -2098,12 +2037,6 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
-      "Node": "PMU_LIT_LCPI_THRESHOLD",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
       "Value": "55"
@@ -2116,12 +2049,6 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
-      "Node": "PMU_MID_LCPI_THRESHOLD",
-      "Duration": 0,
-      "Value": "3"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
       "Value": "30"
@@ -2131,12 +2058,6 @@
       "Node": "PMU_BIG_LIMIT_FREQ",
       "Duration": 0,
       "Value": "1298000"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_STANDARD",
-      "Node": "PMU_BIG_LCPI_THRESHOLD",
-      "Duration": 0,
-      "Value": "3"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
@@ -2461,12 +2382,6 @@
       "Node": "PMU_LIT_LIMIT_FREQ",
       "Duration": 0,
       "Value": "1328000"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_VIDEO_CALL",
-      "Node": "PMU_LIT_LCPI_THRESHOLD",
-      "Duration": 0,
-      "Value": "2"
     },
     {
       "PowerHint": "CAMERA_STREAMING_VIDEO_CALL",
@@ -3059,12 +2974,6 @@
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
-      "Node": "PMU_LIT_LCPI_THRESHOLD",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
       "Value": "42"
@@ -3077,12 +2986,6 @@
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
-      "Node": "PMU_MID_LCPI_THRESHOLD",
-      "Duration": 0,
-      "Value": "3"
-    },
-    {
-      "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
       "Value": "18"
@@ -3092,12 +2995,6 @@
       "Node": "PMU_BIG_LIMIT_FREQ",
       "Duration": 0,
       "Value": "1298000"
-    },
-    {
-      "PowerHint": "CAMERA_PROJECT11",
-      "Node": "PMU_BIG_LCPI_THRESHOLD",
-      "Duration": 0,
-      "Value": "3"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
