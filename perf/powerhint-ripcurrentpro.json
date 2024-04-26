@@ -2132,7 +2132,7 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "CPUDVFSHeadroom",
       "Duration": 0,
-      "Value": "1280 1100 1055"
+      "Value": "1100"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
