@@ -686,6 +686,7 @@
       "Name": "PMU_LIT_SPC_THRESHOLD",
       "Path": "/sys/devices/system/cpu/cpufreq/policy0/sched_pixel/spc_threshold",
       "Values": [
+        "76",
         "70",
         "55",
         "42",
@@ -710,6 +711,7 @@
       "Name": "PMU_MID_SPC_THRESHOLD",
       "Path": "/sys/devices/system/cpu/cpufreq/policy4/sched_pixel/spc_threshold",
       "Values": [
+        "59",
         "50",
         "32",
         "30",
@@ -732,6 +734,7 @@
       "Name": "PMU_BIG_SPC_THRESHOLD",
       "Path": "/sys/devices/system/cpu/cpufreq/policy7/sched_pixel/spc_threshold",
       "Values": [
+        "62",
         "50",
         "22",
         "20"
