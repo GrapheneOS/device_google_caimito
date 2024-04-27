@@ -351,10 +351,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Support RIL Domain-selection
 SUPPORT_RIL_DOMAIN_SELECTION := true
 
-# Thread HAL
-PRODUCT_PACKAGES += \
-   com.google.caimito.hardware.threadnetwork
-
 # Keyboard height ratio and bottom padding in dp for portrait mode
 PRODUCT_PRODUCT_PROPERTIES += \
           ro.com.google.ime.kb_pad_port_b=8 \
@@ -362,7 +358,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Enable Bluetooth AutoOn feature
 PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.server.automatic_turn_on=false
+    bluetooth.server.automatic_turn_on=true
 
 # Window Extensions
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
