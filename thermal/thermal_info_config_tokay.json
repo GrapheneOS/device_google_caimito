@@ -343,7 +343,7 @@
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 1,
                     "BindedPowerRail": "S4M_VDD_CPUCL0",
-                    "CdevCeiling": [0, 2, 2, 2, 2, 2, 2]
+                    "CdevCeilingFrequency": [1950000, 1696000, 1696000, 1696000, 1696000, 1696000, 1696000]
                 },
                 {
                     "CdevRequest": "thermal-cpufreq-1",
@@ -351,7 +351,7 @@
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 2,
                     "BindedPowerRail": "S2M_VDD_CPUCL1",
-                    "CdevCeiling": [0, 6, 6, 6, 6, 6, 6]
+                    "CdevCeilingFrequency": [2600000, 1795000, 1795000, 1795000, 1795000, 1795000, 1795000]
                 },
                 {
                     "CdevRequest": "thermal-cpufreq-2",
@@ -359,7 +359,7 @@
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 2,
                     "BindedPowerRail": "S3M_VDD_CPUCL2",
-                    "CdevCeiling": [0, 15, 15, 15, 15, 15, 15]
+                    "CdevCeilingFrequency": [3105000, 1396000, 1396000, 1396000, 1396000, 1396000, 1396000]
                 }
             ],
             "Profile": [
@@ -419,21 +419,21 @@
                     "CdevWeightForPID": [0.292, 0.292, 0.292, 0.292, 0.292, 0.292, 0.292],
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 1,
-                    "CdevCeiling": [0, 7, 7, 7, 7, 7, 7]
+                    "CdevCeilingFrequency": [1950000, 1098000, 1098000, 1098000, 1098000, 1098000, 1098000]
                 },
                 {
                     "CdevRequest": "thermal-cpufreq-1",
                     "CdevWeightForPID": [0.804, 0.804, 0.804, 0.804, 0.804, 0.804, 0.804],
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 2,
-                    "CdevCeiling": [0, 10, 10, 10, 10, 10, 10]
+                    "CdevCeilingFrequency": [2600000, 1221000, 1221000, 1221000, 1221000, 1221000, 1221000]
                 },
                 {
                     "CdevRequest": "thermal-cpufreq-2",
                     "CdevWeightForPID": [0.342, 0.342, 0.342, 0.342, 0.342, 0.342, 0.342],
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 2,
-                    "CdevCeiling": [0, 17, 17, 17, 17, 17, 17]
+                    "CdevCeilingFrequency": [3105000, 700000, 700000, 700000, 700000, 700000, 700000]
                 }
             ],
             "Profile": [
@@ -510,21 +510,21 @@
                     "CdevWeightForPID": [0.156, 0.156, 0.156, 0.156, 0.156, 0.156, 0.156],
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 1,
-                    "CdevCeiling": [0, 9, 9, 9, 9, 9, 9]
+                    "CdevCeilingFrequency": [1950000, 820000, 820000, 820000, 820000, 820000, 820000]
                 },
                 {
                     "CdevRequest": "thermal-cpufreq-1",
                     "CdevWeightForPID": [0.428, 0.428, 0.428, 0.428, 0.428, 0.428, 0.428],
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 2,
-                    "CdevCeiling": [0, 13, 13, 13, 13, 13, 13]
+                    "CdevCeilingFrequency": [2600000, 787000, 787000, 787000, 787000, 787000, 787000]
                 },
                 {
                     "CdevRequest": "thermal-cpufreq-2",
                     "CdevWeightForPID": [0.225, 0.225, 0.225, 0.225, 0.225, 0.225, 0.225],
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 2,
-                    "CdevCeiling": [0, 17, 17, 17, 17, 17, 17]
+                    "CdevCeilingFrequency": [3105000, 700000, 700000, 700000, 700000, 700000, 700000]
                 }
             ],
             "Profile": [
@@ -556,21 +556,21 @@
                             "CdevWeightForPID": [0.156, 0.156, 0.156, 0.156, 0.156, 0.156, 0.156],
                             "MaxReleaseStep": 1,
                             "MaxThrottleStep": 1,
-                            "CdevCeiling": [0, 2, 2, 2, 2, 2, 2]
+                            "CdevCeilingFrequency": [1950000, 1696000, 1696000, 1696000, 1696000, 1696000, 1696000]
                          },
                          {
                             "CdevRequest": "thermal-cpufreq-1",
                             "CdevWeightForPID": [0.428, 0.428, 0.428, 0.428, 0.428, 0.428, 0.428],
                             "MaxReleaseStep": 1,
                             "MaxThrottleStep": 2,
-                            "CdevCeiling": [0, 6, 6, 6, 6, 6, 6]
+                            "CdevCeilingFrequency": [2600000, 1795000, 1795000, 1795000, 1795000, 1795000, 1795000]
                          },
                          {
                             "CdevRequest": "thermal-cpufreq-2",
                             "CdevWeightForPID": [0.225, 0.225, 0.225, 0.225, 0.225, 0.225, 0.225],
                             "MaxReleaseStep": 1,
                             "MaxThrottleStep": 2,
-                            "CdevCeiling": [0, 15, 15, 15, 15, 15, 15]
+                            "CdevCeilingFrequency": [3105000, 1396000, 1396000, 1396000, 1396000, 1396000, 1396000]
                          }
                     ]
                 }
@@ -608,8 +608,8 @@
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 1,
                     "BindedPowerRail": "S4M_VDD_CPUCL0",
-                    "CdevCeiling": [0, 9, 9, 9, 9, 9, 9],
-                    "LimitInfo": [0, 0, 0, 0, 0, 9, 9]
+                    "CdevCeilingFrequency": [1950000, 820000, 820000, 820000, 820000, 820000, 820000],
+                    "LimitInfoFrequency": [1950000, 1950000, 1950000, 1950000, 1950000, 820000, 820000]
                 },
                 {
                     "CdevRequest": "thermal-cpufreq-1",
@@ -617,8 +617,8 @@
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 2,
                     "BindedPowerRail": "S2M_VDD_CPUCL1",
-                    "CdevCeiling": [0, 13, 13, 13, 14, 16, 16],
-                    "LimitInfo": [0, 0, 0, 0, 0, 16, 16]
+                    "CdevCeilingFrequency": [2600000, 787000, 787000, 787000, 648000, 357000, 357000],
+                    "LimitInfoFrequency": [2600000, 2600000, 2600000, 2600000, 2600000, 357000, 357000]
                 },
                 {
                     "CdevRequest": "thermal-cpufreq-2",
@@ -626,8 +626,8 @@
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 2,
                     "BindedPowerRail": "S3M_VDD_CPUCL2",
-                    "CdevCeiling": [0, 17, 17, 17, 17, 17, 17],
-                    "LimitInfo": [0, 0, 0, 0, 0, 17, 17]
+                    "CdevCeilingFrequency": [3105000, 700000, 700000, 700000, 700000, 700000, 700000],
+                    "LimitInfoFrequency": [3105000, 3105000, 3105000, 3105000, 3105000, 700000, 700000]
                 },
                 {
                     "CdevRequest": "thermal-gpufreq-0",
@@ -1045,17 +1045,20 @@
         {
             "Name":"thermal-cpufreq-0",
             "Type":"CPU",
-            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-0/user_vote"
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-0/user_vote",
+            "ScalingAvailableFrequenciesPath": "/sys/devices/system/cpu/cpufreq/policy0/scaling_available_frequencies"
         },
         {
             "Name":"thermal-cpufreq-1",
             "Type":"CPU",
-            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-1/user_vote"
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-1/user_vote",
+            "ScalingAvailableFrequenciesPath": "/sys/devices/system/cpu/cpufreq/policy4/scaling_available_frequencies"
         },
         {
             "Name":"thermal-cpufreq-2",
             "Type":"CPU",
-            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-2/user_vote"
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-cpufreq-2/user_vote",
+            "ScalingAvailableFrequenciesPath": "/sys/devices/system/cpu/cpufreq/policy7/scaling_available_frequencies"
         },
         {
             "Name":"thermal-gpufreq-0",
