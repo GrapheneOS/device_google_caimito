@@ -759,8 +759,8 @@
                     "MaxReleaseStep": 1,
                     "MaxThrottleStep": 1,
                     "BindedPowerRail": "S2S_VDD_G3D",
-                    "CdevCeiling": [0, 9, 9, 9, 10, 12, 12],
-                    "LimitInfo": [0, 0, 0, 0, 0, 12, 12]
+                    "CdevCeilingFrequency": [940000, 419000, 419000, 419000, 376000, 302000, 302000],
+                    "LimitInfoFrequency": [940000, 940000, 940000, 940000, 940000, 302000, 302000]
                 },
                 {
                     "CdevRequest": "tpu_cooling",
@@ -802,7 +802,7 @@
                 {
                     "CdevRequest": "thermal-gpufreq-0",
                     "CdevWeightForPID": [1, 1, 1, 1, 1, 1, 1],
-                    "CdevCeiling": [0, 9, 9, 10, 12, 12, 12]
+                    "CdevCeilingFrequency": [940000, 419000, 419000, 376000, 302000, 302000, 302000]
                 }
             ]
         },
@@ -1162,7 +1162,8 @@
         {
             "Name":"thermal-gpufreq-0",
             "Type":"GPU",
-            "WritePath":"/dev/thermal/cdev-by-name/thermal-gpufreq-0/user_vote"
+            "WritePath":"/dev/thermal/cdev-by-name/thermal-gpufreq-0/user_vote",
+            "ScalingAvailableFrequenciesPath": "/sys/devices/platform/1f000000.mali/available_frequencies"
         },
         {
             "Name":"chg_mdis",
