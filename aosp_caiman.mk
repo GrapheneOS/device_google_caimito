@@ -20,7 +20,7 @@ USE_SWIFTSHADER := false
 BOARD_USES_SWIFTSHADER := false
 
 $(call inherit-product, device/google/zumapro/aosp_common.mk)
-$(call inherit-product, device/google/caimito/device-caiman.mk)
+$(call inherit-product, device/google/caimito/caiman_generic.mk)
 
 PRODUCT_NAME := aosp_caiman
 PRODUCT_DEVICE := caiman
