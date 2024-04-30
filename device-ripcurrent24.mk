@@ -14,8 +14,13 @@
 # limitations under the License.
 #
 
-TARGET_KERNEL_DIR ?= device/google/caimito-kernel
-TARGET_BOARD_KERNEL_HEADERS := device/google/caimito-kernel/kernel-headers
+ifdef RELEASE_GOOGLE_RIPCURRENT24_KERNEL_DIR
+TARGET_KERNEL_DIR ?= $(RELEASE_GOOGLE_RIPCURRENT24_KERNEL_DIR)
+TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_GOOGLE_RIPCURRENT24_KERNEL_DIR)/kernel-headers
+else
+TARGET_KERNEL_DIR ?= device/google/caimito-kernels/6.1/24D1
+TARGET_BOARD_KERNEL_HEADERS ?= device/google/caimito-kernels/6.1/24D1/kernel-headers
+endif
 
 $(call inherit-product-if-exists, vendor/google_devices/caimito/prebuilts/device-vendor-ripcurrent24.mk)
 $(call inherit-product-if-exists, vendor/google_devices/zumapro/prebuilts/device-vendor.mk)
