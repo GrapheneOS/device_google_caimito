@@ -175,7 +175,7 @@
             "PreviousSampleCount": 3,
             "OffsetThresholds" : [50000, 53000],
             "OffsetValues" : [500, 1000],
-            "SupportUnderStampling": true
+            "SupportUnderSampling": true
         },
         {
             "Name": "VIRTUAL-SKIN-MODEL-UPPER-CLAMPED",
