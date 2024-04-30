@@ -37,6 +37,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_SOONG_NAMESPACES += \
 	vendor/qcom/fingerprint/QFPCalibration
+
+PRODUCT_PACKAGES += \
+        QFPCalibration
 endif
 
 ifneq (,$(findstring factory, $(TARGET_PRODUCT)))
