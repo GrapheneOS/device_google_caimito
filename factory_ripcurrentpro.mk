@@ -57,3 +57,6 @@ SOONG_CONFIG_gpssdk_gpsconf := factory
 
 # Factory binaries of camera
 PRODUCT_PACKAGES += fatp_km4cm4tk4_wide_hat_tool fatp_km4cm4_tele_hat_tool fatp_km4cm4tk4_ultrawide_hat_tool fatp_km4cm4_front_hat_tool fatp_tk4_front_hat_tool
+
+# preloaded_nanoapps.json
+PRODUCT_SOONG_NAMESPACES += vendor/google_contexthub/devices/factory
