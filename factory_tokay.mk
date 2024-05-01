@@ -59,3 +59,6 @@ SOONG_CONFIG_gpssdk_gpsconf := factory
 PRODUCT_PACKAGES += fatp_km4cm4tk4_wide_hat_tool fatp_km4cm4tk4_ultrawide_hat_tool fatp_tk4_front_hat_tool factory_lwis_client_test
 
 PRODUCT_WITHOUT_TTS_VOICE_PACKS := true
+
+# preloaded_nanoapps.json
+PRODUCT_SOONG_NAMESPACES += vendor/google_contexthub/devices/factory
