@@ -385,10 +385,6 @@ SUPPORT_RIL_DOMAIN_SELECTION := true
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
-# Thread HAL
-PRODUCT_PACKAGES += \
-   com.google.caimito.hardware.threadnetwork
-
 # Window Extensions
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
