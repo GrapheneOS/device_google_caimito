@@ -727,7 +727,7 @@
       "Values": [
         "2363000",
         "1885000",
-        "1298000"
+        "1396000"
       ],
       "DefaultIndex": 0
     },
@@ -1756,7 +1756,7 @@
       "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "PMU_BIG_LIMIT_FREQ",
       "Duration": 0,
-      "Value": "1298000"
+      "Value": "1396000"
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
@@ -1894,7 +1894,7 @@
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PMU_BIG_LIMIT_FREQ",
       "Duration": 0,
-      "Value": "1298000"
+      "Value": "1396000"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
@@ -2056,7 +2056,7 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PMU_BIG_LIMIT_FREQ",
       "Duration": 0,
-      "Value": "1298000"
+      "Value": "1396000"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
