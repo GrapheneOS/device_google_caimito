@@ -274,6 +274,7 @@
         "0x0",
         "0x80"
       ],
+      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
@@ -855,12 +856,6 @@
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "CPUSkipMask",
-      "Duration": 5000,
-      "Value": "0x0"
-    },
-    {
-      "PowerHint": "LAUNCH",
       "Node": "ReducePreferIdle",
       "Duration": 5000,
       "Value": "0"
@@ -1005,12 +1000,6 @@
       "Node": "FGPreferIdle",
       "Duration": 5000,
       "Value": "1"
-    },
-    {
-      "PowerHint": "LAUNCH_EXTEND",
-      "Node": "CPUSkipMask",
-      "Duration": 2000,
-      "Value": "0x0"
     },
     {
       "PowerHint": "LAUNCH_EXTEND",
@@ -1285,12 +1274,6 @@
       "Node": "FGPreferIdle",
       "Duration": 0,
       "Value": "0"
-    },
-    {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "CPUSkipMask",
-      "Duration": 1000,
-      "Value": "0x0"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
@@ -1887,12 +1870,6 @@
       "Value": "camera"
     },
     {
-      "PowerHint": "CAMERA_STREAMING_EXTREME",
-      "Node": "CPUSkipMask",
-      "Duration": 0,
-      "Value": "0x0"
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PowerHALCameraRunning",
       "Duration": 0,
@@ -2313,12 +2290,6 @@
       "Value": "4-7"
     },
     {
-      "PowerHint": "CAMERA_STREAMING_LOW",
-      "Node": "CPUSkipMask",
-      "Duration": 0,
-      "Value": "0x0"
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_VIDEO_CALL",
       "Node": "PowerHALCameraRunning",
       "Duration": 0,
@@ -2461,12 +2432,6 @@
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
       "Value": "30"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_VIDEO_CALL",
-      "Node": "CPUSkipMask",
-      "Duration": 0,
-      "Value": "0x0"
     },
     {
       "PowerHint": "CAMERA_VIDEO_RECORDING",
