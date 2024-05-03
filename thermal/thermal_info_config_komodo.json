@@ -346,10 +346,6 @@
             },
             "BindedCdevInfo": [
                 {
-                    "CdevRequest": "tpu_cooling",
-                    "LimitInfo": [0, 2, 3, 4, 5, 5, 5]
-                },
-                {
                     "CdevRequest": "gxp-cooling",
                     "LimitInfo": [0, 0, 0, 0, 0, 6, 6]
                 }
@@ -681,7 +677,7 @@
             ]
         },
         {
-            "Name":"VIRTUAL-SKIN-CPU-GPU",
+            "Name":"VIRTUAL-SKIN-SOC",
             "Type":"UNKNOWN",
             "Hidden":true,
             "VirtualSensor":true,
@@ -701,7 +697,7 @@
                 "K_D":["NAN", "NAN", "NAN", 0, "NAN", "NAN", "NAN"],
                 "I_Max":["NAN", "NAN", "NAN", 2600, "NAN", "NAN", "NAN"],
                 "S_Power":["NAN", "NAN", "NAN", 800, "NAN", "NAN", "NAN"],
-                "MinAllocPower":["NAN", "NAN", "NAN", 0, "NAN", "NAN", "NAN"],
+                "MinAllocPower":["NAN", "NAN", "NAN", 800, "NAN", "NAN", "NAN"],
                 "MaxAllocPower":["NAN", "NAN", "NAN", 3900, "NAN", "NAN", "NAN"],
                 "I_Cutoff":["NAN", "NAN", "NAN", 8, "NAN", "NAN", "NAN"]
             },
@@ -741,6 +737,15 @@
                     "BindedPowerRail": "S2S_VDD_G3D",
                     "CdevCeiling": [0, 9, 9, 9, 10, 12, 12],
                     "LimitInfo": [0, 0, 0, 0, 0, 12, 12]
+                },
+                {
+                    "CdevRequest": "tpu_cooling",
+                    "CdevWeightForPID": [1, 1, 1, 1, 1, 1, 1],
+                    "MaxReleaseStep": 1,
+                    "MaxThrottleStep": 1,
+                    "BindedPowerRail": "S7M_VDD_TPU",
+                    "CdevCeiling": [0, 7, 7, 7, 7, 7, 7],
+                    "LimitInfo": [0, 0, 0, 0, 0, 7, 7]
                 }
             ]
         },
@@ -1188,6 +1193,11 @@
         },
         {
             "Name":"S2S_VDD_G3D",
+            "PowerSampleDelay":7000,
+            "PowerSampleCount":1
+        },
+        {
+            "Name":"S7M_VDD_TPU",
             "PowerSampleDelay":7000,
             "PowerSampleCount":1
         },
