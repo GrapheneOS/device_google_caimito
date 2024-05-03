@@ -960,6 +960,7 @@
             "Name":"VIRTUAL-SKIN-CHARGE",
             "Type":"UNKNOWN",
             "Version":"9.0",
+            "Hidden":true,
             "VirtualSensor":true,
             "Formula":"MAXIMUM",
             "Combination": ["VIRTUAL-SKIN-CHARGE-SUB-0", "VIRTUAL-SKIN-CHARGE-SUB-1", "VIRTUAL-SKIN-CHARGE-SUB-2", "VIRTUAL-SKIN-CHARGE-SUB-3", "VIRTUAL-SKIN-CHARGE-SUB-4", "VIRTUAL-SKIN-CHARGE-SUB-5"],
@@ -994,7 +995,6 @@
         {
             "Name":"VIRTUAL-SKIN-CHARGE-WIRED",
             "Type":"UNKNOWN",
-            "Hidden":true,
             "VirtualSensor":true,
             "TriggerSensor": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
             "Formula":"WEIGHTED_AVG",
@@ -1038,7 +1038,6 @@
         {
             "Name":"VIRTUAL-SKIN-CHARGE-PERSIST",
             "Type":"UNKNOWN",
-            "Hidden":true,
             "VirtualSensor":true,
             "TriggerSensor": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
             "Formula":"WEIGHTED_AVG",
