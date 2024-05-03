@@ -846,6 +846,7 @@
             "Name":"VIRTUAL-SKIN-CHARGE",
             "Type":"UNKNOWN",
             "Version":"8.0",
+            "Hidden":true,
             "VirtualSensor":true,
             "Formula":"MAXIMUM",
             "Combination": ["VIRTUAL-SKIN-CHARGE-SUB-0", "VIRTUAL-SKIN-CHARGE-SUB-1", "VIRTUAL-SKIN-CHARGE-SUB-2", "VIRTUAL-SKIN-CHARGE-SUB-3", "VIRTUAL-SKIN-CHARGE-SUB-4", "VIRTUAL-SKIN-CHARGE-SUB-5"],
