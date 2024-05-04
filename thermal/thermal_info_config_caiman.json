@@ -356,10 +356,6 @@
             },
             "BindedCdevInfo": [
                 {
-                    "CdevRequest": "tpu_cooling",
-                    "LimitInfo": [0, 2, 3, 4, 5, 5, 5]
-                },
-                {
                     "CdevRequest": "gxp-cooling",
                     "LimitInfo": [0, 0, 0, 0, 0, 6, 6]
                 }
@@ -376,7 +372,7 @@
                             0.055, 0.002, 0.029, 0.061, 0.072, 0.011, 0.04, 0.027, 0.072,
                             0.071, 0.003, 0.026, 0.03, 0.04, 0.015, 0.001, 0.035, 0.042],
             "OffsetThresholds": [0.0],
-            "OffsetValues": [-490.0],            
+            "OffsetValues": [-490.0],
             "Multiplier": 0.001
         },
         {
@@ -705,7 +701,7 @@
             ]
         },
         {
-            "Name":"VIRTUAL-SKIN-CPU-GPU",
+            "Name":"VIRTUAL-SKIN-SOC",
             "Type":"UNKNOWN",
             "Hidden":true,
             "VirtualSensor":true,
@@ -725,7 +721,7 @@
                 "K_D":["NAN", "NAN", "NAN", 0, "NAN", "NAN", "NAN"],
                 "I_Max":["NAN", "NAN", "NAN", 2600, "NAN", "NAN", "NAN"],
                 "S_Power":["NAN", "NAN", "NAN", 800, "NAN", "NAN", "NAN"],
-                "MinAllocPower":["NAN", "NAN", "NAN", 0, "NAN", "NAN", "NAN"],
+                "MinAllocPower":["NAN", "NAN", "NAN", 800, "NAN", "NAN", "NAN"],
                 "MaxAllocPower":["NAN", "NAN", "NAN", 3900, "NAN", "NAN", "NAN"],
                 "I_Cutoff":["NAN", "NAN", "NAN", 8, "NAN", "NAN", "NAN"]
             },
@@ -765,6 +761,15 @@
                     "BindedPowerRail": "S2S_VDD_G3D",
                     "CdevCeiling": [0, 9, 9, 9, 10, 12, 12],
                     "LimitInfo": [0, 0, 0, 0, 0, 12, 12]
+                },
+                {
+                    "CdevRequest": "tpu_cooling",
+                    "CdevWeightForPID": [1, 1, 1, 1, 1, 1, 1],
+                    "MaxReleaseStep": 1,
+                    "MaxThrottleStep": 1,
+                    "BindedPowerRail": "S7M_VDD_TPU",
+                    "CdevCeiling": [0, 7, 7, 7, 7, 7, 7],
+                    "LimitInfo": [0, 0, 0, 0, 0, 7, 7]
                 }
             ]
         },
@@ -957,6 +962,7 @@
             "Name":"VIRTUAL-SKIN-CHARGE",
             "Type":"UNKNOWN",
             "Version":"8.0",
+            "Hidden":true,
             "VirtualSensor":true,
             "Formula":"MAXIMUM",
             "Combination": ["VIRTUAL-SKIN-CHARGE-SUB-0", "VIRTUAL-SKIN-CHARGE-SUB-1", "VIRTUAL-SKIN-CHARGE-SUB-2", "VIRTUAL-SKIN-CHARGE-SUB-3", "VIRTUAL-SKIN-CHARGE-SUB-4", "VIRTUAL-SKIN-CHARGE-SUB-5"],
@@ -991,7 +997,6 @@
         {
             "Name":"VIRTUAL-SKIN-CHARGE-WIRED",
             "Type":"UNKNOWN",
-            "Hidden":true,
             "VirtualSensor":true,
             "TriggerSensor": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
             "Formula":"WEIGHTED_AVG",
@@ -1035,7 +1040,6 @@
         {
             "Name":"VIRTUAL-SKIN-CHARGE-PERSIST",
             "Type":"UNKNOWN",
-            "Hidden":true,
             "VirtualSensor":true,
             "TriggerSensor": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
             "Formula":"WEIGHTED_AVG",
@@ -1197,6 +1201,11 @@
         },
         {
             "Name":"S4M_VDD_CPUCL0",
+            "PowerSampleDelay":7000,
+            "PowerSampleCount":1
+        },
+        {
+            "Name":"S7M_VDD_TPU",
             "PowerSampleDelay":7000,
             "PowerSampleCount":1
         },
