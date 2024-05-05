@@ -73,7 +73,3 @@ on fs
     # Permission for SSC mode enable
     chown system system /sys/class/backlight/panel0-backlight/ssc_en
     chmod 664 /sys/class/backlight/panel0-backlight/ssc_en
-
-# Disable Async DVFS
-on property:sys.boot_completed=1
-    write /sys/devices/platform/26040000.cal_if/async_dvfs_enabled 0
