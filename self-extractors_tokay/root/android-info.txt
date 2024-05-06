@@ -1,0 +1,6 @@
+require board=tokay
+require version-bootloader=ripcurrentpro-14.6-11496616
+
+
+
+require version-baseband=g5400c-240216-240223-B-11489653

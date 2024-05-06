@@ -29,7 +29,6 @@ include hardware/google/pixel/vibrator/cs40l26/device-stereo.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/stm/stm20.mk
 include device/google/caimito/fingerprint/ultrasonic_udfps.mk
--include vendor/samsung_slsi/gps/s5400/location/gnssd/device-gnss.mk
 
 # go/lyric-soong-variables
 # Set to 'ripcurrent' as ripcurrent camera service is compatible with ripcurrent24.
@@ -82,6 +81,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.bluetooth.a2dp_offload.disabled=false \
     persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-opus
 
+# POF
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.bluetooth.finder.supported=true
+
 # Spatial Audio
 PRODUCT_PACKAGES += \
 	libspatialaudio
@@ -89,6 +92,10 @@ PRODUCT_PACKAGES += \
 # declare use of spatial audio
 PRODUCT_PROPERTY_OVERRIDES += \
        ro.audio.spatializer_enabled=true
+
+# declare use of stereo spatialization
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.audio.stereo_spatialization_enabled=true
 
 # Bluetooth hci_inject test tool
 PRODUCT_PACKAGES_DEBUG += \
@@ -136,7 +143,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
 	bluetooth.profile.hap.client.enabled=true \
 	bluetooth.profile.mcp.server.enabled=true \
 	bluetooth.profile.ccp.server.enabled=true \
-	bluetooth.profile.vcp.controller.enabled=true \
+	bluetooth.profile.vcp.controller.enabled=true
+
+ifeq ($(RELEASE_PIXEL_BROADCAST_ENABLED), true)
+PRODUCT_PRODUCT_PROPERTIES += \
+	bluetooth.profile.bap.broadcast.assist.enabled=true \
+	bluetooth.profile.bap.broadcast.source.enabled=true
+endif
 
 # Bluetooth LE Audio enable hardware offloading
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -189,8 +202,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/caimito/prebuilts
 
 # Location
+# iGNSS
+include device/google/gs-common/gps/lsi/s5400.mk
+# gps.cfg
+PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/ripcurrent24
+$(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
+PRODUCT_PACKAGES += gps.cfg
+# eGNSS
 # SDK build system
-$(call soong_config_set, include_libsitril-gps-wifi, board_without_radio, $(BOARD_WITHOUT_RADIO))
+$(call soong_config_set, include_libsitril_gps_wifi, board_without_radio, $(BOARD_WITHOUT_RADIO))
 include device/google/gs-common/gps/brcm/device.mk
 
 PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/ripcurrent24
@@ -203,9 +223,7 @@ PRODUCT_PACKAGES += \
 	scd.conf \
 	lhd.conf
 
-# Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
-	vendor.zram.size=50p \
 	vendor.disable.thermal.control=1 \
 	persist.device_config.configuration.disable_rescue_party=true
 
@@ -223,3 +241,14 @@ PRODUCT_VENDOR_PROPERTIES += \
 # PKVM Memory Reclaim
 PRODUCT_VENDOR_PROPERTIES += \
     hypervisor.memory_reclaim.supported=1
+
+# Indicate that the bootloader supports the MTE developer option switch
+# (MISC_MEMTAG_MODE_MEMTAG_ONCE), with the exception of _fullmte products that
+# force enable MTE.
+ifeq (,$(filter %_fullmte,$(TARGET_PRODUCT)))
+PRODUCT_PRODUCT_PROPERTIES += ro.arm64.memtag.bootctl_supported=1
+PRODUCT_PRODUCT_PROPERTIES += persist.arm64.memtag.app.com.android.se=off
+PRODUCT_PRODUCT_PROPERTIES += persist.arm64.memtag.app.com.google.android.bluetooth=off
+PRODUCT_PRODUCT_PROPERTIES += persist.arm64.memtag.app.com.android.nfc=off
+PRODUCT_PRODUCT_PROPERTIES += persist.arm64.memtag.system_server=off
+endif

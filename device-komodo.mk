@@ -17,29 +17,41 @@
 TARGET_KERNEL_DIR ?= device/google/caimito-kernel
 TARGET_BOARD_KERNEL_HEADERS := device/google/caimito-kernel/kernel-headers
 
+LOCAL_PATH := device/google/caimito
+
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
     USE_UWBFIELDTESTQM := true
 endif
 ifeq ($(filter factory_komodo, $(TARGET_PRODUCT)),)
-    include device/google/caimito/uwb/uwb_calibration.mk
+    include device/google/caimito/komodo/uwb/uwb_calibration.mk
 endif
 
 $(call inherit-product-if-exists, vendor/google_devices/caimito/prebuilts/device-vendor-komodo.mk)
 $(call inherit-product-if-exists, vendor/google_devices/zumapro/prebuilts/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/zumapro/proprietary/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/google_devices/komodo/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/caimito/proprietary/komodo/device-vendor-komodo.mk)
 $(call inherit-product-if-exists, vendor/qorvo/uwb/qm35-hal/Device.mk)
 
+ifeq ($(filter factory_komodo, $(TARGET_PRODUCT)),)
+    $(call inherit-product-if-exists, vendor/google_devices/caimito/proprietary/WallpapersKomodo.mk)
+endif
+
 # display
 DEVICE_PACKAGE_OVERLAYS += device/google/caimito/komodo/overlay
+
+ifeq ($(RELEASE_PIXEL_AIDL_AUDIO_HAL),true)
+USE_AUDIO_HAL_AIDL := true
+endif
 
 include device/google/caimito/audio/komodo/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
 include hardware/google/pixel/vibrator/cs40l26/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
+include device/google/gs-common/touch/gti/gti.mk
 include device/google/gs-common/touch/syna/syna20.mk
 include device/google/caimito/fingerprint/ultrasonic_udfps.mk
--include vendor/samsung_slsi/gps/s5400/location/gnssd/device-gnss.mk
+include device/google/gs-common/modem/radio_ext/radio_ext.mk
 
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,komodo)
@@ -48,6 +60,7 @@ $(call soong_config_set,google3a_config,target_device,komodo)
 
 # Display RRS default Config
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config=1008x2244@120:120
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.preferred_mode=1008x2244@120:120
 
 ifeq ($(filter factory_komodo, $(TARGET_PRODUCT)),)
     PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.vrr.enabled=true
@@ -62,7 +75,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.primarydisplay.op.hs_hz=120 \
     vendor.primarydisplay.op.ns_hz=60 \
     vendor.primarydisplay.op.ns_min_dbv=440 \
-    vendor.primarydisplay.op.hist_delta_th=15
+    vendor.primarydisplay.op.hs_switch_min_dbv=1088 \
+    vendor.primarydisplay.op.hist_delta_th=8
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -105,10 +119,30 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.bluetooth.a2dp_offload.disabled=false \
     persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-opus
 
+# Coex Config
+PRODUCT_SOONG_NAMESPACES += device/google/caimito/radio/komodo/coex
+PRODUCT_PACKAGES += \
+    camera_front_mipi_coex_table \
+    camera_rear_main_dbr_coex_table \
+    camera_rear_main_mipi_coex_table \
+    camera_rear_tele_mipi_coex_table \
+    camera_rear_wide_mipi_coex_table \
+    display_primary_mipi_coex_table \
+    display_primary_ssc_coex_table
+
+# Bluetooth Tx power caps
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
+        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv
+
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.gms.dck.eligible_wcc=3 \
     ro.gms.dck.se_capability=1
+
+# POF
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.bluetooth.finder.supported=true
 
 # Spatial Audio
 PRODUCT_PACKAGES += \
@@ -117,6 +151,10 @@ PRODUCT_PACKAGES += \
 # declare use of spatial audio
 PRODUCT_PROPERTY_OVERRIDES += \
        ro.audio.spatializer_enabled=true
+
+# declare use of stereo spatialization
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.audio.stereo_spatialization_enabled=true
 
 # Sound Dose
 PRODUCT_PACKAGES += \
@@ -146,6 +184,10 @@ PRODUCT_PACKAGES_DEBUG += \
 # Bluetooth AAC VBR
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.a2dp_aac.vbr_supported=true
+
+# Bluetooth Super Wide Band
+PRODUCT_PRODUCT_PROPERTIES += \
+    bluetooth.hfp.swb.supported=true
 
 # Override BQR mask to enable LE Audio Choppy report, remove BTRT logging
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
@@ -209,18 +251,28 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     WifiOverlay2024
 
+# Settings Overlay
+PRODUCT_PACKAGES += \
+    SettingsKomodoOverlay
+
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/caimito/prebuilts
 
 # UWB
 PRODUCT_SOONG_NAMESPACES += \
-    device/google/caimito/uwb
+    device/google/caimito/komodo/uwb
 
 # Location
+# iGNSS
+include device/google/gs-common/gps/lsi/s5400.mk
+# gps.cfg
+PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/komodo
+$(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
+PRODUCT_PACKAGES += gps.cfg
+# eGNSS
 # SDK build system
-$(call soong_config_set, include_libsitril-gps-wifi, board_without_radio, $(BOARD_WITHOUT_RADIO))
+$(call soong_config_set, include_libsitril_gps_wifi, board_without_radio, $(BOARD_WITHOUT_RADIO))
 include device/google/gs-common/gps/brcm/device.mk
-
 PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/komodo
 SOONG_CONFIG_NAMESPACES += gpssdk
 SOONG_CONFIG_gpssdk += gpsconf
@@ -238,14 +290,16 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
 PRODUCT_PACKAGES += \
     libthermal_tflite_wrapper
 
-# Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
-	vendor.zram.size=50p \
 	persist.device_config.configuration.disable_rescue_party=true
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.udfps.als_feed_forward_supported=true \
     persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
+
+# Camera Vendor property
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.camera.front_720P_always_binning=true
 
 # Vibrator HAL
 ACTUATOR_MODEL := luxshare_ict_081545
@@ -274,6 +328,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
 	bluetooth.profile.mcp.server.enabled=true \
 	bluetooth.profile.ccp.server.enabled=true \
 	bluetooth.profile.vcp.controller.enabled=true
+
+ifeq ($(RELEASE_PIXEL_BROADCAST_ENABLED), true)
+PRODUCT_PRODUCT_PROPERTIES += \
+	bluetooth.profile.bap.broadcast.assist.enabled=true \
+	bluetooth.profile.bap.broadcast.source.enabled=true
+endif
 
 # LE Audio switcher in developer options
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -304,3 +364,14 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
    persist.bluetooth.leaudio.allow_list=SM-R510
 
+# Exynos RIL and telephony
+# Support RIL Domain-selection
+SUPPORT_RIL_DOMAIN_SELECTION := true
+
+# Set support one-handed mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
+
+# Thread HAL
+PRODUCT_PACKAGES += \
+   com.google.caimito.hardware.threadnetwork

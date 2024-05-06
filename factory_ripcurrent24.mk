@@ -30,6 +30,20 @@ PRODUCT_MANUFACTURER := Google
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.bluetooth.evb_bdaddr="22:22:22:33:44:55"
 
+# Location
+# iGNSS
+PRODUCT_PACKAGES += \
+	sctd \
+	spad \
+	swcnd \
+	libmptool_json \
+	libmptool_log \
+	libmptool_utils \
+	sctd.json \
+	spad.json \
+	swcnd.json \
+	android.hardware.gnss@2.1-impl
+# eGNSS
 # Override to factory SDK
 SOONG_CONFIG_NAMESPACES += gpssdk
 SOONG_CONFIG_gpssdk += sdkv1
