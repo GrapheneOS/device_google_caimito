@@ -52,14 +52,14 @@ volume index from 0 to 100.
         <point>100,-1800</point>
     </volume>
     <volume stream="AUDIO_STREAM_SYSTEM" deviceCategory="DEVICE_CATEGORY_SPEAKER">
-        <point>1,-6600</point>
-        <point>13,-6180</point>
-        <point>29,-5350</point>
-        <point>43,-4650</point>
-        <point>57,-3850</point>
-        <point>71,-3650</point>
-        <point>86,-3250</point>
-        <point>100,-2850</point>
+        <point>1,-5510</point>
+        <point>13,-4890</point>
+        <point>29,-4220</point>
+        <point>43,-3670</point>
+        <point>57,-3010</point>
+        <point>71,-2760</point>
+        <point>86,-2450</point>
+        <point>100,-2110</point>
     </volume>
     <volume stream="AUDIO_STREAM_SYSTEM" deviceCategory="DEVICE_CATEGORY_EARPIECE"
                                          ref="DEFAULT_SYSTEM_VOLUME_CURVE"/>
@@ -184,14 +184,14 @@ volume index from 0 to 100.
         <point>100,-1800</point>
     </volume>
     <volume stream="AUDIO_STREAM_ENFORCED_AUDIBLE" deviceCategory="DEVICE_CATEGORY_SPEAKER">
-        <point>1,-6600</point>
-        <point>13,-6180</point>
-        <point>29,-5350</point>
-        <point>43,-4650</point>
-        <point>57,-3850</point>
-        <point>71,-3650</point>
-        <point>86,-3250</point>
-        <point>100,-2850</point>
+        <point>1,-5510</point>
+        <point>13,-4890</point>
+        <point>29,-4220</point>
+        <point>43,-3670</point>
+        <point>57,-3010</point>
+        <point>71,-2760</point>
+        <point>86,-2450</point>
+        <point>100,-2110</point>
     </volume>
     <volume stream="AUDIO_STREAM_ENFORCED_AUDIBLE" deviceCategory="DEVICE_CATEGORY_EARPIECE"
                                                    ref="DEFAULT_SYSTEM_VOLUME_CURVE"/>
@@ -207,13 +207,13 @@ volume index from 0 to 100.
     </volume>
     <volume stream="AUDIO_STREAM_DTMF" deviceCategory="DEVICE_CATEGORY_SPEAKER">
         <point>1,-6600</point>
-        <point>14,-6000</point>
-        <point>29,-5180</point>
-        <point>43,-4300</point>
-        <point>57,-3950</point>
-        <point>71,-3340</point>
-        <point>85,-2750</point>
-        <point>100,-2300</point>
+        <point>14,-5280</point>
+        <point>29,-4480</point>
+        <point>43,-3820</point>
+        <point>57,-3710</point>
+        <point>71,-3160</point>
+        <point>85,-2480</point>
+        <point>100,-2086</point>
     </volume>
     <volume stream="AUDIO_STREAM_DTMF" deviceCategory="DEVICE_CATEGORY_EARPIECE"
                                        ref="DEFAULT_SYSTEM_VOLUME_CURVE"/>
