@@ -114,8 +114,11 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth Tx power caps
 PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
-        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv
+        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_caiman.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
+        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_caiman_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv \
+        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_caiman_CA.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_CA.csv \
+        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_caiman_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
+        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_caiman_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \

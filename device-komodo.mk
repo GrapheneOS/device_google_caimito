@@ -137,8 +137,11 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth Tx power caps
 PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
-        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv
+        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_komodo.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
+        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_komodo_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv \
+        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_komodo_CA.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_CA.csv \
+        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_komodo_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
+        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_komodo_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
