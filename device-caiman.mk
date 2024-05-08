@@ -414,3 +414,12 @@ PRODUCT_PACKAGES += \
 #Component Override for Pixel Troubleshooting App
 PRODUCT_COPY_FILES += \
     device/google/caimito/caiman/caiman-component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/caiman-component-overrides.xml
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.bluetooth.thread_dispatcher.enabled=true
+
+# Thread HAL
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+PRODUCT_PACKAGES += \
+   com.google.caimito.hardware.threadnetwork
+endif
