@@ -14,8 +14,23 @@
 # limitations under the License.
 #
 
-TARGET_KERNEL_DIR ?= device/google/caimito-kernel
-TARGET_BOARD_KERNEL_HEADERS := device/google/caimito-kernel/kernel-headers
+ifdef RELEASE_GOOGLE_TOKAY_RADIO_DIR
+RELEASE_GOOGLE_PRODUCT_RADIO_DIR ?= $(RELEASE_GOOGLE_TOKAY_RADIO_DIR)
+endif
+ifdef RELEASE_GOOGLE_TOKAY_RADIOCFG_DIR
+RELEASE_GOOGLE_PRODUCT_RADIOCFG_DIR ?= $(RELEASE_GOOGLE_TOKAY_RADIOCFG_DIR)
+endif
+RELEASE_GOOGLE_BOOTLOADER_TOKAY_DIR ?= 24D1# Keep this for pdk TODO: b/327119000
+RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/$(RELEASE_GOOGLE_BOOTLOADER_TOKAY_DIR)
+$(call soong_config_set,caimito_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_TOKAY_DIR))
+
+ifdef RELEASE_GOOGLE_TOKAY_KERNEL_DIR
+TARGET_KERNEL_DIR ?= $(RELEASE_GOOGLE_TOKAY_KERNEL_DIR)
+TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_GOOGLE_TOKAY_KERNEL_DIR)/kernel-headers
+else
+TARGET_KERNEL_DIR ?= device/google/caimito-kernels/6.1/24D1
+TARGET_BOARD_KERNEL_HEADERS ?= device/google/caimito-kernels/6.1/24D1/kernel-headers
+endif
 
 $(call inherit-product-if-exists, vendor/google_devices/caimito/prebuilts/device-vendor-tokay.mk)
 $(call inherit-product-if-exists, vendor/google_devices/zumapro/prebuilts/device-vendor.mk)
