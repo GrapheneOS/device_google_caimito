@@ -225,12 +225,12 @@
             "VirtualSensor": true,
             "ModelPath": "vt_estimation_model.tflite",
             "Formula": "USE_ML_MODEL",
-            "Combination": ["battery", "btmspkr_therm", "charging_therm", "disp_therm", "north_therm", "quiet_therm", "rfpa_therm", "soc_therm", "usb_pwr_therm"],
+            "Combination": ["btmspkr_therm", "charging_therm", "disp_therm", "north_therm", "quiet_therm", "rfpa_therm", "soc_therm", "usb_pwr_therm"],
             "Multiplier": 0.001,
             "PreviousSampleCount": 3,
             "OffsetThresholds" : [50000, 53000],
             "OffsetValues" : [500, 1000],
-            "SupportUnderSampling": true
+            "BackupSensor" : "VIRTUAL-SKIN-LEGACY"
         },
         {
             "Name": "VIRTUAL-SKIN-MODEL-UPPER-CLAMPED",
