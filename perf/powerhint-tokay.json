@@ -603,10 +603,11 @@
       "Name": "PMU_LIT_LIMIT_FREQ",
       "Path": "/sys/devices/system/cpu/cpufreq/policy0/sched_pixel/limit_frequency",
       "Values": [
+        "1425000",
         "1328000",
         "1098000"
       ],
-      "DefaultIndex": 0,
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -615,6 +616,7 @@
       "Values": [
         "76",
         "70",
+        "40",
         "55",
         "42",
         "35",
@@ -629,6 +631,7 @@
       "Path": "/sys/devices/system/cpu/cpufreq/policy4/sched_pixel/limit_frequency",
       "Values": [
         "1795000",
+        "1549000",
         "1328000"
       ],
       "DefaultIndex": 0,
@@ -641,6 +644,7 @@
         "59",
         "50",
         "32",
+        "15",
         "30",
         "20",
         "18"
@@ -663,8 +667,8 @@
       "Values": [
         "62",
         "50",
-        "22",
-        "20"
+        "20",
+        "22"
       ],
       "DefaultIndex": 0
     },
@@ -773,7 +777,7 @@
         "1800000",
         "1548000",
         "820000",
-        "610000",        
+        "610000",
         "0"
       ],
       "ResetOnInit": true
@@ -1445,27 +1449,39 @@
     },
     {
       "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
-      "Node": "CPUBigClusterMaxFreq",
-      "Duration": 3000,
-      "Value": "1885000"
-    },
-    {
-      "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
-      "Node": "CPUMidClusterMaxFreq",
-      "Duration": 3000,
-      "Value": "1549000"
-    },
-    {
-      "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
-      "Node": "CPULittleClusterMaxFreq",
+      "Node": "PMU_LIT_LIMIT_FREQ",
       "Duration": 3000,
       "Value": "1425000"
     },
     {
       "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
-      "Node": "PMU_POLL",
+      "Node": "PMU_MID_LIMIT_FREQ",
       "Duration": 3000,
-      "Value": "0"
+      "Value": "1549000"
+    },
+    {
+      "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
+      "Node": "PMU_BIG_LIMIT_FREQ",
+      "Duration": 3000,
+      "Value": "1885000"
+    },
+    {
+      "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
+      "Node": "PMU_LIT_SPC_THRESHOLD",
+      "Duration": 3000,
+      "Value": "40"
+    },
+    {
+      "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
+      "Node": "PMU_MID_SPC_THRESHOLD",
+      "Duration": 3000,
+      "Value": "15"
+    },
+    {
+      "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
+      "Node": "PMU_BIG_SPC_THRESHOLD",
+      "Duration": 3000,
+      "Value": "20"
     },
     {
       "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
