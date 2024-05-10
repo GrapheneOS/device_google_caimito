@@ -589,6 +589,15 @@
       "DefaultIndex": 0
     },
     {
+      "Name": "PMU_FORCE_LIMIT",
+      "Path": "/proc/vendor_sched/pmu_force_limited",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "DefaultIndex": 0
+    },
+    {
       "Name": "EM_Profile",
       "Path": "/sys/kernel/pixel_em/active_profile",
       "Values": [
@@ -1815,6 +1824,12 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
+      "Node": "PMU_FORCE_LIMIT",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "EM_Profile",
       "Duration": 0,
       "Value": "cam2"
@@ -1948,6 +1963,12 @@
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PMU_POLL",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_HIGH",
+      "Node": "PMU_FORCE_LIMIT",
       "Duration": 0,
       "Value": "1"
     },
@@ -2110,6 +2131,12 @@
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PMU_POLL",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_STANDARD",
+      "Node": "PMU_FORCE_LIMIT",
       "Duration": 0,
       "Value": "1"
     },
@@ -2421,6 +2448,12 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_VIDEO_CALL",
+      "Node": "PMU_FORCE_LIMIT",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_VIDEO_CALL",
       "Node": "PMU_LIT_LIMIT_FREQ",
       "Duration": 0,
       "Value": "1328000"
@@ -2621,6 +2654,12 @@
     },
     {
       "PowerHint": "LOW_POWER",
+      "Node": "PMU_FORCE_LIMIT",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "LOW_POWER",
       "Node": "BigTjOffset",
       "Duration": 0,
       "Value": "1"
@@ -2743,6 +2782,12 @@
       "Node": "PMU_POLL",
       "Duration": 0,
       "Value": "1"
+    },
+    {
+      "PowerHint": "THERMAL_VIRTUAL-SKIN-HINT_LIGHT",
+      "Node": "PMU_FORCE_LIMIT",
+      "Duration": 0,
+      "Value": "0"
     },
     {
       "PowerHint": "THERMAL_VIRTUAL-SKIN-HINT_LIGHT",
@@ -3047,6 +3092,12 @@
     {
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_POLL",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_PROJECT11",
+      "Node": "PMU_FORCE_LIMIT",
       "Duration": 0,
       "Value": "1"
     },
