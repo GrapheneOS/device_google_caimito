@@ -34,7 +34,9 @@
       <argument name="SpeakerPowerPollWaitMs" value="5000" />
     </feature>
     <feature name="RuntimeTuningDump" />
-    <feature name="SoundDose" />
+    <feature name="SoundDose">
+      <argument name="Curves" value="blackbird,condor=0,46.35,0.1950549451;54.6,57,0.98625" />
+    </feature>
     <feature name="MicrophoneCompensation" />
     <feature name="spatializer-offload" />
   </features>
