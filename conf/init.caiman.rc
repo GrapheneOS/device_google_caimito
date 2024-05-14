@@ -75,12 +75,6 @@ on property:sys.boot_completed=1
     chmod 660 /dev/touch_offload
     start twoshay
 
-# For Japan sku, always enforce camera shutter sound
-# Since this property is read by the audio server in system service,
-# it should be written by the system init.
-on property:ro.boot.hardware.sku=GWVK6
-    setprop audio.camerasound.force true
-
 # Check serial no. from specific CM4 devices for audio.
 on property:ro.boot.serialno=*
     setprop vendor.audio_hal.device.serialno ${ro.boot.serialno}

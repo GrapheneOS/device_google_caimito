@@ -77,12 +77,6 @@ on fs
     chown system system /sys/class/backlight/panel0-backlight/ssc_en
     chmod 664 /sys/class/backlight/panel0-backlight/ssc_en
 
-# For Japan sku, always enforce camera shutter sound
-# Since this property is read by the audio server in system service,
-# it should be written by the system init.
-on property:ro.boot.hardware.sku=G1B60
-    setprop audio.camerasound.force true
-
 # Check serial no. from specific TK4 devices for audio.
 on property:ro.boot.serialno=*
     setprop vendor.audio_hal.device.serialno ${ro.boot.serialno}
