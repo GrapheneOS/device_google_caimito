@@ -272,7 +272,7 @@
             "Formula": "COUNT_THRESHOLD",
             "StepRatio": 0.2,
             "Combination": ["VIRTUAL-SKIN-MODEL-LEGACY-DIFF", "VIRTUAL-SKIN-LEGACY-MODEL-DIFF"],
-            "Coefficient": [7000, 7000],
+            "Coefficient": [10000, 7000],
             "Multiplier": 1,
             "PassiveDelay": 7000
         },
