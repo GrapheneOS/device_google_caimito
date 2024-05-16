@@ -58,3 +58,7 @@ endif
 PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_BATTERY_MITIGATION_CONFIG_PATH)/bm_config_$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/bm_config.json
 endif
+
+# sysconfigs from stock OS
+PRODUCT_COPY_FILES += \
+    device/google/caimito/product-sysconfig-stock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/product-sysconfig-stock.xml
