@@ -260,6 +260,16 @@
       "ResetOnInit": true
     },
     {
+      "Name": "PerTaskMaxIowaitBoost",
+      "Path": "/proc/vendor_sched/per_task_iowait_boost_max_value",
+      "Values": [
+        "0",
+        "512"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
       "Name": "CPUUClampMaxFilterEnable",
       "Path": "/proc/vendor_sched/uclamp_max_filter_enable",
       "Values": [
@@ -1351,6 +1361,12 @@
       "Value": "0x80"
     },
     {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "PerTaskMaxIowaitBoost",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "CPUSkipMask",
       "Duration": 1000,
@@ -1886,6 +1902,12 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
+      "Node": "PerTaskMaxIowaitBoost",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "CPULittleClusterDownRateLimitUs",
       "Duration": 0,
       "Value": "5000"
@@ -2049,6 +2071,12 @@
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "AutoDvfsHeadroomEnable",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_HIGH",
+      "Node": "PerTaskMaxIowaitBoost",
       "Duration": 0,
       "Value": "0"
     },
@@ -2246,6 +2274,12 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
+      "Node": "PerTaskMaxIowaitBoost",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "CPULittleClusterDownRateLimitUs",
       "Duration": 0,
       "Value": "5000"
@@ -2349,6 +2383,12 @@
     {
       "PowerHint": "CAMERA_STREAMING_LOW",
       "Node": "AutoDvfsHeadroomEnable",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_LOW",
+      "Node": "PerTaskMaxIowaitBoost",
       "Duration": 0,
       "Value": "0"
     },
@@ -2577,6 +2617,12 @@
     {
       "PowerHint": "CAMERA_STREAMING_VIDEO_CALL",
       "Node": "AutoDvfsHeadroomEnable",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_STREAMING_VIDEO_CALL",
+      "Node": "PerTaskMaxIowaitBoost",
       "Duration": 0,
       "Value": "0"
     },
@@ -3134,6 +3180,12 @@
       "Value": "2"
     },
     {
+      "PowerHint": "GAME",
+      "Node": "PerTaskMaxIowaitBoost",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
       "PowerHint": "FACE_UNLOCK_BOOST",
       "Node": "CPUMidClusterMaxFreq",
       "Duration": 500,
@@ -3220,6 +3272,12 @@
     {
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "AutoDvfsHeadroomEnable",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_PROJECT11",
+      "Node": "PerTaskMaxIowaitBoost",
       "Duration": 0,
       "Value": "0"
     },
