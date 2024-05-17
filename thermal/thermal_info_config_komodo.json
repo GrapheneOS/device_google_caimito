@@ -107,8 +107,8 @@
             "VirtualSensor":true,
             "Formula":"WEIGHTED_AVG",
             "Combination":["quiet_therm"],
-            "Coefficient":[0.088],
-            "Offset":1882,
+            "Coefficient":[0.051],
+            "Offset":780,
             "Multiplier":0.001
         },
         {
