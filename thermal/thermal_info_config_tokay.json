@@ -285,7 +285,8 @@
             "Combination": ["VIRTUAL-SKIN-LEGACY", "VIRTUAL-SKIN-MODEL-CLAMPED"],
             "Coefficient": ["VT_LEGACY_WEIGHT", "VT_MODEL_WEIGHT"],
             "CoefficientType": ["SENSOR", "SENSOR"],
-            "Multiplier": 1
+            "Multiplier": 1,
+            "StepRatio": 0.4
         },
         {
             "Name": "VIRTUAL-SKIN-LSTM-MODEL",
