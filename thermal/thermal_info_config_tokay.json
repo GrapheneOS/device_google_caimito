@@ -209,7 +209,8 @@
             "PreviousSampleCount": 3,
             "OffsetThresholds" : [50000, 53000],
             "OffsetValues" : [500, 1000],
-            "BackupSensor" : "VIRTUAL-SKIN-LEGACY"
+            "BackupSensor" : "VIRTUAL-SKIN-LEGACY",
+            "TimeResolution": 7000
         },
         {
             "Name": "VIRTUAL-SKIN-MODEL-UPPER-CLAMPED",
