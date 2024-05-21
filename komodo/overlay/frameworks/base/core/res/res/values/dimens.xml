@@ -19,7 +19,7 @@
 
 <resources>
     <!-- Radius of the software rounded corners. -->
-    <dimen name="rounded_corner_radius">153px</dimen>
-    <dimen name="rounded_corner_radius_top">153px</dimen>
-    <dimen name="rounded_corner_radius_bottom">153px</dimen>
+    <dimen name="rounded_corner_radius">137px</dimen>
+    <dimen name="rounded_corner_radius_top">137px</dimen>
+    <dimen name="rounded_corner_radius_bottom">137px</dimen>
 </resources>
