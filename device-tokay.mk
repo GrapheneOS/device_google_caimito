@@ -158,7 +158,7 @@ endif
 # HdMic Audio
 PRODUCT_SOONG_NAMESPACES += device/google/caimito/audio/tokay/prebuilt/libspeechenhancer
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.audio.hdmic.version=1
+    persist.vendor.app.audio.gsenet.version=1
 PRODUCT_PACKAGES += \
     libspeechenhancer
 
