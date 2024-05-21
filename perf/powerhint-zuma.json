@@ -628,6 +628,15 @@
       "DefaultIndex": 0
     },
     {
+      "Name": "PMU_FORCE_LIMIT",
+      "Path": "/proc/vendor_sched/pmu_force_limited",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "DefaultIndex": 0
+    },
+    {
       "Name": "EM_Profile",
       "Path": "/sys/kernel/pixel_em/active_profile",
       "Values": [
