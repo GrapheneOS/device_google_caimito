@@ -308,7 +308,8 @@
             "Coefficient": ["VT_LEGACY_WEIGHT", "VT_MODEL_WEIGHT"],
             "CoefficientType": ["SENSOR", "SENSOR"],
             "Multiplier": 1,
-            "StepRatio": 0.4
+            "StepRatio": 0.4,
+            "PassiveDelay": 7000
         },
         {
             "Name": "VIRTUAL-SKIN-LSTM-MODEL",
