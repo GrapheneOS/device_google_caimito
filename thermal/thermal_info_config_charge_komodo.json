@@ -83,9 +83,9 @@
             "Hidden": true,
             "VirtualSensor": true,
             "Formula": "WEIGHTED_AVG",
-            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
-            "Coefficient": [0.071, 0.041, 0.016, 0.089, 0.188, 0.301, 0.227, 0.059, 0.008],
-            "Offset": -811.0,
+            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
+            "Coefficient": [0.221, 0.009, 0.01, 0.032, 0.14, 0.069, 0.192, 0.325],
+            "Offset": -927.0,
             "Multiplier": 0.001
         },
         {
@@ -94,9 +94,9 @@
             "Hidden": true,
             "VirtualSensor": true,
             "Formula": "WEIGHTED_AVG",
-            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
-            "Coefficient": [0.017, 0.007, 0.044, 0.35, 0.007, 0.07, 0.308, 0.01, 0.227],
-            "Offset": -1668.0,
+            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
+            "Coefficient": [0.019, 0.015, 0.225, 0.08, 0.027, 0.281, 0.018, 0.334],
+            "Offset": -713.0,
             "Multiplier": 0.001
         },
         {
@@ -105,9 +105,9 @@
             "Hidden": true,
             "VirtualSensor": true,
             "Formula": "WEIGHTED_AVG",
-            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
-            "Coefficient": [0.001, 0.05, 0.001, 0.084, 0.203, 0.023, 0.191, 0.226, 0.22],
-            "Offset": -660.0,
+            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
+            "Coefficient": [0.127, 0.056, 0.01, 0.019, 0.373, 0.247, 0.013, 0.156],
+            "Offset": -877.0,
             "Multiplier": 0.001
         },
         {
@@ -116,9 +116,9 @@
             "Hidden": true,
             "VirtualSensor": true,
             "Formula": "WEIGHTED_AVG",
-            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
-            "Coefficient": [0.181, 0.044, 0.008, 0.066, 0.008, 0.042, 0.213, 0.322, 0.115],
-            "Offset": -2297.0,
+            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
+            "Coefficient": [0.018, 0.033, 0.043, 0.358, 0.034, 0.287, 0.054, 0.213],
+            "Offset": -1722.0,
             "Multiplier": 0.001
         },
         {
@@ -127,9 +127,9 @@
             "Hidden": true,
             "VirtualSensor": true,
             "Formula": "WEIGHTED_AVG",
-            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
-            "Coefficient": [0.394, 0.022, 0.032, 0.136, 0.113, 0.069, 0.131, 0.01, 0.094],
-            "Offset": -2325.0,
+            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
+            "Coefficient": [0.109, 0.015, 0.003, 0.129, 0.05, 0.282, 0.265, 0.147],
+            "Offset": -995.0,
             "Multiplier": 0.001
         },
         {
@@ -138,20 +138,31 @@
             "Hidden": true,
             "VirtualSensor": true,
             "Formula": "WEIGHTED_AVG",
-            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "battery", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
-            "Coefficient": [0.103, 0.109, 0.108, 0.099, 0.099, 0.104, 0.099, 0.104, 0.099],
-            "Offset": 1237.0,
+            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
+            "Coefficient": [0.348, 0.025, 0.081, 0.086, 0.062, 0.213, 0.172, 0.013],
+            "Offset": -1998.0,
+            "Multiplier": 0.001
+        },
+        {
+            "Name": "VIRTUAL-SKIN-CHARGE-SUB-6",
+            "Type": "UNKNOWN",
+            "Hidden": true,
+            "VirtualSensor": true,
+            "Formula": "WEIGHTED_AVG",
+            "Combination": ["north_therm", "soc_therm", "charging_therm", "disp_therm", "quiet_therm", "usb_pwr_therm", "rfpa_therm", "btmspkr_therm"],
+            "Coefficient": [0.007, 0.038, 0.013, 0.225, 0.103, 0.09, 0.372, 0.154],
+            "Offset": -2627.0,
             "Multiplier": 0.001
         },
         {
             "Name":"VIRTUAL-SKIN-CHARGE",
             "Type":"UNKNOWN",
-            "Version":"9.0",
+            "Version":"9.1",
             "Hidden":true,
             "VirtualSensor":true,
             "Formula":"MAXIMUM",
-            "Combination": ["VIRTUAL-SKIN-CHARGE-SUB-0", "VIRTUAL-SKIN-CHARGE-SUB-1", "VIRTUAL-SKIN-CHARGE-SUB-2", "VIRTUAL-SKIN-CHARGE-SUB-3", "VIRTUAL-SKIN-CHARGE-SUB-4", "VIRTUAL-SKIN-CHARGE-SUB-5"],
-            "Coefficient": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+            "Combination": ["VIRTUAL-SKIN-CHARGE-SUB-0", "VIRTUAL-SKIN-CHARGE-SUB-1", "VIRTUAL-SKIN-CHARGE-SUB-2", "VIRTUAL-SKIN-CHARGE-SUB-3", "VIRTUAL-SKIN-CHARGE-SUB-4", "VIRTUAL-SKIN-CHARGE-SUB-5", "VIRTUAL-SKIN-CHARGE-SUB-6"],
+            "Coefficient": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
             "Multiplier":0.001
         },
         {
