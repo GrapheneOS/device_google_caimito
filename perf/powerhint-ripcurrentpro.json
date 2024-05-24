@@ -284,7 +284,6 @@
         "0x0",
         "0x80"
       ],
-      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
@@ -1288,12 +1287,6 @@
       "Node": "FGPreferIdle",
       "Duration": 0,
       "Value": "0"
-    },
-    {
-      "PowerHint": "DISPLAY_INACTIVE",
-      "Node": "SysGroupCfsSkipMask",
-      "Duration": 0,
-      "Value": "0x80"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
