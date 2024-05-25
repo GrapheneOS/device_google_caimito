@@ -3043,9 +3043,9 @@
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
-      "Node": "CPUDVFSHeadroom",
+      "Node": "AutoPreferIdle",
       "Duration": 0,
-      "Value": "1280"
+      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
@@ -3063,7 +3063,7 @@
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "42"
+      "Value": "55"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
@@ -3075,7 +3075,7 @@
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "18"
+      "Value": "30"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
@@ -3109,19 +3109,31 @@
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
+      "Node": "CPUUtilThreshold",
+      "Duration": 0,
+      "Value": "1100 1024 1100"
+    },
+    {
+      "PowerHint": "CAMERA_PROJECT11",
+      "Node": "CPUDVFSHeadroom",
+      "Duration": 0,
+      "Value": "1100"
+    },
+    {
+      "PowerHint": "CAMERA_PROJECT11",
       "Node": "CDPreferHighCap",
       "Duration": 0,
       "Value": "0"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
-      "Node": "CDPreferIdle",
+      "Node": "TAPreferHighCap",
       "Duration": 0,
       "Value": "0"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
-      "Node": "TAPreferHighCap",
+      "Node": "TAPreferIdle",
       "Duration": 0,
       "Value": "0"
     },
@@ -3153,7 +3165,7 @@
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "CDCpuset",
       "Duration": 0,
-      "Value": "0-7"
+      "Value": "0-6"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
@@ -3166,6 +3178,12 @@
       "Node": "VIRTUAL-SKIN-CPU-HIGH",
       "Duration": 0,
       "Value": "camera"
+    },
+    {
+      "PowerHint": "CAMERA_PROJECT11",
+      "Node": "CPUSkipMask",
+      "Duration": 0,
+      "Value": "0x80"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
