@@ -68,6 +68,10 @@ include device/google/caimito/fingerprint/ultrasonic_udfps.mk
 include device/google/gs-common/modem/radio_ext/radio_ext.mk
 include device/google/gs-common/pixelsupport/pixelsupport.mk
 
+# Increment the SVN for any official public releases
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.build.svn=1
+
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,caiman)
 $(call soong_config_set,lyric,tuning_product,caiman)
@@ -304,9 +308,17 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.ois_with_system_imu=true
 
+# Allow external binning setting
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.camera.allow_external_binning_setting=true
+
 # Camera Vendor property
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.front_720P_always_binning=true
+
+# Enable camera exif model/make reporting
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.camera.exif_reveal_make_model=true
 
 # Display RRS default Config
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config=960x2142@120:120
