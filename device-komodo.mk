@@ -68,6 +68,10 @@ include device/google/caimito/fingerprint/ultrasonic_udfps.mk
 include device/google/gs-common/modem/radio_ext/radio_ext.mk
 include device/google/gs-common/pixelsupport/pixelsupport.mk
 
+# Increment the SVN for any official public releases
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.build.svn=1
+
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,komodo)
 $(call soong_config_set,lyric,tuning_product,komodo)
