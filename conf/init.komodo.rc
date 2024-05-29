@@ -83,3 +83,7 @@ on property:sys.boot_completed=1
 # it should be written by the system init.
 on property:ro.boot.hardware.sku=GQ57S
     setprop audio.camerasound.force true
+
+# Enable bootstrap when warrarnty is set
+on boot && property:ro.boot.warranty.sku=*
+    setprop setupwizard.feature.provisioning_profile_mode true
