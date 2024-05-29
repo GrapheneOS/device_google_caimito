@@ -294,6 +294,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.front_720P_always_binning=true
 
+# Enable camera exif model/make reporting
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.camera.exif_reveal_make_model=true
+
 # Vibrator HAL
 ACTUATOR_MODEL := luxshare_ict_081545
 ADAPTIVE_HAPTICS_FEATURE := adaptive_haptics_v1
