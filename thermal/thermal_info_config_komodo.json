@@ -317,7 +317,7 @@
             "PollingDelay": 300000,
             "PassiveDelay": 7000
         },
-       {
+        {
             "Name": "VIRTUAL-SKIN",
             "Type": "SKIN",
             "Version": "6.1",
@@ -1209,36 +1209,8 @@
             "RecordWithDefaultThreshold": ["VIRTUAL-SKIN"],
             "RecordWithThreshold": [
                 {
-                    "Name": "VIRTUAL-BTS-WINDOW-PARTIAL",
-                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
-                },
-                {
                     "Name": "VIRTUAL-SKIN-SPEAKER",
-                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
-                },
-                {
-                    "Name": "VIRTUAL-SKIN-SUB-0",
-                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
-                },
-                {
-                    "Name": "VIRTUAL-SKIN-SUB-1",
-                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
-                },
-                {
-                    "Name": "VIRTUAL-SKIN-SUB-2",
-                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
-                },
-                {
-                    "Name": "VIRTUAL-SKIN-SUB-3",
-                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
-                },
-                {
-                    "Name": "VIRTUAL-SKIN-SUB-4",
-                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
-                },
-                {
-                    "Name": "VIRTUAL-SKIN-SUB-5",
-                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
+                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55]
                 },
                 {
                     "Name": "VIRTUAL-SKIN",
@@ -1246,11 +1218,11 @@
                 },
                 {
                     "Name": "VIRTUAL-SKIN-LEGACY",
-                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
+                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55]
                 },
                 {
                     "Name": "VIRTUAL-SKIN-MODEL",
-                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 55]
+                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55]
                 },
                 {
                     "Name": "VIRTUAL-SKIN-MODEL-LEGACY-DIFF",
