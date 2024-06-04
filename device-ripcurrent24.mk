@@ -217,25 +217,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/caimito/prebuilts
 
 # Location
-# iGNSS
-# gps.cfg
 PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/ripcurrent24
 $(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
 PRODUCT_PACKAGES += gps.cfg
-# eGNSS
-# SDK build system
-$(call soong_config_set, include_libsitril_gps_wifi, board_without_radio, $(BOARD_WITHOUT_RADIO))
-include device/google/gs-common/gps/brcm/device.mk
-
-PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/ripcurrent24
-SOONG_CONFIG_NAMESPACES += gpssdk
-SOONG_CONFIG_gpssdk += gpsconf
-SOONG_CONFIG_gpssdk_gpsconf ?= $(TARGET_BUILD_VARIANT)
-PRODUCT_PACKAGES += \
-	gps.cer \
-	gps.xml \
-	scd.conf \
-	lhd.conf
 
 PRODUCT_VENDOR_PROPERTIES += \
 	vendor.disable.thermal.control=1 \

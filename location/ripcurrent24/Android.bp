@@ -5,7 +5,7 @@ package {
 }
 
 soong_config_module_type {
-    name: "ignss_prebuilt_etc",
+    name: "gnss_prebuilt_etc",
     module_type: "prebuilt_etc",
     config_namespace: "gpssdk",
     variables: [
@@ -25,7 +25,7 @@ soong_config_string_variable {
     ],
 }
 
-ignss_prebuilt_etc {
+gnss_prebuilt_etc {
     name: "gps.cfg",
     soong_config_variables: {
         buildtype: {
@@ -40,110 +40,6 @@ ignss_prebuilt_etc {
             },
             conditions_default: {
                 src: "user/gps.cfg",
-            },
-        },
-    },
-    relative_install_path: "gnss",
-    vendor: true,
-}
-
-soong_config_module_type {
-    name: "egnss_prebuilt_etc",
-    module_type: "prebuilt_etc",
-    config_namespace: "gpssdk",
-    variables: [
-        "gpsconf",
-    ],
-    properties: [
-        "src",
-    ],
-}
-
-soong_config_string_variable {
-    name: "gpsconf",
-    values: [
-        "factory",
-        "user",
-        "userdebug",
-        "eng",
-    ],
-}
-
-prebuilt_etc {
-    name: "gps.cer",
-    src: "gps.cer",
-    relative_install_path: "gnss",
-    vendor: true,
-}
-
-egnss_prebuilt_etc {
-    name: "gps.xml",
-    soong_config_variables: {
-        gpsconf: {
-            user: {
-                src: "user/gps.xml",
-            },
-            userdebug: {
-                src: "userdebug/gps.xml",
-            },
-            eng: {
-                src: "userdebug/gps.xml",
-            },
-            factory: {
-                src: "factory/gps.xml",
-            },
-            conditions_default: {
-                src: "user/gps.xml",
-            },
-        },
-    },
-    relative_install_path: "gnss",
-    vendor: true,
-}
-
-egnss_prebuilt_etc {
-    name: "lhd.conf",
-    soong_config_variables: {
-        gpsconf: {
-            user: {
-                src: "user/lhd.conf",
-            },
-            userdebug: {
-                src: "userdebug/lhd.conf",
-            },
-            eng: {
-                src: "userdebug/lhd.conf",
-            },
-            factory: {
-                src: "factory/lhd.conf",
-            },
-            conditions_default: {
-                src: "user/lhd.conf",
-            },
-        },
-    },
-    relative_install_path: "gnss",
-    vendor: true,
-}
-
-egnss_prebuilt_etc {
-    name: "scd.conf",
-    soong_config_variables: {
-        gpsconf: {
-            user: {
-                src: "user/scd.conf",
-            },
-            userdebug: {
-                src: "userdebug/scd.conf",
-            },
-            eng: {
-                src: "userdebug/scd.conf",
-            },
-            factory: {
-                src: "factory/scd.conf",
-            },
-            conditions_default: {
-                src: "user/scd.conf",
             },
         },
     },
