@@ -73,4 +73,7 @@
 
     <!--  Whether to use a machine learning model for back gesture falsing. -->
     <bool name="config_useBackGestureML">false</bool>
+
+    <!-- Whether to use deadzone with nav bar -->
+    <bool name="config_useDeadZone">false</bool>
 </resources>
