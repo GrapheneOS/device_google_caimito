@@ -274,6 +274,42 @@
       "ResetOnInit": true
     },
     {
+      "Name": "TAUclampMinOnNiceEnable",
+      "Path": "/proc/vendor_sched/groups/ta/uclamp_min_on_nice_enable",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAUclampMinOnNiceMidValue",
+      "Path": "/proc/vendor_sched/groups/ta/uclamp_min_on_nice_mid_value",
+      "Values": [
+        "600",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAUclampMinOnNiceHighPrio",
+      "Path": "/proc/vendor_sched/groups/ta/uclamp_min_on_nice_high_prio",
+      "Values": [
+        "119",
+        "120"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAUclampMinOnNiceMidPrio",
+      "Path": "/proc/vendor_sched/groups/ta/uclamp_min_on_nice_mid_prio",
+      "Values": [
+        "128",
+        "130"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "FGUClampBoost",
       "Path": "/proc/vendor_sched/groups/fg/uclamp_min",
       "Values": [
@@ -389,6 +425,7 @@
       "Path": "/proc/vendor_sched/groups/ta/preferred_idle_mask_high",
       "Values": [
         "0xff",
+        "0xf0",
         "0x7f"
       ],
       "ResetOnInit": true
@@ -398,6 +435,7 @@
       "Path": "/proc/vendor_sched/groups/ta/preferred_idle_mask_mid",
       "Values": [
         "0xff",
+        "0xf0",
         "0x7f"
       ],
       "ResetOnInit": true
@@ -407,6 +445,7 @@
       "Path": "/proc/vendor_sched/groups/ta/preferred_idle_mask_low",
       "Values": [
         "0xff",
+        "0xf0",
         "0x7f"
       ],
       "ResetOnInit": true
@@ -1493,10 +1532,58 @@
       "Value": "20"
     },
     {
+       "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
+       "Node": "ReducePreferIdle",
+       "Duration": 3000,
+       "Value": "0"
+    },
+    {
       "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
-      "Node": "TAUClampBoost",
+      "Node": "TAPreferredIdleMaskHigh",
+      "Duration": 3000,
+      "Value": "0xf0"
+    },
+    {
+      "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
+      "Node": "TAPreferredIdleMaskMid",
+      "Duration": 3000,
+      "Value": "0xf0"
+    },
+    {
+      "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
+      "Node": "TAPreferredIdleMaskLow",
+      "Duration": 3000,
+      "Value": "0xf0"
+    },
+    {
+      "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
+      "Node": "TAUclampMinOnNiceEnable",
+      "Duration": 3000,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
+      "Node": "TAUclampMinOnNiceMidValue",
       "Duration": 3000,
       "Value": "600"
+    },
+    {
+      "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
+      "Node": "TAUclampMinOnNiceHighPrio",
+      "Duration": 3000,
+      "Value": "119"
+    },
+    {
+      "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
+      "Node": "TAUclampMinOnNiceMidPrio",
+      "Duration": 3000,
+      "Value": "128"
+    },
+    {
+      "PowerHint": "CAMERA_CAPTURE_CPU_THROTTLE",
+      "Node": "TAPreferIdle",
+      "Duration": 3000,
+      "Value": "1"
     },
     {
       "PowerHint": "CAMERA_THERMAL_SEVERE_BOOST",
