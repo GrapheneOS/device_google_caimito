@@ -2965,19 +2965,19 @@
     },
     {
       "PowerHint": "FACE_UNLOCK_BOOST",
-      "Node": "CPUBigClusterMaxFreq",
+      "Node": "CPUMidClusterMaxFreq",
       "Duration": 500,
       "Value": "9999999"
     },
     {
       "PowerHint": "FACE_UNLOCK_BOOST",
-      "Node": "CPUBigClusterMinFreq",
+      "Node": "CPUMidClusterMinFreq",
       "Duration": 500,
-      "Value": "1885000"
+      "Value": "1795000"
     },
     {
       "PowerHint": "FACE_UNLOCK_BOOST",
-      "Node": "CPU_BIG_TSKIN_BYPASS",
+      "Node": "CPU_MID_TSKIN_BYPASS",
       "Duration": 500,
       "Value": "1"
     },
