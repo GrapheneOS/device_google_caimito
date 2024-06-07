@@ -196,7 +196,7 @@
             "PIDInfo": {
                 "K_Po":["NAN", "NAN", 119, "NAN", "NAN", "NAN", "NAN"],
                 "K_Pu":["NAN", "NAN", 119, "NAN", "NAN", "NAN", "NAN"],
-                "K_I":["NAN", "NAN", 25, "NAN", "NAN", "NAN", "NAN"],
+                "K_I":["NAN", "NAN", 50, "NAN", "NAN", "NAN", "NAN"],
                 "K_D":["NAN", "NAN", 0, "NAN", "NAN", "NAN", "NAN"],
                 "I_Max":["NAN", "NAN", 1302, "NAN", "NAN", "NAN", "NAN"],
                 "S_Power":["NAN", "NAN", 2527, "NAN", "NAN", "NAN", "NAN"],
@@ -208,7 +208,7 @@
             "ExcludedPowerInfo": [
                 {
                     "PowerRail": "PARTIAL_SYSTEM_POWER",
-                    "PowerWeight": [0.12, 0.12, 0.06, 0.06, 0.24, 0.24, 0.24]
+                    "PowerWeight": [0.12, 0.12, 1.0, 1.0, 1.0, 1.0, 1.0]
                 }
             ],
             "BindedCdevInfo": [
