@@ -17,6 +17,44 @@
 <!-- Phone app resources that may need to be customized
      for different hardware or product builds. -->
 <resources>
+    <!-- Dynamic routing of emergency calls: trying normal routing if it's available.
+         Otherwise, emergency routing. -->
+    <bool name="dynamic_routing_emergency_enabled">true</bool>
+
+    <!-- Array of countries that the dynamic routing is supported.
+         Values should be ISO3166 country codes in lowercase. -->
+    <string-array name="config_countries_dynamic_routing_emergency_enabled"
+            translatable="false">
+        <item>in</item>
+        <item>il</item>
+        <item>tw</item>
+        <item>sg</item>
+        <item>ch</item>
+        <item>sk</item>
+        <item>pl</item>
+        <item>si</item>
+        <item>ba</item>
+    </string-array>
+
+    <!-- Array of emergency numbers for dynamic routing.
+         Values are the tuples of Country ISO, MNC, and numbers. -->
+    <string-array name="config_dynamic_routing_emergency_numbers"
+      translatable="false">
+        <item>in,,101,102,103,108</item>
+        <item>il,,101,102</item>
+        <item>tw,,110,119</item>
+        <item>sg,,995</item>
+        <item>ch,,1414</item>
+        <item>gp,,115,119,191,196,197,116000,116111,116117</item>
+        <item>sk,,159</item>
+        <item>pl,01,984,985,997,998,999</item>
+        <item>pl,06,984,985,997,998,999</item>
+        <item>pl,,986,987,989,991,992,993,994,995,996</item>
+        <item>re,,115,119,191,196,197,116000,116111,116117</item>
+        <item>si,,113</item>
+        <item>ba,,122,123,124</item>
+    </string-array>
+
     <!-- The component name(a flattened ComponentName string) for the telephony domain selection
          service. The device should fallback to the modem based domain selection architecture
          if this is not configured. -->
