@@ -386,3 +386,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
           ro.com.google.ime.kb_pad_port_b=8 \
           ro.com.google.ime.height_ratio=1.09
+
+PRODUCT_VENDOR_PROPERTIES := $(filter-out ro.vendor.build.svn=% , $(PRODUCT_VENDOR_PROPERTIES))
