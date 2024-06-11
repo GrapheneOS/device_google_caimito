@@ -417,3 +417,5 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Reduce lmkd aggressiveness
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lmk.swap_free_low_percentage=7
+
+PRODUCT_VENDOR_PROPERTIES := $(filter-out ro.vendor.build.svn=% , $(PRODUCT_VENDOR_PROPERTIES))
