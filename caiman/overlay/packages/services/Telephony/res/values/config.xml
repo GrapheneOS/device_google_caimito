@@ -43,7 +43,11 @@
         <item>in,,101,102,103,108</item>
         <item>il,,101,102</item>
         <item>tw,,110,119</item>
-        <item>sg,,995</item>
+        <!-- b/343344830 -->
+        <item>sg,01,995</item>
+        <item>sg,02,995</item>
+        <item>sg,03,995</item>
+        <item>sg,10,995</item>
         <item>ch,,1414</item>
         <item>gp,,115,119,191,196,197,116000,116111,116117</item>
         <item>sk,,159</item>
