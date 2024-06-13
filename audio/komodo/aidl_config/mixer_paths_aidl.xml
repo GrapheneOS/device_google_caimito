@@ -1297,6 +1297,10 @@
     <ctl name="MIC Record Soft Gain (dB)" value="0" />
   </path>
 
+  <path name="microphones (VOICE_COMMUNICATION,VOICE)">
+    <path name="microphones (VOICE)" />
+  </path>
+
   <path name="microphones (VOICE_RECOGNITION)">
     <path name="builtin-mic-id-capture-list" />
     <ctl name="MIC DC Blocker" value="1" />
@@ -1329,6 +1333,10 @@
 
   <path name="back-microphones (VOICE)">
     <path name="microphones (VOICE)" />
+  </path>
+
+  <path name="back-microphones (VOICE_COMMUNICATION,VOICE)">
+    <path name="back-microphones (VOICE)" />
   </path>
 
   <path name="back-microphones (CAMCORDER)">

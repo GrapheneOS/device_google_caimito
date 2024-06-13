@@ -220,6 +220,8 @@ PRODUCT_SOONG_NAMESPACES += vendor/google_devices/caimito/prebuilts
 PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/ripcurrent24
 $(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
 PRODUCT_PACKAGES += gps.cfg
+# For GPS property
+PRODUCT_VENDOR_PROPERTIES += ro.vendor.gps.pps.enabled=true
 
 PRODUCT_VENDOR_PROPERTIES += \
 	vendor.disable.thermal.control=1 \

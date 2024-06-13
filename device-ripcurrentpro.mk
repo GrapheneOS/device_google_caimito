@@ -222,6 +222,8 @@ PRODUCT_SOONG_NAMESPACES += vendor/google_devices/caimito/prebuilts
 PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/ripcurrentpro
 $(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
 PRODUCT_PACKAGES += gps.cfg
+# For GPS property
+PRODUCT_VENDOR_PROPERTIES += ro.vendor.gps.pps.enabled=true
 
 PRODUCT_VENDOR_PROPERTIES += \
 	persist.device_config.configuration.disable_rescue_party=true
