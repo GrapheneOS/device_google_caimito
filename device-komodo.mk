@@ -93,10 +93,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.ignore_hdr_camera_layer
 # Display OP HZ Config
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.primarydisplay.op.hs_hz=120 \
-    vendor.primarydisplay.op.ns_hz=60 \
-    vendor.primarydisplay.op.ns_min_dbv=440 \
-    vendor.primarydisplay.op.hs_switch_min_dbv=1088 \
-    vendor.primarydisplay.op.hist_delta_th=8
+    vendor.primarydisplay.op.ns_hz=120
 
 # Display fixed TE2
 PRODUCT_VENDOR_PROPERTIES += vendor.primarydisplay.fixed_te2.default_rate_hz=120
