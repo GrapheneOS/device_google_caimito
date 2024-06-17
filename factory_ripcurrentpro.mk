@@ -31,7 +31,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.bluetooth.evb_bdaddr="22:22:22:33:44:55"
 
 # Location
-# iGNSS
 PRODUCT_PACKAGES += \
 	sctd \
 	spad \
@@ -43,17 +42,6 @@ PRODUCT_PACKAGES += \
 	spad.json \
 	swcnd.json \
 	android.hardware.gnss@2.1-impl
-# eGNSS
-# Override to factory SDK
-SOONG_CONFIG_NAMESPACES += gpssdk
-SOONG_CONFIG_gpssdk += sdkv1
-SOONG_CONFIG_gpssdk_sdkv1 := true
-SOONG_CONFIG_NAMESPACES += gpssdk
-SOONG_CONFIG_gpssdk += gpsmcuversion
-SOONG_CONFIG_gpssdk_gpsmcuversion := gpsv1_$(TARGET_BUILD_VARIANT)
-SOONG_CONFIG_NAMESPACES += gpssdk
-SOONG_CONFIG_gpssdk += gpsconf
-SOONG_CONFIG_gpssdk_gpsconf := factory
 
 # Factory binaries of camera
 PRODUCT_PACKAGES += fatp_km4cm4tk4_wide_hat_tool fatp_km4cm4_tele_hat_tool fatp_km4cm4tk4_ultrawide_hat_tool fatp_km4cm4_front_hat_tool fatp_tk4_front_hat_tool
