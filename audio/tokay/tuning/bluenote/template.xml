@@ -17,8 +17,8 @@
       <param id="18" name="noiseGate" type="float"/>
       <param id="19" name="minGain" type="float"/>
       <param id="20" name="maxGain" type="float"/>
-      <param id="21" name="longGainAtRt" type="uint32"/>
-      <param id="22" name="GainAtRt" type="uint32"/>
+      <param id="21" name="releaseTime" type="uint32"/>
+      <param id="22" name="attackTime" type="uint32"/>
       <param id="23" name="rmsTav" type="uint32"/>
     </module>
     <module id="6" name="Surround Record">
@@ -59,6 +59,10 @@
         <param default="22" name="CB_fc_mid_high" type="int32"/>
         <param default="5" name="CB_smooth_span" type="int32"/>
         <param default="1.0" name="CB_forget_factor" type="float"/>
+      </struct>
+      <struct id="35">
+        <param name="IIR_lowpass" size="5" type="float"/>
+        <param name="IIR_highpass" size="5" type="float"/>
       </struct>
     </module>
     <module id="7" name="Multi Channel IIR 2">
@@ -281,7 +285,7 @@
         <param name="crossover_iir_hp2" size="5" type="float"/>
         <param default="250" max="1000" min="5" name="environment_rms_window_ms" type="int32"/>
         <param default="-40" max="0" name="environment_rms_threshold_db" type="float"/>
-        <param default="10000" min="0" name="environment_rms_attack_release_ms" type="int32"/>
+        <param default="50" min="0" name="environment_low_to_high_ms" type="int32"/>
         <param default="1" min="0" name="environment_loudness_ratio_band0" type="float"/>
         <param default="1" min="0" name="environment_loudness_ratio_band1" type="float"/>
         <param default="1" min="0" name="environment_loudness_ratio_band2" type="float"/>
@@ -432,6 +436,7 @@
         <param default="-30" name="drc_long_term_window_upper_db_band0" type="float"/>
         <param default="-30" name="drc_long_term_window_upper_db_band1" type="float"/>
         <param default="-30" name="drc_long_term_window_upper_db_band2" type="float"/>
+        <param default="10000" min="0" name="environment_high_to_low_ms" type="int32"/>
       </struct>
     </module>
     <module id="10000" name="Eraser">

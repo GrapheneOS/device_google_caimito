@@ -15,14 +15,10 @@
 #
 
 PRODUCT_SOONG_NAMESPACES += \
-	vendor/qcom/fingerprint/qfp-service \
-	vendor/qcom/fingerprint/QFingerprintService \
-	vendor/qcom/fingerprint/QFPCalibration \
+	vendor/qcom/fingerprint/qfp-service
 
 PRODUCT_PACKAGES += \
-	qfp-daemon \
-	QFingerprintService \
-	QFPCalibration \
+	qfp-daemon
 
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -35,6 +31,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.qfp.update_vfs_calib=1 \
 	persist.vendor.qfp.enable_setprop=0 \
 	log.tag.QFP=3
+
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+PRODUCT_SOONG_NAMESPACES += \
+	vendor/qcom/fingerprint/QFPCalibration
+
+PRODUCT_PACKAGES += \
+        QFPCalibration
+endif
 
 ifneq (,$(findstring factory, $(TARGET_PRODUCT)))
 PRODUCT_PACKAGES += QfsFactoryTest

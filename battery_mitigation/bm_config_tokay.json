@@ -1,0 +1,22 @@
+{
+    "MitigationMethod":[
+        {
+            "Name":"AUDIO_MITIGATION",
+            "Module":"AUDIO",
+            "Trigger":["OILO1"],
+            "State":["LIGHT", "MEDIUM", "HEAVY", "DISABLED"],
+            "Condition":"BASIC"
+        },
+        {
+            "Name":"UNDEFINED",
+            "Module":"UNDEFINED",
+            "Trigger":["OILO1", "OILO2", "UVLO1", "UVLO2", "SMPL"],
+            "State":["START", "LIGHT", "MEDIUM", "HEAVY", "DISABLED"],
+            "Condition":"BASIC"
+        }
+    ],
+    "MitigationConfig": {
+        "QuickSaveStats": 1,
+        "TriggerDeglitchMS": 1000
+    }
+}

@@ -32,6 +32,15 @@
     <!-- Minimum screen brightness allowed by the power manager. -->
     <integer name="config_screenBrightnessDim">6</integer>
 
+     <!-- Default strength, in percentage, of bright color reduction when activated. -->
+    <integer name="config_reduceBrightColorsStrengthDefault">50</integer>
+
+    <!-- Minimum strength, in percentage, supported by bright color reduction. -->
+    <integer name="config_reduceBrightColorsStrengthMin">25</integer>
+
+    <!-- Maximum strength, in percentage, supported by bright color reduction. -->
+    <integer name="config_reduceBrightColorsStrengthMax">75</integer>
+
     <!-- Minimum screen brightness setting allowed by power manager.
          The user is forbidden from setting the brightness below this level.  -->
     <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.0</item>
@@ -51,21 +60,6 @@
 
     <!-- The default peak refresh rate. -->
     <integer name="config_defaultPeakRefreshRate">120</integer>
-
-    <!-- Not allow to switch to higher refresh rate when display brightness setting is
-         equal or less than this value -->
-    <integer-array name="config_brightnessThresholdsOfPeakRefreshRate">
-        <item>2</item> <!-- 15% UI brightness -->
-    </integer-array>
-    <integer-array name="config_ambientThresholdsOfPeakRefreshRate">
-        <item>5</item>
-    </integer-array>
-
-    <!-- default refresh rate in the zone defined by birghtness and ambient thresholds -->
-    <integer name="config_defaultRefreshRateInZone">120</integer>
-
-    <!-- Default refresh rate while the device has high brightness mode enabled for HDR. -->
-    <integer name="config_defaultRefreshRateInHbmHdr">60</integer>
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
@@ -194,7 +188,7 @@
     </string>
 
     <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
-        m 614.53715,43.5 h 115 v 115 h -115 z
+        m 614.53715,0 h 115 v 158.5 h -115 z
         @left
     </string>
     <!-- A string config in svg path format for the main display shape.
@@ -208,7 +202,7 @@
 
          Note: If the display supports multiple resolutions, please define the path config based on
          the highest resolution so that it can be scaled correctly in each resolution. -->
-    <string name="config_mainDisplayShape">M 1343.13,226.31 V 2764.73 M 0.09,226.4 V 2764.83 M 224.16,2991.91 H 1118.97 M 224.65,0 h 894.8 m -0.3,2991.7 c 36.66,-0.06 74.28,1.14 109.5,-10.8 22.52,-7.01 43.12,-19.74 60.41,-35.82 17.04,-15.82 30.34,-35.6 38.92,-57.3 5.5,-13.82 9.58,-28.23 11.5,-43.02 4.09,-26.35 3.31,-53.26 3.46,-79.85 m 0.96,-2538.61 c -0.06,-37.05 1.13,-75.08 -10.68,-110.69 -6.93,-22.76 -19.53,-43.59 -35.43,-61.06 -15.65,-17.23 -35.21,-30.67 -56.68,-39.34 -13.67,-5.56 -27.93,-9.68 -42.56,-11.62 -26.06,-4.14 -52.69,-3.34 -78.99,-3.5 M 223.97,2991.7 c -36.66,-0.06 -74.28,1.14 -109.5,-10.8 -22.52,-7.01 -43.12,-19.75 -60.41,-35.81 -17.04,-15.82 -30.34,-35.6 -38.92,-57.3 -5.5,-13.82 -9.58,-28.23 -11.5,-43.02 -4.09,-26.35 -3.31,-53.26 -3.46,-79.85 m 0,-2538.61 C 0.25,189.25 -0.94,151.23 10.87,115.62 17.8,92.85 30.4,72.03 46.3,54.55 61.95,37.33 81.52,23.88 102.98,15.21 116.65,9.65 130.91,5.53 145.55,3.59 c 26.06,-4.14 52.69,-3.34 78.99,-3.5 z</string>
+    <string name="config_mainDisplayShape">M 0,223.8 V 199 187.5 174.1 l 1.915,-23 3.829,-17.2 3.829,-17.2 5.747,-17.22 5.74,-11.48 5.74,-9.56 5.75,-7.65 3.83,-5.75 11.48,-13.39 3.83,-3.82 11.49,-9.56 13.4,-9.58 9.57,-5.73 19.15,-9.57 17.2,-5.738 17.3,-3.825 21,-1.914 L 176.1,0 h 15.4 17.2 19.1 896.2 15 6 8 11 6 l 9,1.913 h 12 l 9,1.914 12,1.912 15,3.826 10,3.825 7,3.82 12,5.75 8,3.83 9,7.65 15,9.56 16,17.22 11,15.3 8,11.48 6,13.4 5,13.4 6,21 2,17.3 v 7.6 l 2,13.4 v 19.1 19.2 15.2 2540.4 6 4 9 8 12 13 l -2,15 v 10 l -6,26 -5,16 -6,13 -10,15 -7,11 -10,13 -11,11 -14,9 -23,14 -15,6 -23,7 -14,2 -30,4 h -23 -12 -7 -10 -888.2 -11.5 -9.5 -9.6 -5.7 -13.4 l -19.2,-2 -11.5,-2 h -7.6 l -17.3,-5 -15.3,-4 -19.13,-10 -15.32,-10 -19.14,-15 -13.4,-11 -9.58,-16 -11.48,-19 -7.66,-19 L 5.744,2858 3.829,2847 0,2827 v -24 -20 -18 z</string>
 
     <!-- Boolean indicating whether allow sending null to modem to clear the previous initial attach
          data profile -->

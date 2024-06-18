@@ -14,10 +14,6 @@ on init
 on late-init && property:ro.boot.hardware.revision=PROTO1.0
     setprop persist.vendor.se.reset.chip_en false
 
-    # Display permission for SSC mode
-    chown system system /sys/class/backlight/panel0-backlight/ssc_mode
-    chmod 664 /sys/class/backlight/panel0-backlight/ssc_mode
-
 on early-boot
     # Wait for insmod_sh to finish all common modules
     wait_for_prop vendor.common.modules.ready 1
@@ -37,6 +33,10 @@ on property:vendor.mfgapi.touchpanel.permission=1
 # Permissions for display
 on fs
     chown system system /sys/class/backlight/panel0-backlight/acl_mode
+
+    # Permission for SSC mode enable
+    chown system system /sys/class/backlight/panel0-backlight/ssc_en
+    chmod 664 /sys/class/backlight/panel0-backlight/ssc_en
 
 # WiFi
 on post-fs-data
@@ -67,11 +67,19 @@ on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_complet
 # ODPM
 on early-boot && property:ro.boot.hardware.sku=GZC4K
     write /sys/bus/iio/devices/iio:device0/enabled_rails "CH11=BUCK12S"
+    write /sys/bus/iio/devices/iio:device1/enabled_rails "CH11=BUCK12S"
 on early-boot && property:ro.boot.hardware.sku=GQ57S
     write /sys/bus/iio/devices/iio:device0/enabled_rails "CH11=BUCK12S"
+    write /sys/bus/iio/devices/iio:device1/enabled_rails "CH11=BUCK12S"
 
 # Start the twoshay touch service
 on property:sys.boot_completed=1
     chown system input /dev/touch_offload
     chmod 660 /dev/touch_offload
     start twoshay
+
+# For Japan sku, always enforce camera shutter sound
+# Since this property is read by the audio server in system service,
+# it should be written by the system init.
+on property:ro.boot.hardware.sku=GQ57S
+    setprop audio.camerasound.force true

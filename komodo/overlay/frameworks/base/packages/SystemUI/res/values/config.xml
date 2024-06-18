@@ -43,10 +43,10 @@
                to brightness values; -1 means keeping the current brightness. -->
     <integer-array name="config_doze_brightness_sensor_to_brightness">
         <item>-1</item> <!-- 0: OFF -->
-        <item>1</item> <!-- 1: NIGHT (1-1)/(255-1)*(1850-2)+2 = 2 nits -->
-        <item>2</item> <!-- 2: LOW (2-1)/(255-1)*(1850-2)+2 = 9.2 nits -->
-        <item>8</item> <!-- 3: HIGH (8-1)/(255-1)*(1850-2)+2 = 52.9 nits -->
-        <item>8</item> <!-- 4: SUN -->
+        <item>1</item> <!-- 1: NIGHT (1-1)/(255-1)*(2050-2)+2 = 2 nits -->
+        <item>2</item> <!-- 2: LOW (2-1)/(255-1)*(2050-2)+2 = 10.1 nits -->
+        <item>7</item> <!-- 3: HIGH (7-1)/(255-1)*(2050-2)+2 = 50.4 nits -->
+        <item>7</item> <!-- 4: SUN -->
     </integer-array>
 
     <!-- Doze: Table that translates sensor values from the doze_brightness_sensor_type sensor
@@ -70,4 +70,10 @@
       <item>100</item>   <!-- sensorLocationY -->
       <item>48</item>   <!--sensorRadius -->
     </integer-array>
+
+    <!--  Whether to use a machine learning model for back gesture falsing. -->
+    <bool name="config_useBackGestureML">false</bool>
+
+    <!-- Whether to use deadzone with nav bar -->
+    <bool name="config_useDeadZone">false</bool>
 </resources>
