@@ -477,6 +477,16 @@
       "ResetOnInit": true
     },
     {
+      "Name": "PowerHALLaunch",
+      "Path": "vendor.powerhal.is_launch",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "Type": "Property",
+      "ResetOnInit": true
+    },
+    {
       "Name": "BigTjOffset",
       "Path": "/sys/devices/platform/100a0000.BIG/offset_enabled",
       "Values": [
@@ -829,6 +839,15 @@
         "67000"
       ],
       "ResetOnInit": true
+    },
+    {
+      "Name": "PA_KILL",
+      "Path": "/sys/kernel/vendor_mm/pa_kill/reclaim_kb",
+      "Values": [
+        "102400",
+        "0"
+      ],
+      "ResetOnInit": false
     }
   ],
   "Actions": [
@@ -1006,6 +1025,12 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "FGPreferIdle",
+      "Duration": 5000,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "PowerHALLaunch",
       "Duration": 5000,
       "Value": "1"
     },
@@ -1288,6 +1313,13 @@
       "Node": "FGPreferIdle",
       "Duration": 0,
       "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "PA_KILL",
+      "EnableProperty": "vendor.powerhal.is_launch",
+      "Duration": 0,
+      "Value": "102400"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
