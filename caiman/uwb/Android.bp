@@ -69,3 +69,9 @@ prebuilt_etc {
     defaults: ["conf_defaults"],
 }
 
+prebuilt_etc {
+    name: "capabilities.conf",
+    src: "capabilities.conf",
+    defaults: ["conf_defaults"],
+}
+
