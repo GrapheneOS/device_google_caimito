@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+SHIPPING_API_LEVEL := 34
+
 ifdef RELEASE_GOOGLE_RIPCURRENTPRO_RADIO_DIR
 RELEASE_GOOGLE_PRODUCT_RADIO_DIR := $(RELEASE_GOOGLE_RIPCURRENTPRO_RADIO_DIR)
 endif
@@ -243,7 +245,3 @@ PRODUCT_VENDOR_PROPERTIES += \
 # PKVM Memory Reclaim
 PRODUCT_VENDOR_PROPERTIES += \
     hypervisor.memory_reclaim.supported=1
-
-# Thread HAL
-PRODUCT_PACKAGES += \
-   com.google.caimito.hardware.threadnetwork

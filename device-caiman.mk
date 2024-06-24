@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+SHIPPING_API_LEVEL := 34
+
 ifdef RELEASE_GOOGLE_CAIMAN_RADIO_DIR
 RELEASE_GOOGLE_PRODUCT_RADIO_DIR := $(RELEASE_GOOGLE_CAIMAN_RADIO_DIR)
 endif
@@ -434,9 +436,3 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.thread_dispatcher.enabled=true
-
-# Thread HAL
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-PRODUCT_PACKAGES += \
-   com.google.caimito.hardware.threadnetwork
-endif
