@@ -160,3 +160,9 @@ prebuilt_etc {
     filename_from_src: true,
     relative_install_path: "spatializer",
 }
+
+prebuilt_etc {
+    name: "default_mic_compensation.bin",
+    src: "compensation/default_mic_compensation.bin",
+    soc_specific: true,
+}
