@@ -243,3 +243,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # PKVM Memory Reclaim
 PRODUCT_VENDOR_PROPERTIES += \
     hypervisor.memory_reclaim.supported=1
+
+# Thread HAL
+PRODUCT_PACKAGES += \
+   com.google.caimito.hardware.threadnetwork
