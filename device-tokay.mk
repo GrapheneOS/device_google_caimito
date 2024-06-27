@@ -277,8 +277,11 @@ PRODUCT_PACKAGES += gps.cfg
 # For GPS property
 PRODUCT_VENDOR_PROPERTIES += ro.vendor.gps.pps.enabled=true
 
-# Display LBE
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
+# Display function property settings
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    vendor.display.lbe.supported=1 \
+    ro.vendor.primarydisplay.google-tk4c.temperature_path=/dev/thermal/tz-by-name/disp_therm/temp \
+    ro.vendor.display.read_temp_interval=30
 
 #Thermal VT estimator
 PRODUCT_PACKAGES += \
