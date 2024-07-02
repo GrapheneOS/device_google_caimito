@@ -3018,7 +3018,7 @@
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_BIG_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "50"
+      "Value": "20"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
