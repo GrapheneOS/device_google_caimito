@@ -700,9 +700,10 @@
       "Path": "/sys/devices/system/cpu/cpufreq/policy0/sched_pixel/spc_threshold",
       "Values": [
         "76",
-        "38",
-        "36",
         "10",
+        "47",
+        "45",
+        "36",
         "30",
         "0"
       ],
@@ -725,10 +726,10 @@
       "Values": [
         "59",
         "50",
-        "20",
+        "30",
         "2",
-        "18",
-        "15"
+        "23",
+        "20"
       ],
       "DefaultIndex": 0
     },
@@ -747,10 +748,10 @@
       "Path": "/sys/devices/system/cpu/cpufreq/policy7/sched_pixel/spc_threshold",
       "Values": [
         "62",
+        "50",
         "0",
         "20",
-        "22",
-        "15"
+        "22"
       ],
       "DefaultIndex": 0
     },
@@ -1768,7 +1769,7 @@
       "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "36"
+      "Value": "47"
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
@@ -1780,7 +1781,7 @@
       "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "15"
+      "Value": "20"
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
@@ -1792,7 +1793,7 @@
       "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "PMU_BIG_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "15"
+      "Value": "20"
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
@@ -1906,7 +1907,7 @@
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "38"
+      "Value": "45"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
@@ -1918,7 +1919,7 @@
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "20"
+      "Value": "30"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
@@ -2062,7 +2063,7 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "30"
+      "Value": "47"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
@@ -2074,7 +2075,7 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "18"
+      "Value": "23"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
