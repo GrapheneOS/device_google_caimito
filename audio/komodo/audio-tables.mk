@@ -61,7 +61,8 @@ PRODUCT_PACKAGES += \
     waves_config.ini \
     waves_preset.mps \
     compens_spk_l.conf \
-    compens_spk_r.conf
+    compens_spk_r.conf \
+    default_mic_compensation.bin
 
 # userdebug and eng specific
 PRODUCT_PACKAGES_DEBUG += \
