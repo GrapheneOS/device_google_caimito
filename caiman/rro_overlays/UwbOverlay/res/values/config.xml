@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
- * Copyright (C) 2022 The Android Open Source Project
+ * Copyright (C) 2024 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@
     -->
     <bool name = "background_ranging_enabled">true</bool>
 
-     <!-- Whether multicast list update notification v2 is supported or not.
+    <!-- Whether multicast list update notification v2 is supported or not.
      If enabled, the notification will be parsed into version 2 if uci major version is 2.0. -->
     <bool name = "is_multicast_list_update_ntf_v2_supported">true</bool>
 </resources>
