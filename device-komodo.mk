@@ -70,7 +70,7 @@ include device/google/gs-common/pixelsupport/pixelsupport.mk
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=2
+    ro.vendor.build.svn=3
 
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,komodo)
