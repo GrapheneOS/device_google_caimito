@@ -681,9 +681,10 @@
       "Values": [
         "76",
         "55",
-        "38",
-        "36",
         "10",
+        "47",
+        "45",
+        "36",
         "30",
         "28"
       ],
@@ -706,10 +707,9 @@
       "Values": [
         "59",
         "30",
-        "20",
         "2",
-        "18",
-        "15"
+        "23",
+        "20"
       ],
       "DefaultIndex": 0
     },
@@ -730,8 +730,7 @@
         "62",
         "0",
         "20",
-        "22",
-        "15"
+        "22"
       ],
       "DefaultIndex": 0
     },
@@ -1850,7 +1849,7 @@
       "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "36"
+      "Value": "47"
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
@@ -1862,7 +1861,7 @@
       "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "15"
+      "Value": "20"
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
@@ -1874,7 +1873,7 @@
       "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "PMU_BIG_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "15"
+      "Value": "20"
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
@@ -2024,7 +2023,7 @@
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "38"
+      "Value": "45"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
@@ -2036,7 +2035,7 @@
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "20"
+      "Value": "30"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
@@ -2216,7 +2215,7 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "30"
+      "Value": "47"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
@@ -2228,7 +2227,7 @@
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "18"
+      "Value": "23"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
@@ -3321,7 +3320,7 @@
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_LIT_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "28"
+      "Value": "47"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
@@ -3333,7 +3332,7 @@
       "PowerHint": "CAMERA_PROJECT11",
       "Node": "PMU_MID_SPC_THRESHOLD",
       "Duration": 0,
-      "Value": "18"
+      "Value": "23"
     },
     {
       "PowerHint": "CAMERA_PROJECT11",
