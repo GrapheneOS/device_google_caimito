@@ -91,7 +91,8 @@ PRODUCT_PACKAGES_DEBUG += \
     template.xml \
     tuning_constraints_combination.xml \
     test_config.ini \
-    test_preset.mps
+    test_preset.mps \
+    speaker_post_processing_volume_spec.xml
 
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 # Mixer Path Configuration for Audio Speaker Calibration Tool crus_sp_cal

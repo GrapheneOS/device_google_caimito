@@ -241,6 +241,12 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "speaker_post_processing_volume_spec.xml",
+    src: "pts/speaker_post_processing_volume_spec.xml",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
     name: "test_config.ini",
     src: "waves/tests/test_config.ini",
     soc_specific: true,
