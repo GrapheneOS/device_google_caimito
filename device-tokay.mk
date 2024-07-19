@@ -417,7 +417,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Thread HAL
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
-   com.google.caimito.hardware.threadnetwork
+   com.google.caimito.hardware.threadnetwork \
+   ThreadNetworkDemoApp
 endif
 
 # Bluetooth device id
