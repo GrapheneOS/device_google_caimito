@@ -73,7 +73,7 @@ ifdef RELEASE_SVN_CAIMAN
 TARGET_SVN ?= $(RELEASE_SVN_CAIMAN)
 else
 # Set this for older releases that don't use build flag
-TARGET_SVN ?= 03
+TARGET_SVN ?= 04
 endif
 
 PRODUCT_VENDOR_PROPERTIES += \
