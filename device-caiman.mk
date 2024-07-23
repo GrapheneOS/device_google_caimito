@@ -457,3 +457,7 @@ endif
 # Bluetooth device id
 PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.device_id.product_id=20496
+
+# Set support for LEA multicodec
+PRODUCT_PRODUCT_PROPERTIES += \
+    bluetooth.core.le_audio.codec_extension_aidl.enabled=true
