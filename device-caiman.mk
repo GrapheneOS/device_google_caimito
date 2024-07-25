@@ -27,6 +27,9 @@ $(call soong_config_set,caimito_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOA
 ifdef RELEASE_KERNEL_CAIMAN_DIR
 TARGET_KERNEL_DIR ?= $(RELEASE_KERNEL_CAIMAN_DIR)
 TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_KERNEL_CAIMAN_DIR)/kernel-headers
+
+include device/google/caimito/device-caimito-16k-common.mk
+
 else
 TARGET_KERNEL_DIR ?= device/google/caimito-kernels/6.1/24D1
 TARGET_BOARD_KERNEL_HEADERS ?= device/google/caimito-kernels/6.1/24D1/kernel-headers
