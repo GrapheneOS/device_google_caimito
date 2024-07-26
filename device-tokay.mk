@@ -406,3 +406,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.thread_dispatcher.enabled=true
+
+# Reduce lmkd aggressiveness
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.swap_free_low_percentage=7
