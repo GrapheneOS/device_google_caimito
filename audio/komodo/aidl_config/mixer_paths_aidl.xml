@@ -318,6 +318,7 @@
   <ctl name="Incall Capture Stream0" value="Off" />
   <ctl name="Incall Capture Stream1" value="Off" />
   <ctl name="Incall Capture Stream2" value="Off" />
+  <ctl name="Incall Capture Stream3" value="Off" />
 
   <!-- These two controls control the muting function of mics and sinks during the voice call. -->
   <!-- They would be enabled by HAL. -->
@@ -1101,6 +1102,39 @@
   </path>
 
   <path name="bluetooth-low-energy-headset-microphones -> voip-capture-0">
+    <ctl name="VOIP TX Mixer BT_TX" value="1" />
+  </path>
+
+  <path name="microphones -> voip-gsenet-capture-0">
+    <ctl name="Incall Capture Stream3" value="3MIC" />
+    <ctl name="VOIP TX Mixer INTERNAL_MIC_TX" value="1" />
+  </path>
+
+  <path name="back-microphones -> voip-gsenet-capture-0">
+    <ctl name="Incall Capture Stream3" value="3MIC" />
+    <ctl name="VOIP TX Mixer INTERNAL_MIC_TX" value="1" />
+  </path>
+
+  <path name="usb-microphones -> voip-gsenet-capture-0">
+    <ctl name="Incall Capture Stream3" value="3MIC" />
+    <ctl name="VOIP TX Mixer USB_TX" value="1" />
+  </path>
+
+  <path name="usb-headset-microphones -> voip-gsenet-capture-0">
+    <path name="usb-microphones -> voip-gsenet-capture-0" />
+  </path>
+
+  <path name="usb-device-microphones -> voip-gsenet-capture-0">
+    <path name="usb-microphones -> voip-gsenet-capture-0" />
+  </path>
+
+  <path name="bluetooth-sco-headset-microphones -> voip-gsenet-capture-0">
+    <ctl name="Incall Capture Stream3" value="3MIC" />
+    <ctl name="VOIP TX Mixer BT_TX" value="1" />
+  </path>
+
+  <path name="bluetooth-low-energy-headset-microphones -> voip-gsenet-capture-0">
+    <ctl name="Incall Capture Stream3" value="3MIC" />
     <ctl name="VOIP TX Mixer BT_TX" value="1" />
   </path>
 
