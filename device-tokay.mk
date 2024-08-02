@@ -438,3 +438,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Reduce lmkd aggressiveness
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lmk.swap_free_low_percentage=7
+
+# LE Audio configuration scenarios
+PRODUCT_COPY_FILES += \
+    device/google/caimito/bluetooth/audio_set_scenarios.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.json
+
+PRODUCT_COPY_FILES += \
+    device/google/caimito/bluetooth/audio_set_configurations.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.json
