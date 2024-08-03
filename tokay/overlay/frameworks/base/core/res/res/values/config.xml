@@ -54,6 +54,10 @@
      <!-- 140 nits: (140-2)/(1200-2)*(0.67-0.0)+0.0 = 0.077178631 -->
      <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.077178631</item>
 
+    <!-- The maximum range of gamma adjustment possible using the screen
+         auto-brightness adjustment setting. -->
+    <fraction name="config_autoBrightnessAdjustmentMaxGamma">105%</fraction>
+
      <!-- The default refresh rate. Pixel 6 manages this using the peak refresh rate setting, so set
           this value to 0 so it has no effect. -->
      <integer name="config_defaultRefreshRate">0</integer>
