@@ -16,9 +16,11 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_caiman.mk \
+    $(LOCAL_DIR)/aosp_caiman_16k.mk \
     $(LOCAL_DIR)/aosp_caiman_fullmte.mk \
     $(LOCAL_DIR)/factory_caiman.mk \
     $(LOCAL_DIR)/aosp_komodo.mk \
+    $(LOCAL_DIR)/aosp_komodo_16k.mk \
     $(LOCAL_DIR)/aosp_komodo_fullmte.mk \
     $(LOCAL_DIR)/factory_komodo.mk \
     $(LOCAL_DIR)/aosp_ripcurrentpro.mk \
@@ -28,6 +30,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_ripcurrent24_fullmte.mk \
     $(LOCAL_DIR)/factory_ripcurrent24.mk \
     $(LOCAL_DIR)/aosp_tokay.mk \
+    $(LOCAL_DIR)/aosp_tokay_16k.mk \
     $(LOCAL_DIR)/aosp_tokay_fullmte.mk \
     $(LOCAL_DIR)/factory_tokay.mk
 COMMON_LUNCH_CHOICES := \
