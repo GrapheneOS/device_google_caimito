@@ -35,16 +35,19 @@ prebuilt_etc {
     src: "bluenote/recording.gatf",
     defaults: ["aoc_defaults"],
 }
+
 prebuilt_etc {
     name: "smartfeature.gstf",
     src: "bluenote/smartfeature.gstf",
     defaults: ["aoc_defaults"],
 }
+
 prebuilt_etc {
     name: "template.xml",
     src: "bluenote/template.xml",
     defaults: ["aoc_defaults"],
 }
+
 prebuilt_etc {
     name: "tuning_constraints_combination.xml",
     src: "bluenote/tuning_constraints_combination.xml",
@@ -56,6 +59,7 @@ prebuilt_etc {
     src: "compensation/compens_spk_l.conf",
     soc_specific: true,
 }
+
 prebuilt_etc {
     name: "compens_spk_r.conf",
     src: "compensation/compens_spk_r.conf",
@@ -67,44 +71,160 @@ prebuilt_etc {
     src: "fortemedia/BLUETOOTH.dat",
     defaults: ["aoc_defaults"],
 }
+
 prebuilt_etc {
     name: "BLUETOOTH.mods",
     src: "fortemedia/BLUETOOTH.mods",
     defaults: ["aoc_defaults"],
 }
+
 prebuilt_etc {
     name: "HANDSFREE.dat",
     src: "fortemedia/HANDSFREE.dat",
     defaults: ["aoc_defaults"],
 }
+
 prebuilt_etc {
     name: "HANDSFREE.mods",
     src: "fortemedia/HANDSFREE.mods",
     defaults: ["aoc_defaults"],
 }
+
 prebuilt_etc {
     name: "HANDSET.dat",
     src: "fortemedia/HANDSET.dat",
     defaults: ["aoc_defaults"],
 }
+
 prebuilt_etc {
     name: "HANDSET.mods",
     src: "fortemedia/HANDSET.mods",
     defaults: ["aoc_defaults"],
 }
+
 prebuilt_etc {
     name: "HEADSET.dat",
     src: "fortemedia/HEADSET.dat",
     defaults: ["aoc_defaults"],
 }
+
 prebuilt_etc {
     name: "HEADSET.mods",
     src: "fortemedia/HEADSET.mods",
     defaults: ["aoc_defaults"],
 }
+
 prebuilt_etc {
     name: "mcps.dat",
     src: "fortemedia/mcps.dat",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "downlink_bluetooth_headset_config.pb",
+    src: "apmg3/downlink_bluetooth_headset_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "downlink_dock_config.pb",
+    src: "apmg3/downlink_dock_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "downlink_external_speaker_config.pb",
+    src: "apmg3/downlink_external_speaker_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "downlink_handset_config.pb",
+    src: "apmg3/downlink_handset_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "downlink_speaker_config.pb",
+    src: "apmg3/downlink_speaker_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "downlink_wired_headset_config.pb",
+    src: "apmg3/downlink_wired_headset_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "uplink_bluetooth_headset_aec_off_config.pb",
+    src: "apmg3/uplink_bluetooth_headset_aec_off_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "uplink_bluetooth_headset_aec_on_config.pb",
+    src: "apmg3/uplink_bluetooth_headset_aec_on_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "uplink_dock_aec_off_config.pb",
+    src: "apmg3/uplink_dock_aec_off_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "uplink_dock_aec_on_config.pb",
+    src: "apmg3/uplink_dock_aec_on_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "uplink_external_speaker_aec_off_config.pb",
+    src: "apmg3/uplink_external_speaker_aec_off_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "uplink_external_speaker_aec_on_config.pb",
+    src: "apmg3/uplink_external_speaker_aec_on_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "uplink_handset_aec_off_config.pb",
+    src: "apmg3/uplink_handset_aec_off_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "uplink_handset_aec_on_config.pb",
+    src: "apmg3/uplink_handset_aec_on_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "uplink_speaker_aec_off_config.pb",
+    src: "apmg3/uplink_speaker_aec_off_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "uplink_speaker_aec_on_config.pb",
+    src: "apmg3/uplink_speaker_aec_on_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "uplink_wired_headset_aec_off_config.pb",
+    src: "apmg3/uplink_wired_headset_aec_off_config.pb",
+    defaults: ["aoc_defaults"],
+}
+
+prebuilt_etc {
+    name: "uplink_wired_headset_aec_on_config.pb",
+    src: "apmg3/uplink_wired_headset_aec_on_config.pb",
     defaults: ["aoc_defaults"],
 }
 
@@ -113,16 +233,25 @@ prebuilt_etc {
     src: "waves/waves_config.ini",
     soc_specific: true,
 }
+
 prebuilt_etc {
     name: "waves_preset.mps",
     src: "waves/waves_preset.mps",
     soc_specific: true,
 }
+
+prebuilt_etc {
+    name: "speaker_post_processing_volume_spec.xml",
+    src: "pts/speaker_post_processing_volume_spec.xml",
+    defaults: ["aoc_defaults"],
+}
+
 prebuilt_etc {
     name: "test_config.ini",
     src: "waves/tests/test_config.ini",
     soc_specific: true,
 }
+
 prebuilt_etc {
     name: "test_preset.mps",
     src: "waves/tests/test_preset.mps",
