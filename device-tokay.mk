@@ -59,8 +59,15 @@ include device/google/gs-common/modem/radio_ext/radio_ext.mk
 include device/google/gs-common/pixelsupport/pixelsupport.mk
 
 # Increment the SVN for any official public releases
+ifdef RELEASE_SVN_TOKAY
+TARGET_SVN ?= $(RELEASE_SVN_TOKAY)
+else
+# Set this for older releases that don't use build flag
+TARGET_SVN ?= 04
+endif
+
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=1
+    ro.vendor.build.svn=$(TARGET_SVN)
 
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,tokay)
@@ -406,3 +413,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.thread_dispatcher.enabled=true
+
+# Reduce lmkd aggressiveness
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.swap_free_low_percentage=7
