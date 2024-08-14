@@ -68,7 +68,7 @@
       <argument name="ThermistorsName" value="VIRTUAL-SKIN-SPEAKER" />
       <argument name="Extensions" value="StereoSpatializerIndicator,SpeakerPowerLinkLaw" />
     </tuner>
-    <tuner type="telephony" name="fortemedia">
+    <tuner type="telephony" name="fmapmg3hybrid">
       <argument name="VoIP_DLCHs" value="SPK:2,USB:2,BT:2" />
       <argument name="VoIP_Rate" value="32000" />
       <argument name="BOOST_USB_SWB_CLK" value="y" />
