@@ -308,6 +308,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     device/google/caimito/powerstats/komodo
 
+# UWB Overlay
+PRODUCT_PACKAGES += \
+    UwbOverlayKM4
+
 # WiFi Overlay
 PRODUCT_PACKAGES += \
     WifiOverlay2024
