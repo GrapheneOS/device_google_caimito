@@ -288,6 +288,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     device/google/caimito/powerstats/caiman
 
+# UWB Overlay
+PRODUCT_PACKAGES += \
+    UwbOverlayCM4
+
 # WiFi Overlay
 PRODUCT_PACKAGES += \
     WifiOverlay2024
