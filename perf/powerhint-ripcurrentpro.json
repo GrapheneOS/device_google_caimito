@@ -875,16 +875,6 @@
         "200"
       ],
       "ResetOnInit": true
-    },
-    {
-      "Name": "MaxLoadBalanceInterval",
-      "Path": "/proc/vendor_sched/max_load_balance_interval",
-      "Values": [
-        "1",
-        "4"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
     }
   ],
   "Actions": [
@@ -2006,12 +1996,6 @@
       "Value": "0x0"
     },
     {
-      "PowerHint": "CAMERA_STREAMING_EXTREME",
-      "Node": "MaxLoadBalanceInterval",
-      "Duration": 0,
-      "Value": "4"
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PowerHALCameraRunning",
       "Duration": 0,
@@ -2168,12 +2152,6 @@
       "Value": "0x80"
     },
     {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "MaxLoadBalanceInterval",
-      "Duration": 0,
-      "Value": "4"
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "AutoPreferIdle",
       "Duration": 0,
@@ -2310,12 +2288,6 @@
       "Node": "CPUSkipMask",
       "Duration": 0,
       "Value": "0x80"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_STANDARD",
-      "Node": "MaxLoadBalanceInterval",
-      "Duration": 0,
-      "Value": "4"
     },
     {
       "PowerHint": "CAMERA_STREAMING_LOW",
