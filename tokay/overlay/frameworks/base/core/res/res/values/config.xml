@@ -173,9 +173,12 @@
     <!-- The max vibration strength allowed in audio haptic channels. -->
     <item name="config_hapticChannelMaxVibrationAmplitude" format="float" type="dimen">0.335</item>
 
-    <dimen name="status_bar_height_default">52dp</dimen>
-    <dimen name="status_bar_height_portrait">52dp</dimen>
-    <dimen name="status_bar_height_landscape">52dp</dimen>
+    <!-- Align to camera cutout's height. -->
+    <dimen name="status_bar_height_portrait">66dp</dimen>
+    <!-- Since @dimen/status_bar_height_portrait is modified in overlay, need to restore its value
+         from original folder. This should be done even looks no effect on some apps because
+         some other apps may reference to it. -->
+    <dimen name="status_bar_height_landscape">24dp</dimen>
 
     <!-- Whether the display cutout region of the main built-in display should be forced to
         black in software (to avoid aliasing or emulate a cutout that is not physically existent).
@@ -187,8 +190,10 @@
         @left
     </string>
 
+    <!-- This configuartion effects status bar's height actually. Set its height as double
+         y position of @dimen/config_mainBuiltInDisplayCutout to make cutout center vertically -->
     <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
-        m 484.5,0 h 110 v 141.5 h -110 z
+        m 484.5,0 h 110 v 173 h -110 z
         @left
     </string>
     <!-- A string config in svg path format for the main display shape.
