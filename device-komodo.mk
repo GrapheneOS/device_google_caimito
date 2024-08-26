@@ -422,3 +422,5 @@ PRODUCT_PRODUCT_PROPERTIES += \
           ro.com.google.ime.height_ratio=1.13
 
 PRODUCT_VENDOR_PROPERTIES := $(filter-out ro.vendor.build.svn=% , $(PRODUCT_VENDOR_PROPERTIES))
+
+PRODUCT_PACKAGES += fir-proximity-feature.xml
