@@ -451,8 +451,9 @@ PRODUCT_PACKAGES += \
 endif
 
 # Bluetooth device id
+# Tokay: 0x4112
 PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.device_id.product_id=20498
+    bluetooth.device_id.product_id=16658
 
 # Set support for LEA multicodec
 PRODUCT_PRODUCT_PROPERTIES += \

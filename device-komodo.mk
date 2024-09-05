@@ -486,8 +486,9 @@ PRODUCT_PACKAGES += \
 endif
 
 # Bluetooth device id
+# Komodo: 0x4111
 PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.device_id.product_id=20497
+    bluetooth.device_id.product_id=16657
 
 # Set support for LEA multicodec
 PRODUCT_PRODUCT_PROPERTIES += \
