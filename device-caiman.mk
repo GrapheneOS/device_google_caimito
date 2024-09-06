@@ -486,8 +486,9 @@ PRODUCT_PACKAGES += \
 endif
 
 # Bluetooth device id
+# Caiman: 0x4110
 PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.device_id.product_id=20496
+    bluetooth.device_id.product_id=16656
 
 # Set support for LEA multicodec
 PRODUCT_PRODUCT_PROPERTIES += \
