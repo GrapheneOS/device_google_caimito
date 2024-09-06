@@ -47,6 +47,7 @@ include hardware/google/pixel/vibrator/cs40l26/device-stereo.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/stm/stm20.mk
 include device/google/caimito/fingerprint/ultrasonic_udfps.mk
+include device/google/gs-common/gril/hidl/1.7/gril_hidl.mk
 
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,ripcurrentpro)
