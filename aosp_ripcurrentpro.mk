@@ -20,7 +20,7 @@ USE_SWIFTSHADER := false
 BOARD_USES_SWIFTSHADER := false
 
 $(call inherit-product, device/google/zumapro/aosp_common.mk)
-$(call inherit-product, device/google/caimito/device-ripcurrentpro.mk)
+$(call inherit-product, device/google/caimito/ripcurrentpro_generic.mk)
 
 PRODUCT_NAME := aosp_ripcurrentpro
 PRODUCT_DEVICE := ripcurrentpro

@@ -20,7 +20,7 @@ USE_SWIFTSHADER := false
 BOARD_USES_SWIFTSHADER := false
 
 $(call inherit-product, device/google/zumapro/aosp_common.mk)
-$(call inherit-product, device/google/caimito/device-tokay.mk)
+$(call inherit-product, device/google/caimito/tokay_generic.mk)
 
 PRODUCT_NAME := aosp_tokay
 PRODUCT_DEVICE := tokay

@@ -152,7 +152,7 @@
 
     <!-- Boolean indicating whether we should enable the STA current connected indoor channel
      for SAP, WFD GO, Wi-Fi Aware -->
-    <bool translatable="false" name="config_wifiEnableStaIndoorChannelForPeerNetwork">true</bool>
+    <bool translatable="false" name="config_wifiEnableStaIndoorChannelForPeerNetwork">false</bool>
 
     <!-- Boolean indicating whether we should enable the STA current connected DFS channel
          for SAP, WFD GO, Wi-Fi Aware -->
@@ -190,5 +190,11 @@
     <!-- Configure the max number of new channels to add into the initial partial scan list per network.
          If equals to 0, it means there's no limit on the max number of channels to include per network.-->
     <integer translatable="false" name="config_wifiInitialPartialScanMaxNewChannelsPerNetwork">3</integer>
+
+    <!-- Boolean indicating whether to disable firmware roaming when the device goes into idle mode.
+         true: firmware roaming will be disabled when the device goes into idle mode, and then
+               re-activated when the device exits idle mode.
+         false: firmware roaming will not be affected. -->
+    <bool translatable="false" name ="config_wifiDisableFirmwareRoamingInIdleMode">true</bool>
 
 </resources>

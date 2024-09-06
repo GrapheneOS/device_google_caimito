@@ -20,6 +20,12 @@
       <argument name="Name" value="BCL_AUDIO_BAACL" />
       <argument name="Strategy" value="MediaSpeakerAndScreenOn" />
     </feature>
+    <feature name="BatteryMitigation">
+      <argument name="TargetDigitalVolume" value="809" />
+      <argument name="PcmRampMs" value="15ms" />
+      <argument name="ThrottleDurationMs" value="3000" />
+      <argument name="ThrottleMitigationLevel" value="LIGHT" />
+    </feature>
     <feature name="PlaybackThermalThrottle">
       <argument name="PollWaitMs" value="20000" />
       <argument name="ThermistorName" value="VIRTUAL-SKIN-SPEAKER" />
@@ -28,8 +34,11 @@
       <argument name="SpeakerPowerPollWaitMs" value="5000" />
     </feature>
     <feature name="RuntimeTuningDump" />
-    <feature name="SoundDose" />
-    <!-- <feature name="spatializer-offload" /> -->
+    <feature name="SoundDose">
+      <argument name="Curves" value="blackbird,condor=0,46.35,0.1950549451;54.6,57,0.98625" />
+    </feature>
+    <feature name="MicrophoneCompensation" />
+    <feature name="spatializer-offload" />
   </features>
 
   <voipVolume>
@@ -49,7 +58,6 @@
     <device name="usb" />
     <device name="speaker" codec="cs35l41">
       <argument name="SpeakerNum" value="2" />
-      <argument name="Rotation" />
       <argument name="AcousticShockProtection" />
     </device>
   </devices>
@@ -80,8 +88,8 @@
     <latency source="primary-playback" sink="speaker" milliseconds="20" />
     <latency source="primary-playback" sink="usb-device" milliseconds="10" />
     <latency source="primary-playback" sink="usb-headset" milliseconds="10" />
-    <latency source="primary-playback" sink="bluetooth-a2dp-device" milliseconds="10" />
-    <latency source="primary-playback" sink="bluetooth-low-energy-speaker" milliseconds="10" />
+    <latency source="primary-playback" sink="bluetooth-a2dp-device" milliseconds="100" />
+    <latency source="primary-playback" sink="bluetooth-low-energy-speaker" milliseconds="100" />
 
     <latency source="deep-buffer-playback" sink="speaker" milliseconds="70" />
     <latency source="deep-buffer-playback" sink="usb-device" milliseconds="70" />
@@ -95,19 +103,23 @@
 
     <latency source="immersive-playback" sink="bluetooth-a2dp-device" milliseconds="100" />
 
-    <latency source="microphones" sink="primary-capture" milliseconds="160" />
-    <latency source="back-microphones" sink="primary-capture" milliseconds="160" />
-    <latency source="bluetooth-sco-headset" sink="primary-capture" milliseconds="40" />
+    <latency source="microphones" sink="primary-capture" milliseconds="300" />
+    <latency source="back-microphones" sink="primary-capture" milliseconds="300" />
+    <latency source="bluetooth-sco-headset" sink="primary-capture" milliseconds="160" />
+    <latency source="usb-device-microphones" sink="primary-capture" milliseconds="100" />
+    <latency source="usb-headset-microphones" sink="primary-capture" milliseconds="100" />
   </latencies>
 
   <spatialCapture>
     <enablement useCase="primary-capture" deviceInterface="microphones">
       <source>MIC</source>
       <source>CAMCORDER</source>
+      <source>VOICE_RECOGNITION</source>
     </enablement>
     <enablement useCase="primary-capture" deviceInterface="back-microphones">
       <source>MIC</source>
       <source>CAMCORDER</source>
+      <source>VOICE_RECOGNITION</source>
     </enablement>
   </spatialCapture>
 

@@ -71,8 +71,6 @@
   <ctl name="R ASPTX4 Slot Position" value="7" />
 
   <!-- Cirrus Booster Amp DRE and VBST config-->
-  <ctl name="VBSTMON Output Switch" value="1" />
-  <ctl name="R VBSTMON Output Switch" value="1" />
   <ctl name="DRE DRE Switch" value="1" />
   <ctl name="R DRE DRE Switch" value="1" />
 
@@ -144,7 +142,6 @@
   <ctl name="TDM_1_RX Mixer EP5" value="0" />
   <ctl name="TDM_1_RX Mixer EP6" value="0" />
   <ctl name="TDM_1_RX Mixer EP7" value="0" />
-  <ctl name="TDM_1_RX Mixer EP8" value="0" />
   <ctl name="TDM_1_RX Mixer NoHost1" value="0" />
 
   <ctl name="USB_RX Mixer EP1" value="0" />
@@ -895,6 +892,18 @@
     <ctl name="BT_RX Mixer EP4" value="1" />
   </path>
 
+  <path name="spatializer-offload-playback-0 -> bluetooth-sco-default">
+    <path name="spatializer-offload-playback -> bt" />
+  </path>
+
+  <path name="spatializer-offload-playback-0 -> bluetooth-sco-headset">
+    <path name="spatializer-offload-playback -> bt" />
+  </path>
+
+  <path name="spatializer-offload-playback-0 -> bluetooth-sco-car-kit">
+    <path name="spatializer-offload-playback -> bt" />
+  </path>
+
   <path name="spatializer-offload-playback-0 -> bluetooth-a2dp-device">
     <path name="spatializer-offload-playback -> bt" />
   </path>
@@ -1087,11 +1096,15 @@
     <ctl name="EP3 TX Mixer BT_TX" value="1" />
   </path>
 
-  <path name="microphones -> sound-trigger-capture-0" />
+  <path name="sound-trigger-microphones -> sound-trigger-capture-0" />
 
-  <path name="microphones -> sound-trigger-tap-capture-0" />
+  <path name="sound-trigger-microphones -> sound-trigger-tap-capture-0">
+    <ctl name="Audio Capture Eraser Enable" value="1" />
+    <ctl name="Hotword Tap Enable" value="1" />
+    <ctl name="MIC Record Soft Gain (dB)" value="0" />
+  </path>
 
-  <path name="microphones -> hotword-lookback-capture-0" />
+  <path name="sound-trigger-microphones -> hotword-lookback-capture-0" />
 
   <path name="ultrasound-microphones -> ultrasound-capture-0">
     <ctl name="EP5 TX Mixer INTERNAL_MIC_US_TX" value="1" />
@@ -1210,53 +1223,9 @@
     <ctl name="NoHost1 TX Mixer TDM_0_TX" value="1" />
   </path>
 
-  <path name="telephony-rx (VOICE_DOWNLINK) -> in-call-capture-0">
-    <ctl name="Incall Capture Stream0" value="DL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_UPLINK) -> in-call-capture-0">
-    <ctl name="Incall Capture Stream0" value="UL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_CALL) -> in-call-capture-0">
-    <ctl name="Incall Capture Stream0" value="UL_DL" />
-  </path>
-
-  <path name="telephony-rx -> in-call-capture-0">
-    <ctl name="Incall Capture Stream0" value="DL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_DOWNLINK) -> in-call-capture-1">
-    <ctl name="Incall Capture Stream1" value="DL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_UPLINK) -> in-call-capture-1">
-    <ctl name="Incall Capture Stream1" value="UL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_CALL) -> in-call-capture-1">
-    <ctl name="Incall Capture Stream1" value="UL_DL" />
-  </path>
-
-  <path name="telephony-rx -> in-call-capture-1">
-    <ctl name="Incall Capture Stream1" value="DL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_DOWNLINK) -> in-call-capture-2">
-    <ctl name="Incall Capture Stream2" value="DL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_UPLINK) -> in-call-capture-2">
-    <ctl name="Incall Capture Stream2" value="UL" />
-  </path>
-
-  <path name="telephony-rx (VOICE_CALL) -> in-call-capture-2">
-    <ctl name="Incall Capture Stream2" value="UL_DL" />
-  </path>
-
-  <path name="telephony-rx -> in-call-capture-2">
-    <ctl name="Incall Capture Stream2" value="DL" />
-  </path>
+  <path name="in-call-capture-source-0 -> in-call-capture-0" />
+  <path name="in-call-capture-source-1 -> in-call-capture-1" />
+  <path name="in-call-capture-source-2 -> in-call-capture-2" />
 
   <!-- codec setting -->
   <!-- Rx device -->
@@ -1282,10 +1251,10 @@
   <path name="speaker">
     <ctl name="Main AMP Enable Switch" value="1" />
     <ctl name="R Main AMP Enable Switch" value="1" />
-    <ctl name="Fast Use Case Delta File" value="fast_switch3.txt" />
+    <!--ctl name="Fast Use Case Delta File" value="fast_switch3.txt" />
     <ctl name="Fast Use Case Switch Enable" value="1" />
     <ctl name="R Fast Use Case Delta File" value="fast_switch4.txt" />
-    <ctl name="R Fast Use Case Switch Enable" value="1" />
+    <ctl name="R Fast Use Case Switch Enable" value="1" /-->
   </path>
 
   <path name="speaker (VOICE)">
@@ -1294,17 +1263,17 @@
     <ctl name="R Main AMP Enable Switch" value="1" />
     <ctl name="Main AMP Enable Switch" value="1" />
     <!-- load Enable FIR -->
-    <ctl name="Fast Use Case Delta File" value="fast_switch1.txt" />
+    <!--ctl name="Fast Use Case Delta File" value="fast_switch1.txt" />
     <ctl name="Fast Use Case Switch Enable" value="1" />
     <ctl name="R Fast Use Case Delta File" value="fast_switch2.txt" />
-    <ctl name="R Fast Use Case Switch Enable" value="1" />
+    <ctl name="R Fast Use Case Switch Enable" value="1" /-->
   </path>
 
   <path name="speaker-safe">
     <ctl name="R Main AMP Enable Switch" value="1" />
     <!-- load Bypass FIR -->
-    <ctl name="R Fast Use Case Delta File" value="fast_switch4.txt" />
-    <ctl name="R Fast Use Case Switch Enable" value="1" />
+    <!--ctl name="R Fast Use Case Delta File" value="fast_switch4.txt" />
+    <ctl name="R Fast Use Case Switch Enable" value="1" /-->
   </path>
 
   <!-- Tx device -->
@@ -1328,16 +1297,14 @@
     <ctl name="MIC Record Soft Gain (dB)" value="0" />
   </path>
 
+  <path name="microphones (VOICE_COMMUNICATION,VOICE)">
+    <path name="microphones (VOICE)" />
+  </path>
+
   <path name="microphones (VOICE_RECOGNITION)">
     <path name="builtin-mic-id-capture-list" />
     <ctl name="MIC DC Blocker" value="1" />
     <ctl name="MIC Record Soft Gain (dB)" value="22" />
-  </path>
-
-  <path name="microphones (VOICE_RECOGNITION,SOUND_TRIGGER_TAP)">
-    <ctl name="Audio Capture Eraser Enable" value="1" />
-    <ctl name="Hotword Tap Enable" value="1" />
-    <ctl name="MIC Record Soft Gain (dB)" value="0" />
   </path>
 
   <path name="microphones (SOUND_TRIGGER_AEC)">
@@ -1368,6 +1335,10 @@
     <path name="microphones (VOICE)" />
   </path>
 
+  <path name="back-microphones (VOICE_COMMUNICATION,VOICE)">
+    <path name="back-microphones (VOICE)" />
+  </path>
+
   <path name="back-microphones (CAMCORDER)">
     <path name="microphones (CAMCORDER)" />
   </path>
@@ -1394,11 +1365,67 @@
     <path name="bluetooth-sco-headset-microphones" />
   </path>
 
-  <path name="usb-headset-microphones">
+  <path name="usb-microphones">
     <path name="builtin-mic-id-capture-list" />
     <ctl name="Audio Capture Mic Source" value="USB_MIC" />
     <ctl name="Voice Call Mic Source" value="USB_MIC" />
     <ctl name="MIC Record Soft Gain (dB)" value="0" />
+  </path>
+
+  <path name="usb-headset-microphones">
+    <path name="usb-microphones" />
+  </path>
+
+  <path name="usb-device-microphones">
+    <path name="usb-microphones" />
+  </path>
+
+  <path name="in-call-capture-source-0 (VOICE_DOWNLINK)">
+    <ctl name="Incall Capture Stream0" value="DL" />
+  </path>
+
+  <path name="in-call-capture-source-0 (VOICE_UPLINK)">
+    <ctl name="Incall Capture Stream0" value="UL" />
+  </path>
+
+  <path name="in-call-capture-source-0 (VOICE_CALL)">
+    <ctl name="Incall Capture Stream0" value="UL_DL" />
+  </path>
+
+  <path name="in-call-capture-source-0">
+    <path name="in-call-capture-source-0 (VOICE_DOWNLINK)" />
+  </path>
+
+  <path name="in-call-capture-source-1 (VOICE_DOWNLINK)">
+    <ctl name="Incall Capture Stream1" value="DL" />
+  </path>
+
+  <path name="in-call-capture-source-1 (VOICE_UPLINK)">
+    <ctl name="Incall Capture Stream1" value="UL" />
+  </path>
+
+  <path name="in-call-capture-source-1 (VOICE_CALL)">
+    <ctl name="Incall Capture Stream1" value="UL_DL" />
+  </path>
+
+  <path name="in-call-capture-source-1">
+    <path name="in-call-capture-source-1 (VOICE_DOWNLINK)" />
+  </path>
+
+  <path name="in-call-capture-source-2 (VOICE_DOWNLINK)">
+    <ctl name="Incall Capture Stream2" value="DL" />
+  </path>
+
+  <path name="in-call-capture-source-2 (VOICE_UPLINK)">
+    <ctl name="Incall Capture Stream2" value="UL" />
+  </path>
+
+  <path name="in-call-capture-source-2 (VOICE_CALL)">
+    <ctl name="Incall Capture Stream2" value="UL_DL" />
+  </path>
+
+  <path name="in-call-capture-source-2">
+    <path name="in-call-capture-source-2 (VOICE_DOWNLINK)" />
   </path>
 
   <!-- cs35l41 specific path to load firmware in cs35l41.c -->

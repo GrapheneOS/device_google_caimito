@@ -29,7 +29,7 @@
                to brightness values; -1 means keeping the current brightness. -->
     <integer-array name="config_doze_brightness_sensor_to_brightness">
         <item>-1</item> <!-- 0: OFF -->
-        <item>2</item> <!-- 1: NIGHT -->
+        <item>1</item> <!-- 1: NIGHT (1-1)/(255-1)*(1800-2)+2 = 2 nits -->
         <item>2</item> <!-- 2: LOW (2-1)/(255-1)*(1800-2)+2 = 9.08 nits -->
         <item>8</item> <!-- 3: HIGH (8-1)/(255-1)*(1800-2)+2 = 51.55 nits -->
         <item>8</item> <!-- 4: SUN -->
@@ -41,7 +41,7 @@
                -1 means keeping the current opacity. -->
     <integer-array name="config_doze_brightness_sensor_to_scrim_opacity">
         <item>-1</item> <!-- 0: OFF -->
-        <item>133</item> <!-- 1: NIGHT -->
+        <item>0</item> <!-- 1: NIGHT -->
         <item>0</item> <!-- 2: LOW -->
         <item>0</item> <!-- 3: HIGH -->
         <item>0</item> <!-- 4: SUN -->
@@ -70,4 +70,10 @@
       <item>87</item>   <!-- sensorLocationY -->
       <item>44</item>   <!--sensorRadius -->
     </integer-array>
+
+    <!--  Whether to use a machine learning model for back gesture falsing. -->
+    <bool name="config_useBackGestureML">false</bool>
+
+    <!-- Whether to use deadzone with nav bar -->
+    <bool name="config_useDeadZone">false</bool>
 </resources>

@@ -14,8 +14,23 @@
 # limitations under the License.
 #
 
-TARGET_KERNEL_DIR ?= device/google/caimito-kernel
-TARGET_BOARD_KERNEL_HEADERS := device/google/caimito-kernel/kernel-headers
+ifdef RELEASE_GOOGLE_RIPCURRENTPRO_RADIO_DIR
+RELEASE_GOOGLE_PRODUCT_RADIO_DIR := $(RELEASE_GOOGLE_RIPCURRENTPRO_RADIO_DIR)
+endif
+ifdef RELEASE_GOOGLE_RIPCURRENTPRO_RADIOCFG_DIR
+RELEASE_GOOGLE_PRODUCT_RADIOCFG_DIR := $(RELEASE_GOOGLE_RIPCURRENTPRO_RADIOCFG_DIR)
+endif
+RELEASE_GOOGLE_BOOTLOADER_RIPCURRENTPRO_DIR ?= 24D1# Keep this for pdk TODO: b/327119000
+RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/$(RELEASE_GOOGLE_BOOTLOADER_RIPCURRENTPRO_DIR)
+$(call soong_config_set,caimito_bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_RIPCURRENTPRO_DIR))
+
+ifdef RELEASE_KERNEL_RIPCURRENTPRO_DIR
+TARGET_KERNEL_DIR ?= $(RELEASE_KERNEL_RIPCURRENTPRO_DIR)
+TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_KERNEL_RIPCURRENTPRO_DIR)/kernel-headers
+else
+TARGET_KERNEL_DIR ?= device/google/caimito-kernels/6.1/24D1
+TARGET_BOARD_KERNEL_HEADERS ?= device/google/caimito-kernels/6.1/24D1/kernel-headers
+endif
 
 USE_SWIFTSHADER := false
 BOARD_USES_SWIFTSHADER := false
@@ -204,25 +219,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/caimito/prebuilts
 
 # Location
-# iGNSS
-include device/google/gs-common/gps/lsi/s5400.mk
-# gps.cfg
 PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/ripcurrentpro
 $(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
 PRODUCT_PACKAGES += gps.cfg
-# eGNSS
-# SDK build system
-$(call soong_config_set, include_libsitril_gps_wifi, board_without_radio, $(BOARD_WITHOUT_RADIO))
-include device/google/gs-common/gps/brcm/device.mk
-PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/ripcurrentpro
-SOONG_CONFIG_NAMESPACES += gpssdk
-SOONG_CONFIG_gpssdk += gpsconf
-SOONG_CONFIG_gpssdk_gpsconf ?= $(TARGET_BUILD_VARIANT)
-PRODUCT_PACKAGES += \
-	gps.cer \
-	gps.xml \
-	scd.conf \
-	lhd.conf
+# For GPS property
+PRODUCT_VENDOR_PROPERTIES += ro.vendor.gps.pps.enabled=true
 
 PRODUCT_VENDOR_PROPERTIES += \
 	persist.device_config.configuration.disable_rescue_party=true
@@ -232,6 +233,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
 
 # Vibrator HAL
+$(call soong_config_set,haptics,kernel_ver,v$(subst .,_,$(TARGET_LINUX_KERNEL_VERSION)))
 ACTUATOR_MODEL := luxshare_ict_081545
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.vibrator.hal.chirp.enabled=1 \
@@ -241,18 +243,3 @@ PRODUCT_VENDOR_PROPERTIES += \
 # PKVM Memory Reclaim
 PRODUCT_VENDOR_PROPERTIES += \
     hypervisor.memory_reclaim.supported=1
-
-# Indicate that the bootloader supports the MTE developer option switch
-# (MISC_MEMTAG_MODE_MEMTAG_ONCE), with the exception of _fullmte products that
-# force enable MTE.
-ifeq (,$(filter %_fullmte,$(TARGET_PRODUCT)))
-PRODUCT_PRODUCT_PROPERTIES += ro.arm64.memtag.bootctl_supported=1
-PRODUCT_PRODUCT_PROPERTIES += persist.arm64.memtag.app.com.android.se=off
-PRODUCT_PRODUCT_PROPERTIES += persist.arm64.memtag.app.com.google.android.bluetooth=off
-PRODUCT_PRODUCT_PROPERTIES += persist.arm64.memtag.app.com.android.nfc=off
-PRODUCT_PRODUCT_PROPERTIES += persist.arm64.memtag.system_server=off
-endif
-
-# Thread HAL
-PRODUCT_PACKAGES += \
-   com.google.caimito.hardware.threadnetwork
