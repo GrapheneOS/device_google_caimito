@@ -60,6 +60,7 @@ include device/google/gs-common/touch/gti/predump_gti.mk
 include device/google/caimito/fingerprint/ultrasonic_udfps.mk
 include device/google/gs-common/modem/radio_ext/radio_ext.mk
 include device/google/gs-common/pixelsupport/pixelsupport.mk
+include device/google/gs-common/gril/hidl/1.7/gril_hidl.mk
 
 # Increment the SVN for any official public releases
 ifdef RELEASE_SVN_TOKAY
@@ -451,8 +452,9 @@ PRODUCT_PACKAGES += \
 endif
 
 # Bluetooth device id
+# Tokay: 0x4112
 PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.device_id.product_id=20498
+    bluetooth.device_id.product_id=16658
 
 # Set support for LEA multicodec
 PRODUCT_PRODUCT_PROPERTIES += \
