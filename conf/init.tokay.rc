@@ -10,6 +10,7 @@ on init && property:ro.boot.hardware.platform=zuma
 on init
     # eSE streset tool name
     setprop persist.vendor.se.streset libstreset24
+    setprop persist.vendor.nfc.streset libstreset24
 # No se_chip_en for P1.0
 on late-init && property:ro.boot.hardware.revision=PROTO1.0
     setprop persist.vendor.se.reset.chip_en false
