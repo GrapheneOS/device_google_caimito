@@ -444,13 +444,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.thread_dispatcher.enabled=true
 
-# Thread HAL
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-PRODUCT_PACKAGES += \
-   com.google.caimito.hardware.threadnetwork \
-   ThreadNetworkDemoApp
-endif
-
 # Bluetooth device id
 # Tokay: 0x4112
 PRODUCT_PRODUCT_PROPERTIES += \
