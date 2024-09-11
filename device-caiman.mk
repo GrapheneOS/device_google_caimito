@@ -478,13 +478,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.thread_dispatcher.enabled=true
 
-# Thread HAL & demo app
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-PRODUCT_PACKAGES += \
-   com.google.caimito.hardware.threadnetwork \
-   ThreadNetworkDemoApp
-endif
-
 # Bluetooth device id
 # Caiman: 0x4110
 PRODUCT_PRODUCT_PROPERTIES += \
