@@ -78,30 +78,6 @@
             "PassiveDelay":7000
         },
         {
-            "Name":"battery_cycle",
-            "Type":"BCL_VOLTAGE"
-        },
-        {
-            "Name":"soc",
-            "Type":"BCL_PERCENTAGE",
-            "HotThreshold":["NAN", "NAN", 80, "NAN", "NAN", "NAN", "NAN"],
-            "Multiplier":1
-        },
-        {
-            "Name":"BCL_AUDIO_BAACL",
-            "Type":"BCL_VOLTAGE",
-            "VirtualSensor":true,
-            "Formula":"COUNT_THRESHOLD",
-            "TriggerSensor": "soc",
-            "Combination":["battery", "soc"],
-            "Coefficient":[-25000, 80],
-            "HotThreshold":["NAN", "NAN",  "NAN", "NAN", 2.0, "NAN", "NAN"],
-            "PollingDelay":0,
-            "PassiveDelay":1000,
-            "Multiplier":1,
-            "SendCallback":true
-        },
-        {
             "Name": "VIRTUAL-SKIN-SUB-0",
             "Type": "UNKNOWN",
             "Hidden": true,
