@@ -469,16 +469,17 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Window Extensions
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
-# Connectivity Resources Overlay
+# Connectivity Resources Overlay for Thread host settings
 PRODUCT_PACKAGES += \
     ConnectivityResourcesOverlayCaimitoOverride
+
+# Thread Dispatcher enablement in Bluetooth HAL
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.bluetooth.thread_dispatcher.enabled=false
 
 #Component Override for Pixel Troubleshooting App
 PRODUCT_COPY_FILES += \
     device/google/caimito/caiman/caiman-component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/caiman-component-overrides.xml
-
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.bluetooth.thread_dispatcher.enabled=true
 
 # Bluetooth device id
 # Caiman: 0x4110
