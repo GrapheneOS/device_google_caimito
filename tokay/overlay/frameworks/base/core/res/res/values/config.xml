@@ -212,4 +212,6 @@
     <string name="config_mms_user_agent" translatable="false">g2ybb</string>
     <!-- MMS user agent profile url -->
     <string name="config_mms_user_agent_profile_url" translatable="false">http://www.gstatic.com/android/sms/G2YBB.xml</string>
+
+    <integer name="config_multiuserMaxRunningUsers">10</integer>
 </resources>
