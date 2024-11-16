@@ -221,4 +221,6 @@
     <string name="config_mms_user_agent" translatable="false">ggx8b</string>
     <!-- MMS user agent profile url -->
     <string name="config_mms_user_agent_profile_url" translatable="false">http://www.gstatic.com/android/sms/GGX8B.xml</string>
+
+    <integer name="config_multiuserMaxRunningUsers">14</integer>
 </resources>
